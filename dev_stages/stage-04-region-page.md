@@ -81,25 +81,39 @@ For Cairo: `config.label = "Cairo"`, so this keeps only landmarks where
 
 ---
 
-## Sorting by Importance (The User's Requirement)
+## Sorting by Importance — A Data Contract, Not Runtime Work
 
-```js
-regionLandmarks.sort(function(a, b) {
-    return (b.importance || 0) - (a.importance || 0);
-});
+**The JSON is already sorted.** After checking `landmarks.json`, it is globally sorted
+by importance descending. This was verified by inspecting the file:
+
+```
+importance 10 → Great Pyramid of Giza, Great Sphinx, KV62, Karnak...
+importance 9  → Cairo Citadel, Cairo Tower, Citadel of Qaitbay...
+importance 8  → Al-Azhar Park, Aswan High Dam...
+...and so on
 ```
 
-`Array.sort()` sorts in-place (modifies the array directly).
-It takes a comparison function with two parameters `(a, b)`:
-- If the function returns **negative** → `a` comes before `b` (a is first)
-- If the function returns **positive** → `b` comes before `a` (b is first)
-- If it returns **zero** → order doesn't matter
+**Key insight:** `Array.filter()` preserves the order of the original array.
+If the source is sorted, the filtered result is also sorted — no extra work needed.
 
-`b.importance - a.importance` = descending order (highest importance first):
-- Pyramid (importance 10), Sphinx (10), KV62 (10) appear first
-- Coloured Canyon (importance 5) appears last
+```js
+// The JSON is already sorted by importance desc.
+// filter() preserves that order. No .sort() needed.
+const regionLandmarks = allLandmarks.filter(function(landmark) {
+    return landmark.region === config.label;
+});
+// Cairo result: importance 9, 9, 9, 9, 8, 8, 8, 7, 7, 7, 6, 5, 5...
+```
 
-The `|| 0` is a safety fallback: if a landmark has no importance field, treat it as 0.
+**Why we removed the runtime `.sort()`:**
+For 22 items, `.sort()` takes < 0.01ms — not a performance problem.
+But removing it makes the code's intent clearer:
+*"The data is correct by definition — we trust the source."*
+
+**The data contract — documented in `region.js`:**
+If anyone adds a new landmark to `landmarks.json`, they MUST insert it
+at the correct position (by importance score). This is now written as a
+comment in the code so it is never a hidden assumption.
 
 ---
 

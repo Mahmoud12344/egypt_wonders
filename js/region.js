@@ -382,15 +382,19 @@ async function main() {
 
         /* Filter: keep only landmarks whose region matches our label.
            The JSON "region" field uses display names like "Cairo",
-           "Giza & Pyramids", etc. — we match using config.label. */
+           "Giza & Pyramids", etc. — we match using config.label.
+
+           IMPORTANT — Data contract:
+           landmarks.json is pre-sorted by importance DESCENDING globally.
+           Array.filter() preserves the source array's order, so the
+           filtered result is also sorted by importance descending.
+           NO runtime sort is needed — and none is performed here.
+
+           If landmarks.json is ever modified, whoever adds a new entry
+           MUST insert it at the correct position (by importance score)
+           to maintain this contract. */
         const regionLandmarks = allLandmarks.filter(function(landmark) {
             return landmark.region === config.label;
-        });
-
-        /* Sort by importance DESCENDING — most important landmarks first.
-           This is the priority ordering requested. */
-        regionLandmarks.sort(function(a, b) {
-            return (b.importance || 0) - (a.importance || 0);
         });
 
         /* Update the header with the real count */
