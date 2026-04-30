@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    blog.html — Blog Page
+    ======================
+    Assigned to: Salah
+    This is a static page with placeholder blog posts.
+    It uses only global.css — no page-specific CSS or JS beyond nav.js.
+
+    The blog posts are hardcoded here since there is no CMS or backend.
+    For a real project, these would load from a JSON file.
+    For this academic project, static HTML is the correct choice.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Egypt Wonders</title>
+    <meta name="description" content="Stories, history, and travel insights from Egypt's most remarkable landmarks and regions.">
+    <link rel="stylesheet" href="css/global.css">
+
+    <style>
+        /* ── Blog-specific styles ──
+           Kept in a <style> block here since this is a simple
+           page that doesn't warrant a full separate CSS file.
+           If it grows more complex, move to css/blog.css. */
+
+        .blog-header {
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: var(--space-xl);
+        }
+
+        .blog-header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: var(--space-xs);
+        }
+
+        .blog-header p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Blog post grid — two columns */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        /* Individual blog post card */
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .blog-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .blog-card-body {
+            padding: var(--space-md);
+        }
+
+        .blog-card-date {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            display: block;
+        }
+
+        .blog-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: var(--space-xs);
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            line-height: 1.65;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav — identical to all pages -->
+    <header class="site-nav" role="banner">
+        <nav class="nav-inner container" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">Egypt Wonders</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+
+            <header class="blog-header">
+                <h1>Stories from the Nile</h1>
+                <p>History, travel insights, and discoveries from Egypt's most extraordinary places.</p>
+            </header>
+
+            <div class="blog-grid">
+
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <img
+                        class="blog-card-img"
+                        src="assets/images/Great_Pyramid_of_Giza/1.jpg"
+                        alt="Inside the Great Pyramid"
+                        loading="lazy">
+                    <div class="blog-card-body">
+                        <span class="blog-card-date">April 2026</span>
+                        <h2 class="blog-card-title">Inside Khufu's Pyramid: What the Builders Left Behind</h2>
+                        <p class="blog-card-excerpt">
+                            Walking through the Grand Gallery, the narrow shafts still echo with the silence
+                            of 4,500 years. Archaeologists recently discovered a hidden chamber that may
+                            finally explain how the pyramid was built.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <img
+                        class="blog-card-img"
+                        src="assets/images/Karnak_precinct_of_Amun-Ra/2.jpg"
+                        alt="Karnak Temple at dawn"
+                        loading="lazy">
+                    <div class="blog-card-body">
+                        <span class="blog-card-date">March 2026</span>
+                        <h2 class="blog-card-title">Karnak at Dawn: The Temple That Never Sleeps</h2>
+                        <p class="blog-card-excerpt">
+                            The best time to visit Karnak is before the crowds arrive. As the first light
+                            hits the hypostyle columns, you understand why the ancient Egyptians believed
+                            this place was the home of the gods.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <img
+                        class="blog-card-img"
+                        src="assets/images/Bibliotheca_Alexandrina/0.jpg"
+                        alt="The Bibliotheca Alexandrina"
+                        loading="lazy">
+                    <div class="blog-card-body">
+                        <span class="blog-card-date">February 2026</span>
+                        <h2 class="blog-card-title">Alexandria's New Library and the Ghost of the Old One</h2>
+                        <p class="blog-card-excerpt">
+                            Standing on the Mediterranean shore, the Bibliotheca Alexandrina rises like
+                            a sun disc from the water. Inside, eight million books and the weight of
+                            a civilization that once held all knowledge.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="blog-card">
+                    <img
+                        class="blog-card-img"
+                        src="assets/images/Temple_of_Isis_in_Philae/3.jpg"
+                        alt="Philae Temple at sunset"
+                        loading="lazy">
+                    <div class="blog-card-body">
+                        <span class="blog-card-date">January 2026</span>
+                        <h2 class="blog-card-title">Saving Philae: The Greatest Temple Rescue in History</h2>
+                        <p class="blog-card-excerpt">
+                            In the 1970s, UNESCO dismantled an entire island temple block by block and moved
+                            it to higher ground. It remains one of the most ambitious engineering and
+                            cultural preservation operations ever attempted.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>
+                Egypt Wonders
+                <span class="footer-separator">·</span>
+                Fourth Semester Web Project
+                <span class="footer-separator">·</span>
+                2026
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+
+</body>
+
+</html>
