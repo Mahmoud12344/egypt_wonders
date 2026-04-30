@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region Color Demo — Egypt Wonders</title>
+
+    <!--
+        COLOR DEMO — Egypt Wonders Project
+        ====================================
+        This file is a design review tool ONLY.
+        It is NOT part of the final project.
+        Its only purpose: show the proposed accent color for each region
+        so you can approve or reject each color before we build anything.
+
+        Instructions:
+        - Open this file in a browser
+        - Each row = one region
+        - Look at both the color swatch AND the sample text/button
+        - Give feedback on any color that feels wrong
+    -->
+
+    <style>
+        /* Import the same font we plan to use in the real project */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+
+        /* --- Reset & Base --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F7F3; /* Light warm white - our proposed light mode background */
+            color: #1A1A1A;
+            padding: 3rem 2rem;
+        }
+
+        /* --- Page Header --- */
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A1A1A;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        /* --- Layout: each region gets one row --- */
+        .region-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+        }
+
+        .region-row {
+            display: grid;
+            /* 3 columns: swatch | info | sample UI */
+            grid-template-columns: 80px 1fr auto;
+            align-items: center;
+            gap: 1.5rem;
+            background: #FFFFFF;
+            border: 1px solid #E8E4DC;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        /* --- Color Swatch --- */
+        .swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
+            /* The background-color is set inline on each element */
+            flex-shrink: 0;
+        }
+
+        /* --- Region Info --- */
+        .region-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .region-info .hex {
+            font-size: 0.8rem;
+            color: #888;
+            font-family: monospace;
+            margin-bottom: 0.4rem;
+        }
+
+        .region-info .inspiration {
+            font-size: 0.78rem;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* --- Sample UI Elements using the accent color --- */
+        /* The accent color is applied via inline style on the wrapping element */
+        .sample-ui {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+            min-width: 130px;
+        }
+
+        /* A sample tag/badge - like what appears on a landmark card */
+        .sample-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            /* text and background set via inline var */
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        /* A sample button - like "Explore Region" on the home page */
+        .sample-btn {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 7px 14px;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            cursor: default;
+        }
+
+        /* A sample horizontal rule - like the decorative line under a section title */
+        .sample-line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* --- Section for dark mode preview --- */
+        .dark-preview-note {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dark-preview-note h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .dark-preview-note p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* Dark mode version of the rows */
+        .region-row.dark {
+            background: #1E1D1B;
+            border-color: #2D2A26;
+        }
+
+        .region-row.dark .region-info h2 {
+            color: #F4F4F4;
+        }
+
+        .region-row.dark .region-info .inspiration {
+            color: #777;
+        }
+
+        .region-row.dark .sample-tag {
+            /* Stays the same - accent on dark still works */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="page-title">Region Color Palette — Design Review</h1>
+    <p class="page-subtitle">
+        This page is for your approval only. Each row shows a region's proposed accent color
+        and how it will appear on a tag, a button, and a decorative line in the real UI.
+        Tell me which ones feel wrong and I will change them.
+    </p>
+
+    <!-- ============================================================
+         LIGHT MODE PREVIEW
+         The background here is #F9F7F3 which is our light mode bg
+         ============================================================ -->
+    <div class="region-list">
+
+        <!-- 1. Giza & Pyramids -->
+        <div class="region-row" style="--accent: #C9A84C;">
+            <div class="swatch" style="background-color: #C9A84C;"></div>
+            <div class="region-info">
+                <h2>Giza &amp; Pyramids</h2>
+                <div class="hex">#C9A84C — Pyramid Gold</div>
+                <div class="inspiration">Inspired by the warm limestone of the pyramids at sunset</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Wonders</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 2. Cairo -->
+        <div class="region-row" style="--accent: #B85C3A;">
+            <div class="swatch" style="background-color: #B85C3A;"></div>
+            <div class="region-info">
+                <h2>Cairo</h2>
+                <div class="hex">#B85C3A — Islamic Terracotta</div>
+                <div class="inspiration">Inspired by the old brick and clay of Islamic Cairo</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Modern</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 3. Luxor & Thebes -->
+        <div class="region-row" style="--accent: #9C7D50;">
+            <div class="swatch" style="background-color: #9C7D50;"></div>
+            <div class="region-info">
+                <h2>Luxor &amp; Thebes</h2>
+                <div class="hex">#9C7D50 — Temple Bronze</div>
+                <div class="inspiration">Inspired by the sandstone columns of Karnak temple</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Temples</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 4. Aswan & Nubia -->
+        <div class="region-row" style="--accent: #4A7A5A;">
+            <div class="swatch" style="background-color: #4A7A5A;"></div>
+            <div class="region-info">
+                <h2>Aswan &amp; Nubia</h2>
+                <div class="hex">#4A7A5A — Nile Reed Green</div>
+                <div class="inspiration">Inspired by the palm groves along the Nile banks</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Ancient</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 5. Alexandria -->
+        <div class="region-row" style="--accent: #2266AA;">
+            <div class="swatch" style="background-color: #2266AA;"></div>
+            <div class="region-info">
+                <h2>Alexandria</h2>
+                <div class="hex">#2266AA — Mediterranean Blue</div>
+                <div class="inspiration">Inspired by the sea — this is what you had in mind</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Coastal</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 6. Sinai & Red Sea -->
+        <div class="region-row" style="--accent: #B84040;">
+            <div class="swatch" style="background-color: #B84040;"></div>
+            <div class="region-info">
+                <h2>Sinai &amp; Red Sea</h2>
+                <div class="hex">#B84040 — Coral Red</div>
+                <div class="inspiration">Inspired by the coral reefs underwater</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Nature</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 7. Western Desert -->
+        <div class="region-row" style="--accent: #B8903A;">
+            <div class="swatch" style="background-color: #B8903A;"></div>
+            <div class="region-info">
+                <h2>Western Desert</h2>
+                <div class="hex">#B8903A — Sahara Amber</div>
+                <div class="inspiration">Inspired by sand dunes shifting in afternoon light</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Desert</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 8. Upper Egypt -->
+        <div class="region-row" style="--accent: #7A5C40;">
+            <div class="swatch" style="background-color: #7A5C40;"></div>
+            <div class="region-info">
+                <h2>Upper Egypt</h2>
+                <div class="hex">#7A5C40 — Nile Earth Brown</div>
+                <div class="inspiration">Inspired by ancient Nubian soil and pottery</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Heritage</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 9. Suez Canal -->
+        <div class="region-row" style="--accent: #1A4A7A;">
+            <div class="swatch" style="background-color: #1A4A7A;"></div>
+            <div class="region-info">
+                <h2>Suez Canal</h2>
+                <div class="hex">#1A4A7A — Deep Canal Navy</div>
+                <div class="inspiration">Inspired by the deep blue-gray waters of the canal</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Engineering</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+    </div><!-- end .region-list -->
+
+
+    <!-- ============================================================
+         DARK MODE PREVIEW (same colors, dark background)
+         ============================================================ -->
+    <div class="dark-preview-note">
+        <h2>Same Colors on Dark Mode Background</h2>
+        <p>
+            Below is how the same accent colors look on the dark background (#1E1D1B).
+            Dark mode will be a toggle, not the default — but it needs to look good too.
+        </p>
+    </div>
+
+    <div class="region-list" style="background: #121110; padding: 1.5rem; border-radius: 8px;">
+
+        <!-- 1. Giza dark -->
+        <div class="region-row dark" style="--accent: #D4B86A;">
+            <div class="swatch" style="background-color: #D4B86A;"></div>
+            <div class="region-info">
+                <h2>Giza &amp; Pyramids</h2>
+                <div class="hex">#D4B86A — slightly brighter in dark mode for readability</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Wonders</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 2. Cairo dark -->
+        <div class="region-row dark" style="--accent: #D4724E;">
+            <div class="swatch" style="background-color: #D4724E;"></div>
+            <div class="region-info">
+                <h2>Cairo</h2>
+                <div class="hex">#D4724E — lightened for dark mode</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Modern</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+        <!-- 3. Alexandria dark -->
+        <div class="region-row dark" style="--accent: #4D88CC;">
+            <div class="swatch" style="background-color: #4D88CC;"></div>
+            <div class="region-info">
+                <h2>Alexandria</h2>
+                <div class="hex">#4D88CC — lightened blue for dark mode</div>
+            </div>
+            <div class="sample-ui">
+                <span class="sample-tag">Coastal</span>
+                <button class="sample-btn">Explore Region</button>
+                <div class="sample-line"></div>
+            </div>
+        </div>
+
+    </div><!-- end dark preview -->
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+# Egypt Wonders — .gitignore
+# Tells git which files to NOT track
+
+# ── OS junk files ──────────────────────────────────────
+.DS_Store          # macOS metadata files
+Thumbs.db          # Windows thumbnail cache
+desktop.ini        # Windows folder settings
+
+# ── Editor / IDE files ─────────────────────────────────
+.vscode/           # VS Code workspace settings (personal, not shared)
+.idea/             # JetBrains IDE settings
+*.swp              # Vim swap files
+*.swo
+
+# ── Logs ───────────────────────────────────────────────
+*.log
+
+# ── The nested git repo inside assets/ ────────────────
+# The assets/ folder had its own .git — we ignore its internal git data
+# but we DO track the actual asset files (json, images)
+# Note: the .git folder inside assets/ is not a file, it's a directory,
+# so git will NOT track it (git never tracks other .git directories).
+# No action needed here — just documenting it for clarity.
+
+# ── Temp / scratch files ───────────────────────────────
+*.tmp
+*.bak
