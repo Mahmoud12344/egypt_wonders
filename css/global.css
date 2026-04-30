@@ -429,3 +429,29 @@ p {
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE — MOBILE ADJUSTMENTS
+   Applied globally to all pages at < 600px screen width.
+   More specific breakpoints (modal, sidebar) live in their
+   own CSS files (region.css, landmark.css).
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    /* Tighten the container padding on small screens.
+       40px (--space-lg) on each side is too much on a 380px phone. */
+    .container {
+        padding: 0 var(--space-md); /* 24px each side instead of 40px */
+    }
+
+    /* Reduce nav link font size and letter spacing to fit on one line */
+    .nav-links a {
+        font-size:      0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Reduce the gap between nav links slightly */
+    .nav-links {
+        gap: var(--space-sm);
+    }
+}
