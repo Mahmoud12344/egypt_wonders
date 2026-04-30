@@ -182,13 +182,14 @@
    thumbnail image, name, and landmark count.
    ───────────────────────────────────────────────────────────── */
 .region-card {
-    display:         block;           /* <a> tag is inline by default, we make it block */
+    display:         block;
     position:        relative;
-    border-radius:   var(--radius-lg); /* More rounded corners for modern luxury feel */
+    border-radius:   var(--radius-lg);
     overflow:        hidden;
-    aspect-ratio:    4 / 5;           /* Vertical/portrait aspect ratio for a premium magazine look */
-    border:          none;            /* Removed harsh border */
-    transition:      transform 0.4s ease, box-shadow 0.4s ease;
+    aspect-ratio:    4 / 5;
+    border:          1px solid var(--border-color);
+    box-shadow:      0 15px 40px rgba(0, 0, 0, 0.1);
+    transition:      all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     cursor:          pointer;
     background:      var(--bg-card);
 }
@@ -197,57 +198,115 @@
 .region-card-img {
     width:      100%;
     height:     100%;
-    object-fit: cover;  /* crops and fits the image without distortion */
-    transition: transform 0.4s ease; /* smooth zoom on hover */
+    object-fit: cover;
+    position:   absolute;
+    top:        0;
+    left:       0;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .region-card-overlay {
-    position:   absolute;
-    inset:      0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9) 0%,      /* very dark at bottom for max text contrast */
-        rgba(0, 0, 0, 0.4) 40%,     /* smooth transition up */
-        transparent 100%
-    );
-    transition: opacity 0.4s ease;
+    position:        absolute;
+    inset:           0;
+    background:      linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    display:         flex;
+    flex-direction:  column;
+    justify-content: flex-end;
+    padding:         2rem;
+    transition:      background 0.5s ease;
 }
 
-/* Card text content — anchored to the bottom of the card */
-.region-card-body {
-    position: absolute;
-    bottom:   0;
-    left:     0;
-    right:    0;
-    padding:  var(--space-md);
+.region-card-content {
+    position: relative;
+    z-index:  2;
 }
 
-/* Region name */
+.region-card-tag {
+    display:          inline-block;
+    font-size:        0.75rem;
+    text-transform:   uppercase;
+    letter-spacing:   2px;
+    color:            #FFFFFF;
+    background-color: var(--accent);
+    padding:          6px 12px;
+    border-radius:    20px;
+    margin-bottom:    1rem;
+    font-weight:      600;
+    transition:       transform 0.4s ease;
+    transform:        translateY(20px);
+}
+
 .region-card-name {
-    font-family:   var(--font-heading);
-    font-size:     1.1rem;
-    font-weight:   700;
-    color:         #FFFFFF;
-    margin-bottom: 4px;
+    font-family:    var(--font-heading);
+    font-size:      2rem;
+    line-height:    1.2;
+    margin-bottom:  0.5rem;
+    color:          #FFFFFF;
+    transform:      translateY(20px);
+    transition:     transform 0.4s ease 0.1s;
 }
 
-/* Landmark count — e.g., "22 Landmarks" */
-.region-card-count {
-    font-family:    var(--font-body);
-    font-size:      0.72rem;
-    font-weight:    400;
+.region-card-hidden {
+    max-height: 0;
+    opacity:    0;
+    overflow:   hidden;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.region-card-desc {
+    font-family:        var(--font-body);
+    font-size:          0.95rem;
+    color:              rgba(255, 255, 255, 0.8);
+    margin-bottom:      1.5rem;
+    display:            -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.region-card-btn {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.5rem;
+    font-size:      0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color:          rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+    color:          var(--accent);
+    font-weight:    600;
+}
+
+.region-card-btn svg {
+    width:      20px;
+    height:     20px;
+    transition: transform 0.3s ease;
 }
 
 .region-card:hover {
-    transform:    translateY(-8px) scale(1.03); /* scale and lift */
-    box-shadow:   0 20px 40px rgba(0, 0, 0, 0.15); /* deeper, softer shadow */
+    transform:    translateY(-10px);
+    border-color: var(--accent);
+    box-shadow:   0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .region-card:hover .region-card-img {
-    transform: scale(1.08);  /* image zooms in a bit more dramatically */
+    transform: scale(1.1);
+}
+
+.region-card:hover .region-card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.region-card:hover .region-card-hidden {
+    max-height: 150px;
+    opacity:    1;
+    margin-top: 1rem;
+}
+
+.region-card:hover .region-card-tag,
+.region-card:hover .region-card-name {
+    transform: translateY(0);
+}
+
+.region-card:hover .region-card-btn svg {
+    transform: translateX(5px);
 }
 
 
