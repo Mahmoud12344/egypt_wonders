@@ -307,10 +307,11 @@ p {
 
 
 /* ─────────────────────────────────────────────────────────────
-   8. NAVIGATION BAR
+   8. NAVIGATION BAR — Glassmorphism Design
    Fixed at the top of the screen so it stays visible when scrolling.
-   position: fixed removes it from the document flow.
-   z-index: 1000 puts it in front of everything else.
+   Uses backdrop-filter: blur() to create a frosted-glass effect.
+   The content behind the nav is blurred, making text readable
+   without needing a fully opaque background.
    ───────────────────────────────────────────────────────────── */
 .site-nav {
     position: fixed;
@@ -318,20 +319,35 @@ p {
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: var(--bg-nav);
-    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 
-    /* Smooth background color change when switching modes */
-    transition: background-color var(--transition), border-color var(--transition);
+    /* Glassmorphism: semi-transparent background + blur */
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    /* Smooth transition between transparent ↔ solid states */
+    transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-/* Transparent modifier (used on Home Page when at the top) */
+/* Dark mode: frosted dark glass */
+[data-mode="dark"] .site-nav {
+    background-color: rgba(18, 18, 18, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Transparent modifier (used on Home Page when at the top of the hero).
+   This creates a DARK frosted glass so white text is always
+   readable over the hero video, regardless of video brightness. */
 .site-nav.transparent {
-    background-color: transparent;
-    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* When transparent, all text must be white to contrast with the dark glass */
 .site-nav.transparent .nav-links a {
     color: #FFFFFF;
 }
@@ -342,11 +358,11 @@ p {
 
 .site-nav.transparent .nav-mode-btn {
     color: #FFFFFF;
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .site-nav.transparent .nav-mode-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* The inner flex row: logo on left, links + toggle on right */

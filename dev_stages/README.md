@@ -24,6 +24,7 @@ and **how** every part of the code works.
 | 8 | `stage-08-video-hero.md` | `ffmpeg` video compression, HTML5 background video attributes, CSS object-fit | ✅ Done |
 | 9 | `stage-09-cinematic-animations.md` | CSS animations from scratch, cinematic reveal card interactions, centered modals | ✅ Done |
 | 10 | `stage-10-background-polish.md` | CSS SVG Noise textures, IntersectionObserver scroll reveals, and giant background typography | ✅ Done |
+| 11 | `stage-11-nav-upgrade.md` | Glassmorphism nav, `backdrop-filter: blur()`, fixing white-on-white hero bug | ✅ Done |
 
 ---
 
