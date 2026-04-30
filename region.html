@@ -32,6 +32,9 @@
 
 <body>
 
+    <!-- Giant background typography to fill empty space -->
+    <div class="bg-watermark" aria-hidden="true" id="region-watermark">REGION</div>
+
     <!-- =========================================================
          NAVIGATION BAR — identical to index.html
          nav.js handles active link and dark mode toggle
@@ -93,7 +96,7 @@
              The grid itself starts empty. region.js populates it
              after fetching and filtering landmarks.json.
              ───────────────────────────────────────────────────── -->
-        <section class="landmarks-section" aria-label="Landmark cards">
+        <section class="landmarks-section reveal-element" aria-label="Landmark cards">
             <div class="container">
 
                 <!-- Loading indicator — visible until JS removes it -->
@@ -189,6 +192,7 @@
     <!-- Scripts at end of body — DOM must exist before JS runs -->
     <script src="js/nav.js"></script>
     <script src="js/region.js"></script>
+    <script src="js/reveal.js"></script>
 
 </body>
 

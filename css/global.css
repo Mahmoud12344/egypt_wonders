@@ -42,36 +42,47 @@
 :root {
     /* Typography */
     --font-heading: 'Playfair Display', serif;
-    --font-body:    'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     /* Light mode background colors (default) */
-    --bg-body:      #FFFFFF; /* crisp white */
-    --bg-card:      #FFFFFF; 
-    --bg-nav:       #FFFFFF; /* solid nav by default */
+    --bg-body: #FCFAF8;
+    /* desert bone white */
+    --bg-card: #FFFFFF;
+    --bg-nav: #FFFFFF;
+    /* solid nav by default */
 
     /* Light mode text colors */
-    --text-main:    #1C1C1C; /* deep charcoal */
-    --text-muted:   #666666; 
-    --text-nav:     #1C1C1C; /* dark nav links by default */
+    --text-main: #1C1C1C;
+    /* deep charcoal */
+    --text-muted: #666666;
+    --text-nav: #1C1C1C;
+    /* dark nav links by default */
 
     /* Light mode borders and dividers */
-    --border-color: #EEEEEE; 
+    --border-color: #EEEEEE;
 
     /* Default accent color */
-    --accent:       #D4AF37; /* metallic gold */
+    --accent: #D4AF37;
+    /* metallic gold */
 
     /* Navigation */
-    --nav-height:   68px; /* fixed height for the nav bar */
+    --nav-height: 68px;
+    /* fixed height for the nav bar */
 
     /* Spacing scale — consistent gaps throughout the project.
        We use rem units: 1rem = 16px (browser default).
        All spacing is relative to this, so if the user changes
        their browser font size, everything scales correctly. */
-    --space-xs:  0.5rem;   /*  8px */
-    --space-sm:  0.75rem;  /* 12px */
-    --space-md:  1.5rem;   /* 24px */
-    --space-lg:  2.5rem;   /* 40px */
-    --space-xl:  4rem;     /* 64px */
+    --space-xs: 0.5rem;
+    /*  8px */
+    --space-sm: 0.75rem;
+    /* 12px */
+    --space-md: 1.5rem;
+    /* 24px */
+    --space-lg: 2.5rem;
+    /* 40px */
+    --space-xl: 4rem;
+    /* 64px */
 
     /* Border radius — how rounded the corners are */
     --radius-sm: 4px;
@@ -92,12 +103,13 @@
    JavaScript does NOT need to touch individual elements.
    ───────────────────────────────────────────────────────────── */
 [data-mode="dark"] {
-    --bg-body:      #121212; /* deeper charcoal background */
-    --bg-card:      #1A1A1A;
-    --bg-nav:       #1A1A1A;
-    --text-main:    #F4F4F4;
-    --text-muted:   #A0A0A0;
-    --text-nav:     #F4F4F4;
+    --bg-body: #121212;
+    /* deeper charcoal background */
+    --bg-card: #1A1A1A;
+    --bg-nav: #1A1A1A;
+    --text-main: #F4F4F4;
+    --text-muted: #A0A0A0;
+    --text-nav: #F4F4F4;
     --border-color: #2A2A2A;
 }
 
@@ -115,26 +127,88 @@
    ───────────────────────────────────────────────────────────── */
 
 /* Light mode region accents */
-[data-region="giza_pyramids"]  { --accent: #C9A84C; } /* Pyramid Gold        */
-[data-region="cairo"]          { --accent: #B85C3A; } /* Islamic Terracotta  */
-[data-region="luxor_thebes"]   { --accent: #9C7D50; } /* Temple Bronze       */
-[data-region="aswan_nubia"]    { --accent: #4A7A5A; } /* Nile Reed Green     */
-[data-region="alexandria"]     { --accent: #2266AA; } /* Mediterranean Blue  */
-[data-region="sinai_red_sea"]  { --accent: #B84040; } /* Coral Red           */
-[data-region="western_desert"] { --accent: #B8903A; } /* Sahara Amber        */
-[data-region="upper_egypt"]    { --accent: #7A5C40; } /* Nile Earth Brown    */
-[data-region="suez_canal"]     { --accent: #1A4A7A; } /* Deep Canal Navy     */
+[data-region="giza_pyramids"] {
+    --accent: #C9A84C;
+}
+
+/* Pyramid Gold        */
+[data-region="cairo"] {
+    --accent: #B85C3A;
+}
+
+/* Islamic Terracotta  */
+[data-region="luxor_thebes"] {
+    --accent: #9C7D50;
+}
+
+/* Temple Bronze       */
+[data-region="aswan_nubia"] {
+    --accent: #4A7A5A;
+}
+
+/* Nile Reed Green     */
+[data-region="alexandria"] {
+    --accent: #2266AA;
+}
+
+/* Mediterranean Blue  */
+[data-region="sinai_red_sea"] {
+    --accent: #B84040;
+}
+
+/* Coral Red           */
+[data-region="western_desert"] {
+    --accent: #B8903A;
+}
+
+/* Sahara Amber        */
+[data-region="upper_egypt"] {
+    --accent: #7A5C40;
+}
+
+/* Nile Earth Brown    */
+[data-region="suez_canal"] {
+    --accent: #1A4A7A;
+}
+
+/* Deep Canal Navy     */
 
 /* Dark mode region accents — same hue, increased brightness */
-[data-mode="dark"][data-region="giza_pyramids"]  { --accent: #D4B86A; }
-[data-mode="dark"][data-region="cairo"]          { --accent: #D4724E; }
-[data-mode="dark"][data-region="luxor_thebes"]   { --accent: #B8956A; }
-[data-mode="dark"][data-region="aswan_nubia"]    { --accent: #5E9670; }
-[data-mode="dark"][data-region="alexandria"]     { --accent: #4D88CC; }
-[data-mode="dark"][data-region="sinai_red_sea"]  { --accent: #D45C5C; }
-[data-mode="dark"][data-region="western_desert"] { --accent: #D4A84C; }
-[data-mode="dark"][data-region="upper_egypt"]    { --accent: #9E7A58; }
-[data-mode="dark"][data-region="suez_canal"]     { --accent: #2E6AAA; }
+[data-mode="dark"][data-region="giza_pyramids"] {
+    --accent: #D4B86A;
+}
+
+[data-mode="dark"][data-region="cairo"] {
+    --accent: #D4724E;
+}
+
+[data-mode="dark"][data-region="luxor_thebes"] {
+    --accent: #B8956A;
+}
+
+[data-mode="dark"][data-region="aswan_nubia"] {
+    --accent: #5E9670;
+}
+
+[data-mode="dark"][data-region="alexandria"] {
+    --accent: #4D88CC;
+}
+
+[data-mode="dark"][data-region="sinai_red_sea"] {
+    --accent: #D45C5C;
+}
+
+[data-mode="dark"][data-region="western_desert"] {
+    --accent: #D4A84C;
+}
+
+[data-mode="dark"][data-region="upper_egypt"] {
+    --accent: #9E7A58;
+}
+
+[data-mode="dark"][data-region="suez_canal"] {
+    --accent: #2E6AAA;
+}
 
 
 /* ─────────────────────────────────────────────────────────────
@@ -151,9 +225,10 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* padding/border counts INSIDE the element size, not outside */
-    margin:     0;
-    padding:    0;
+    box-sizing: border-box;
+    /* padding/border counts INSIDE the element size, not outside */
+    margin: 0;
+    padding: 0;
 }
 
 /* Remove default list styling (we use <ul> for nav links) */
@@ -163,14 +238,14 @@ ul {
 
 /* Make images behave like block elements and never overflow */
 img {
-    display:   block;
+    display: block;
     max-width: 100%;
 }
 
 /* Remove default anchor styling — we style links ourselves */
 a {
     text-decoration: none;
-    color:           inherit;
+    color: inherit;
 }
 
 
@@ -178,27 +253,38 @@ a {
    6. BASE BODY & TYPOGRAPHY
    ───────────────────────────────────────────────────────────── */
 body {
-    font-family:      var(--font-body);
+    font-family: var(--font-body);
     background-color: var(--bg-body);
-    color:            var(--text-main);
-    line-height:      1.65;    /* comfortable reading line height */
-    min-height:       100vh;   /* page always fills the full screen height */
+    /* Premium CSS Noise Texture */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    color: var(--text-main);
+    line-height: 1.65;
+    /* comfortable reading line height */
+    min-height: 100vh;
+    /* page always fills the full screen height */
 
     /* Smooth transition when toggling dark/light mode */
     transition: background-color var(--transition), color var(--transition);
 }
 
 /* All headings use the heading font */
-h1, h2, h3, h4, h5, h6 {
-    font-family:  var(--font-heading);
-    font-weight:  700;
-    line-height:  1.2; /* tighter line height for large text */
-    color:        var(--text-main);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    /* tighter line height for large text */
+    color: var(--text-main);
 }
 
 /* Body text paragraphs */
 p {
-    color:     var(--text-muted);
+    color: var(--text-muted);
     font-weight: 300;
 }
 
@@ -215,8 +301,8 @@ p {
    ───────────────────────────────────────────────────────────── */
 .container {
     max-width: 1280px;
-    margin:    0 auto;
-    padding:   0 var(--space-lg);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
 }
 
 
@@ -227,14 +313,14 @@ p {
    z-index: 1000 puts it in front of everything else.
    ───────────────────────────────────────────────────────────── */
 .site-nav {
-    position:         fixed;
-    top:              0;
-    left:             0;
-    width:            100%;
-    height:           var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
     background-color: var(--bg-nav);
-    border-bottom:    1px solid var(--border-color);
-    z-index:          1000;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
 
     /* Smooth background color change when switching modes */
     transition: background-color var(--transition), border-color var(--transition);
@@ -243,99 +329,109 @@ p {
 /* Transparent modifier (used on Home Page when at the top) */
 .site-nav.transparent {
     background-color: transparent;
-    border-bottom:    none;
+    border-bottom: none;
 }
-.site-nav.transparent .nav-links a { color: #FFFFFF; }
-.site-nav.transparent .nav-logo { color: #FFFFFF; }
-.site-nav.transparent .nav-mode-btn { 
-    color: #FFFFFF; 
-    border-color: rgba(255, 255, 255, 0.4); 
+
+.site-nav.transparent .nav-links a {
+    color: #FFFFFF;
 }
+
+.site-nav.transparent .nav-logo {
+    color: #FFFFFF;
+}
+
+.site-nav.transparent .nav-mode-btn {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
 .site-nav.transparent .nav-mode-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* The inner flex row: logo on left, links + toggle on right */
 .nav-inner {
-    height:          100%;
-    display:         flex;
-    align-items:     center;
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 /* Logo — the site name in the top-left */
 .nav-logo {
-    font-family:   var(--font-heading);
-    font-size:     1.25rem;
-    font-weight:   700;
-    color:         var(--accent);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
     letter-spacing: 1px;
-    transition:    color var(--transition);
+    transition: color var(--transition);
 }
 
 /* The group on the right: links + dark mode button */
 .nav-right {
-    display:     flex;
+    display: flex;
     align-items: center;
-    gap:         var(--space-md);
+    gap: var(--space-md);
 }
 
 /* The <ul> holding the nav links */
 .nav-links {
-    display:     flex;
+    display: flex;
     align-items: center;
-    gap:         var(--space-lg); /* Increased spacing for minimal luxury feel */
+    gap: var(--space-lg);
+    /* Increased spacing for minimal luxury feel */
 }
 
 /* Individual nav link */
 .nav-links a {
-    font-size:      0.85rem;
-    font-weight:    600;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color:          var(--text-nav);
+    color: var(--text-nav);
     padding-bottom: 2px;
 
     /* The underline effect on hover/active */
-    border-bottom:  2px solid transparent;
-    transition:     color var(--transition), border-color var(--transition);
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
 }
 
 /* Hover state: show accent-colored underline */
 .nav-links a:hover {
-    color:        var(--accent);
+    color: var(--accent);
     border-color: var(--accent);
 }
 
 /* Active state: set by nav.js on the current page's link */
 .nav-links a.active {
-    color:        var(--accent);
+    color: var(--accent);
     border-color: var(--accent);
 }
 
 /* Dark mode toggle button */
 .nav-mode-btn {
-    background:    none;
-    border:        1px solid var(--border-color);
+    background: none;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
-    width:         36px;
-    height:        36px;
-    cursor:        pointer;
-    font-size:     1rem;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1rem;
 
     /* Centre the icon inside */
-    display:       flex;
-    align-items:   center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 
     /* Inherit font so the emoji icon renders correctly */
-    font-family:   inherit;
-    color:         var(--text-nav); /* Matches nav text */
-    transition:    border-color var(--transition), background-color var(--transition);
+    font-family: inherit;
+    color: var(--text-nav);
+    /* Matches nav text */
+    transition: border-color var(--transition), background-color var(--transition);
 }
 
 .nav-mode-btn:hover {
-    border-color:     var(--accent);
+    border-color: var(--accent);
     background-color: var(--bg-card);
 }
 
@@ -351,24 +447,24 @@ p {
    Simple, minimal footer at the bottom of every page.
    ───────────────────────────────────────────────────────────── */
 .site-footer {
-    margin-top:    var(--space-xl);
-    padding:       var(--space-lg) 0;
-    border-top:    1px solid var(--border-color);
-    text-align:    center;
-    transition:    border-color var(--transition);
+    margin-top: var(--space-xl);
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    transition: border-color var(--transition);
 }
 
 .site-footer p {
-    font-size:  0.8rem;
-    color:      var(--text-muted);
+    font-size: 0.8rem;
+    color: var(--text-muted);
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 /* The accent-coloured dot separator between footer items */
 .footer-separator {
-    color:   var(--accent);
-    margin:  0 0.5rem;
+    color: var(--accent);
+    margin: 0 0.5rem;
 }
 
 
@@ -380,21 +476,21 @@ p {
 
 /* Solid button — filled with accent color */
 .btn-solid {
-    display:        inline-flex;
-    align-items:    center;
-    gap:            0.5rem;
-    padding:        0.65rem 1.4rem;
-    background:     var(--accent);
-    color:          #FFFFFF;
-    border:         1px solid var(--accent);
-    border-radius:  var(--radius-sm);
-    font-family:    var(--font-body);
-    font-size:      0.8rem;
-    font-weight:    600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    background: var(--accent);
+    color: #FFFFFF;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor:         pointer;
-    transition:     opacity var(--transition);
+    cursor: pointer;
+    transition: opacity var(--transition);
 }
 
 .btn-solid:hover {
@@ -403,26 +499,26 @@ p {
 
 /* Outline button — transparent with accent border */
 .btn-outline {
-    display:        inline-flex;
-    align-items:    center;
-    gap:            0.5rem;
-    padding:        0.65rem 1.4rem;
-    background:     transparent;
-    color:          var(--accent);
-    border:         1px solid var(--accent);
-    border-radius:  var(--radius-sm);
-    font-family:    var(--font-body);
-    font-size:      0.8rem;
-    font-weight:    600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor:         pointer;
-    transition:     background-color var(--transition), color var(--transition);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
 }
 
 .btn-outline:hover {
     background-color: var(--accent);
-    color:            #FFFFFF;
+    color: #FFFFFF;
 }
 
 
@@ -432,13 +528,14 @@ p {
    Example: "Ancient Temples", "Modern Marvels", "Nature"
    ───────────────────────────────────────────────────────────── */
 .badge {
-    display:        inline-block;
-    padding:        3px 10px;
-    background:     var(--accent);
-    color:          #FFFFFF;
-    border-radius:  20px; /* pill shape */
-    font-size:      0.7rem;
-    font-weight:    600;
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--accent);
+    color: #FFFFFF;
+    border-radius: 20px;
+    /* pill shape */
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -451,15 +548,17 @@ p {
    own CSS files (region.css, landmark.css).
    ───────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
+
     /* Tighten the container padding on small screens.
        40px (--space-lg) on each side is too much on a 380px phone. */
     .container {
-        padding: 0 var(--space-md); /* 24px each side instead of 40px */
+        padding: 0 var(--space-md);
+        /* 24px each side instead of 40px */
     }
 
     /* Reduce nav link font size and letter spacing to fit on one line */
     .nav-links a {
-        font-size:      0.75rem;
+        font-size: 0.75rem;
         letter-spacing: 0.5px;
     }
 
@@ -467,4 +566,40 @@ p {
     .nav-links {
         gap: var(--space-sm);
     }
+}
+/* ─────────────────────────────────────────────────────────────
+   12. DECORATIVE BACKGROUND WATERMARK
+   ───────────────────────────────────────────────────────────── */
+.bg-watermark {
+    position:       fixed;
+    top:            50%;
+    left:           50%;
+    transform:      translate(-50%, -50%);
+    font-family:    var(--font-heading);
+    font-size:      clamp(8rem, 20vw, 25rem);
+    font-weight:    700;
+    color:          var(--text-main);
+    opacity:        0.02;
+    white-space:    nowrap;
+    z-index:        -1;
+    pointer-events: none;
+    user-select:    none;
+}
+
+[data-mode="dark"] .bg-watermark {
+    opacity: 0.04;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   13. SCROLL REVEAL ANIMATIONS
+   ───────────────────────────────────────────────────────────── */
+.reveal-element {
+    opacity:    0;
+    transform:  translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-visible {
+    opacity:   1;
+    transform: translateY(0);
 }

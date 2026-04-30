@@ -113,6 +113,12 @@ function renderLandmarkPage(landmark, imageData) {
     /* ── Browser tab title ──────────────────────────────────── */
     document.title = landmark.name + ' — Egypt Wonders';
 
+    /* ── Background Watermark ───────────────────────────────── */
+    const watermarkEl = document.getElementById('landmark-watermark');
+    if (watermarkEl) {
+        watermarkEl.textContent = landmark.name.toUpperCase();
+    }
+
     /* ── Hero section ────────────────────────────────────────── */
     const heroEl = document.getElementById('landmark-hero');
     const heroImg = landmark.imagePath || landmark.thumbnail || '';

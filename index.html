@@ -40,6 +40,9 @@
 
 <body>
 
+    <!-- Giant background typography to fill empty space -->
+    <div class="bg-watermark" aria-hidden="true">WONDERS</div>
+
     <!-- =========================================================
          NAVIGATION BAR
          Identical across all pages. nav.js handles:
@@ -116,7 +119,7 @@
                alexandria, sinai_red_sea, western_desert,
                upper_egypt, suez_canal
              ───────────────────────────────────────────────────── -->
-        <section class="regions-section" aria-label="Explore by region">
+        <section class="regions-section reveal-element" aria-label="Explore by region">
             <div class="container main-layout">
                 
                 <!-- Left Column: The Region Cards -->
@@ -381,6 +384,7 @@
          before JavaScript tries to find and use them.
          ========================================================= -->
     <script src="js/nav.js"></script>
+    <script src="js/reveal.js"></script>
 
 </body>
 

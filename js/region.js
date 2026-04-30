@@ -84,9 +84,13 @@ function renderRegionHeader(config, count) {
     /* Update the browser tab title */
     document.title = config.label + ' — Egypt Wonders';
 
-    /* Update the visible region name heading */
+    /* Update the header text */
     const nameEl = document.getElementById('region-name');
     if (nameEl) nameEl.textContent = config.label;
+
+    /* Update the giant background watermark */
+    const watermarkEl = document.getElementById('region-watermark');
+    if (watermarkEl) watermarkEl.textContent = config.label.toUpperCase();
 
     /* Update the landmark count */
     const countEl = document.getElementById('region-count');
