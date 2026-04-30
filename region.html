@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    region.html — Landmark Grid Page
+    ==================================
+    This page displays all landmarks for ONE region.
+    Which region is determined by the URL: region.html?id=cairo
+
+    WHAT IS DYNAMIC vs STATIC on this page:
+    - The nav bar, modal shell, and grid container = STATIC HTML
+    - The region name, landmark count, and all cards = filled by region.js
+
+    LOADING STRATEGY:
+    The page shows a "Loading..." message while region.js fetches
+    the JSON. Once data is ready, JS hides the loader and inserts cards.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default title — region.js updates this to the real region name -->
+    <title>Region — Egypt Wonders</title>
+
+    <meta name="description" content="Explore Egypt's landmarks by region. Discover ancient temples, modern marvels, and natural wonders.">
+
+    <!-- CSS: global design system first, then region-specific styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/region.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         NAVIGATION BAR — identical to index.html
+         nav.js handles active link and dark mode toggle
+         ========================================================= -->
+    <header class="site-nav" role="banner">
+        <nav class="nav-inner container" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">Egypt Wonders</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="page-content">
+
+        <!-- ─────────────────────────────────────────────────────
+             REGION HEADER
+             The thin accent bar at the top changes color per region
+             because CSS reads the data-region on <body> (set by JS).
+             The name and count are empty — region.js fills them in.
+             ───────────────────────────────────────────────────── -->
+        <section class="region-header">
+
+            <!-- Accent bar: 3px tall colored stripe. Its color is var(--accent)
+                 which changes automatically when data-region is set on <body> -->
+            <div class="region-header-accent-bar" aria-hidden="true"></div>
+
+            <div class="container">
+                <!-- Back link — lets user return to the home page -->
+                <a
+                    href="index.html"
+                    style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;
+                           text-transform: uppercase; letter-spacing: 1px;
+                           display: inline-flex; align-items: center; gap: 0.4rem;
+                           margin-bottom: var(--space-sm);">
+                    ← All Regions
+                </a>
+
+                <!-- Region name — filled by region.js -->
+                <h1 class="region-name" id="region-name">Loading...</h1>
+
+                <!-- Meta row: landmark count -->
+                <div class="region-meta">
+                    <span class="region-landmark-count" id="region-count"></span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ─────────────────────────────────────────────────────
+             LANDMARKS GRID SECTION
+             The grid itself starts empty. region.js populates it
+             after fetching and filtering landmarks.json.
+             ───────────────────────────────────────────────────── -->
+        <section class="landmarks-section" aria-label="Landmark cards">
+            <div class="container">
+
+                <!-- Loading indicator — visible until JS removes it -->
+                <p class="loading-indicator" id="loading-indicator">
+                    Loading landmarks...
+                </p>
+
+                <!-- The grid — empty on load, filled by region.js -->
+                <div class="landmark-grid" id="landmark-grid" role="list">
+                    <!-- Cards are injected here by region.js -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         MODAL — Quick Preview Dialog
+         This HTML shell is always in the DOM but hidden.
+         region.js fills it with data and opens it on card click.
+
+         The <dialog> element is HIDDEN by default — browsers do not
+         show it until .showModal() is called in JavaScript.
+         ========================================================= -->
+    <dialog class="landmark-modal" id="landmark-modal" aria-modal="true" aria-labelledby="modal-title">
+
+        <div class="modal-layout">
+
+            <!-- Left column: landmark image -->
+            <img
+                class="modal-image"
+                id="modal-image"
+                src=""
+                alt=""
+                loading="lazy">
+
+            <!-- Right column: text content -->
+            <div class="modal-body">
+
+                <!-- Close button — calls closeModal() in region.js -->
+                <button
+                    class="modal-close-btn"
+                    id="modal-close-btn"
+                    aria-label="Close preview">
+                    &times; <!-- HTML entity for the × character -->
+                </button>
+
+                <!-- Category label — e.g., "Ancient Temples" -->
+                <p class="modal-category" id="modal-category"></p>
+
+                <!-- Landmark name — also used as aria-labelledby for the dialog -->
+                <h2 class="modal-title" id="modal-title"></h2>
+
+                <!-- Short description (1–2 sentences) -->
+                <p class="modal-desc" id="modal-desc"></p>
+
+                <!-- Decorative divider line -->
+                <div class="modal-divider" aria-hidden="true"></div>
+
+                <!-- Link to the full landmark detail page.
+                     href is set dynamically by region.js: landmark.html?id=11959 -->
+                <a
+                    class="btn-solid modal-detail-link"
+                    id="modal-detail-link"
+                    href="#">
+                    See Full Details →
+                </a>
+
+            </div><!-- end .modal-body -->
+        </div><!-- end .modal-layout -->
+
+    </dialog>
+
+
+    <!-- =========================================================
+         FOOTER — identical to index.html
+         ========================================================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>
+                Egypt Wonders
+                <span class="footer-separator">·</span>
+                Fourth Semester Web Project
+                <span class="footer-separator">·</span>
+                2026
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts at end of body — DOM must exist before JS runs -->
+    <script src="js/nav.js"></script>
+    <script src="js/region.js"></script>
+
+</body>
+
+</html>
