@@ -81,26 +81,27 @@
 
         <!-- ─────────────────────────────────────────────────────
              HERO SECTION
-             Full-width cinematic section. Background image is
-             the Great Pyramid of Giza — the most iconic landmark.
-             The overlay darkens it so text is always readable.
+             The video is set to autoplay, loop, and mute (required for autoplay).
+             It stays behind the dark overlay so text remains readable.
              ───────────────────────────────────────────────────── -->
         <section class="hero" aria-label="Hero banner">
 
-            <!-- Overlay: pure CSS darkening layer over the image -->
+            <!-- Video background -->
+            <video class="hero-video" autoplay loop muted playsinline poster="assets/images/Great_Pyramid_of_Giza/0.jpg">
+                <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+            </video>
+
+            <!-- Darkening overlay so white text is always readable -->
             <div class="hero-overlay" aria-hidden="true"></div>
 
-            <!-- Text content -->
             <div class="hero-content">
                 <span class="hero-eyebrow">Discover Egypt</span>
                 <h1 class="hero-title">Seven Thousand Years<br>of Wonder</h1>
                 <p class="hero-subtitle">
-                    From the last surviving wonder of the ancient world
-                    to the modern marvels of a rising nation — explore
-                    Egypt's most extraordinary landmarks.
+                    From the last surviving Wonder of the Ancient World to the turquoise
+                    waters of the Red Sea, explore the monuments that shaped human history.
                 </p>
             </div>
-
         </section>
 
 

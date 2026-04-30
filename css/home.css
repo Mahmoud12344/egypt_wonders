@@ -22,10 +22,21 @@
     align-items:     center;
     justify-content: center;
     text-align:      center;
-    overflow:        hidden;         /* prevents the zoomed bg image from overflowing */
-    background-image:    url('../assets/images/Great_Pyramid_of_Giza/0.jpg');
-    background-size:     cover;
-    background-position: center;
+    overflow:        hidden;         /* prevents the video from overflowing */
+}
+
+/* The video background replacing the static image */
+.hero-video {
+    position:   absolute;
+    top:        50%;
+    left:       50%;
+    min-width:  100%;
+    min-height: 100%;
+    width:      auto;
+    height:     auto;
+    transform:  translate(-50%, -50%);
+    object-fit: cover;
+    z-index:    0;
 }
 
 /* Semi-transparent overlay that darkens the background image
