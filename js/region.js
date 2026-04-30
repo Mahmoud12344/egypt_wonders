@@ -186,9 +186,7 @@ function buildLandmarkCard(landmark) {
                     <!-- Hidden reveal content -->
                     <div class="landmark-card-hidden">
                         <p class="landmark-card-desc">${landmark.description || ''}</p>
-                        <span class="landmark-card-btn">Quick Preview
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </span>
+                        <span class="landmark-card-btn">Quick Preview →</span>
                     </div>
                 </div>
             </div>
