@@ -100,3 +100,17 @@ if (modeBtn) {
         }
     });
 }
+
+/* ─────────────────────────────────────────────────────────────
+   PART 3: TRANSPARENT NAV SCROLL LISTENER (Home Page Only)
+   ───────────────────────────────────────────────────────────── */
+const siteNav = document.querySelector('.site-nav');
+if (siteNav && siteNav.classList.contains('transparent')) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            siteNav.classList.remove('transparent');
+        } else {
+            siteNav.classList.add('transparent');
+        }
+    });
+}

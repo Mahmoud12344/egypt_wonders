@@ -16,13 +16,13 @@
    height, but can grow taller if content requires it.
    ───────────────────────────────────────────────────────────── */
 .hero {
-    position:        relative;       /* needed so .hero-overlay can position itself inside */
-    min-height:      55vh;
+    position:        relative;
+    min-height:      100vh;
     display:         flex;
     align-items:     center;
-    justify-content: center;
-    text-align:      center;
-    overflow:        hidden;         /* prevents the video from overflowing */
+    justify-content: flex-start; /* Align content to the left */
+    text-align:      left;
+    overflow:        hidden;
 }
 
 /* The video background replacing the static image */
@@ -102,7 +102,7 @@
     font-weight: 300;
     color:       rgba(255, 255, 255, 0.8);
     max-width:   480px;
-    margin:      0 auto;
+    margin:      0; /* Left align */
     line-height: 1.7;
     opacity:        0;
     animation:      fadeInUp 0.8s ease forwards;
@@ -117,6 +117,22 @@
    ───────────────────────────────────────────────────────────── */
 .regions-section {
     padding: var(--space-xl) 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN LAYOUT (Cards + Sidebar)
+   ───────────────────────────────────────────────────────────── */
+.main-layout {
+    display:               grid;
+    grid-template-columns: 1fr 340px; /* 1 fraction for cards, 340px for sidebar */
+    gap:                   var(--space-xl);
+    align-items:           start; /* prevents sidebar from stretching to full height */
+}
+
+/* Container for the region groups */
+.regions-column {
+    display: flex;
+    flex-direction: column;
 }
 
 /* A single geographic group (e.g., "The Nile Valley")
@@ -155,7 +171,7 @@
    This is responsive without any media queries. */
 .region-grid {
     display:               grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* strictly 2 columns */
     gap:                   2rem;
 }
 
@@ -232,4 +248,62 @@
 
 .region-card:hover .region-card-img {
     transform: scale(1.08);  /* image zooms in a bit more dramatically */
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   SIDEBAR
+   Complementary content balancing the page layout
+   ───────────────────────────────────────────────────────────── */
+.home-sidebar {
+    position: sticky;
+    top:      calc(var(--nav-height) + var(--space-lg));
+}
+
+.sidebar-widget {
+    background:    var(--bg-card);
+    padding:       var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    border:        1px solid var(--border-color);
+}
+
+.widget-title {
+    font-family:    var(--font-heading);
+    font-size:      1.1rem;
+    font-weight:    700;
+    color:          var(--text-main);
+    margin-bottom:  var(--space-sm);
+    letter-spacing: 1px;
+}
+
+.widget-text {
+    font-family: var(--font-body);
+    font-size:   0.95rem;
+    color:       var(--text-muted);
+    line-height: 1.6;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE LAYOUT
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 950px) {
+    /* Collapse the main layout to a single column */
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    /* The sidebar goes to the bottom */
+    .home-sidebar {
+        position: static;
+        margin-top: var(--space-lg);
+    }
+}
+
+@media (max-width: 600px) {
+    /* On mobile, cards should stack 1 per row */
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
 }

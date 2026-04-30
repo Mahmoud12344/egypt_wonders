@@ -46,7 +46,7 @@
          - Highlighting the active link (Home is active here)
          - Dark/light mode toggle
          ========================================================= -->
-    <header class="site-nav" role="banner">
+    <header class="site-nav transparent" role="banner">
         <nav class="nav-inner container" aria-label="Main navigation">
 
             <!-- Logo — links back to the home page -->
@@ -117,8 +117,10 @@
                upper_egypt, suez_canal
              ───────────────────────────────────────────────────── -->
         <section class="regions-section" aria-label="Explore by region">
-            <div class="container">
-
+            <div class="container main-layout">
+                
+                <!-- Left Column: The Region Cards -->
+                <div class="regions-column">
 
                 <!-- ── GROUP 1: THE NILE VALLEY ────────────────
                      The regions along the Nile from north to south:
@@ -290,8 +292,29 @@
                     </div>
                 </div>
 
+                </div><!-- end .regions-column -->
 
-            </div><!-- end .container -->
+                <!-- Right Column: Sidebar -->
+                <aside class="home-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">About the Project</h3>
+                        <p class="widget-text">
+                            Egypt Wonders is a comprehensive documentary experience exploring the 
+                            monuments, temples, and natural beauty that have shaped human history for 
+                            seven millennia.
+                        </p>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Start Exploring</h3>
+                        <p class="widget-text">
+                            Choose a region on the left to discover its unique landmarks, historical
+                            significance, and exact coordinates.
+                        </p>
+                    </div>
+                </aside>
+
+            </div><!-- end .container.main-layout -->
         </section>
 
     </main>
