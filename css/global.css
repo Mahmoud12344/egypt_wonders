@@ -45,7 +45,7 @@
     --font-body: 'Inter', sans-serif;
 
     /* Light mode background colors (default) */
-    --bg-body: #FCFAF8;
+    --bg-body: #F4EFE6;
     /* desert bone white */
     --bg-card: #FFFFFF;
     --bg-nav: #FFFFFF;
@@ -256,7 +256,7 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-body);
     /* Premium CSS Noise Texture */
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
     background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.65;
@@ -579,7 +579,7 @@ p {
     font-size:      clamp(8rem, 20vw, 25rem);
     font-weight:    700;
     color:          var(--text-main);
-    opacity:        0.02;
+    opacity:        0.08;
     white-space:    nowrap;
     z-index:        -1;
     pointer-events: none;
