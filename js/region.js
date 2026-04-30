@@ -157,7 +157,7 @@ function buildLandmarkCard(landmark) {
        then read it in the event listener. This avoids inline onclick="". */
     return `
         <article
-            class="landmark-card"
+            class="landmark-card cinematic-card"
             data-id="${landmark.id}"
             role="button"
             tabindex="0"
@@ -170,22 +170,27 @@ function buildLandmarkCard(landmark) {
                 alt="${altText}"
                 loading="lazy">
 
-            <div class="landmark-card-body">
+            <div class="landmark-card-overlay">
+                <div class="landmark-card-content">
+                    <!-- Top row: category badge + importance indicator -->
+                    <div class="landmark-card-top">
+                        <span class="landmark-card-tag">${category}</span>
+                        <div class="importance-dots" aria-label="Importance: ${landmark.importance} out of 10">
+                            ${dotsHTML}
+                        </div>
+                    </div>
 
-                <!-- Top row: category badge + importance indicator -->
-                <div class="landmark-card-top">
-                    <span class="badge">${category}</span>
-                    <div class="importance-dots" aria-label="Importance: ${landmark.importance} out of 10">
-                        ${dotsHTML}
+                    <!-- Landmark name -->
+                    <h2 class="landmark-card-name">${landmark.name}</h2>
+
+                    <!-- Hidden reveal content -->
+                    <div class="landmark-card-hidden">
+                        <p class="landmark-card-desc">${landmark.description || ''}</p>
+                        <span class="landmark-card-btn">Quick Preview
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </span>
                     </div>
                 </div>
-
-                <!-- Landmark name -->
-                <h2 class="landmark-card-name">${landmark.name}</h2>
-
-                <!-- Short description (2-line clamp via CSS) -->
-                <p class="landmark-card-desc">${landmark.description || ''}</p>
-
             </div>
         </article>
     `;

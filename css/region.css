@@ -107,32 +107,54 @@
     border:        1px solid var(--border-color);
     border-radius: var(--radius-md);
     overflow:      hidden;
+    position:      relative;
+    aspect-ratio:  4 / 5;
+    box-shadow:    0 15px 40px rgba(0, 0, 0, 0.1);
     cursor:        pointer;
-    transition:    transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    transition:    all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .landmark-card:hover {
-    transform:    translateY(-4px);
-    box-shadow:   0 10px 28px rgba(0, 0, 0, 0.1);
+    transform:    translateY(-10px);
+    box-shadow:   0 20px 50px rgba(0, 0, 0, 0.3);
     border-color: var(--accent);
 }
 
 /* Thumbnail image — fixed height, full width, cropped to fit */
 .landmark-card-img {
     width:      100%;
-    height:     200px;
+    height:     100%;
     object-fit: cover;
-    display:    block;
-    transition: transform 0.4s ease;
+    position:   absolute;
+    top:        0;
+    left:       0;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .landmark-card:hover .landmark-card-img {
-    transform: scale(1.04);
+    transform: scale(1.1);
+}
+
+/* Dark overlay for contrast */
+.landmark-card-overlay {
+    position:        absolute;
+    inset:           0;
+    background:      linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    display:         flex;
+    flex-direction:  column;
+    justify-content: flex-end;
+    padding:         1.5rem;
+    transition:      background 0.5s ease;
+}
+
+.landmark-card:hover .landmark-card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 /* Card text body */
-.landmark-card-body {
-    padding: var(--space-md);
+.landmark-card-content {
+    position: relative;
+    z-index:  2;
 }
 
 /* Top row: category badge + importance dots */
@@ -140,51 +162,107 @@
     display:         flex;
     align-items:     center;
     justify-content: space-between;
-    margin-bottom:   var(--space-xs);
+    margin-bottom:   1rem;
+    transform:       translateY(20px);
+    transition:      transform 0.4s ease;
 }
 
-/* Importance indicator — shows how significant the landmark is.
-   importance 10 = 5 filled dots, importance 8 = 4 dots, etc.
-   This is built by JS as small accent-colored dots. */
+.landmark-card-tag {
+    display:          inline-block;
+    font-size:        0.7rem;
+    text-transform:   uppercase;
+    letter-spacing:   1px;
+    color:            #FFFFFF;
+    background-color: var(--accent);
+    padding:          4px 8px;
+    border-radius:    12px;
+    font-weight:      600;
+}
+
+/* Importance indicator */
 .importance-dots {
     display: flex;
     gap:     3px;
 }
 
 .importance-dot {
-    width:         7px;
-    height:        7px;
-    border-radius: 50%;       /* circle */
-    background:    var(--accent);
-    opacity:       0.25;      /* unfilled dots are faint */
+    width:         6px;
+    height:        6px;
+    border-radius: 50%;
+    background:    #FFFFFF; /* Switched to white for contrast on dark overlay */
+    opacity:       0.3;
 }
 
 .importance-dot.filled {
-    opacity: 1;               /* filled dots are fully opaque */
+    background: var(--accent); /* Filled dots use accent color */
+    opacity:    1;
 }
 
 /* Landmark name */
 .landmark-card-name {
     font-family:   var(--font-heading);
-    font-size:     1.15rem;
+    font-size:     1.4rem;
     font-weight:   700;
-    color:         var(--text-main);
-    margin-bottom: var(--space-xs);
-    line-height:   1.3;
+    color:         #FFFFFF;
+    margin-bottom: 0.5rem;
+    line-height:   1.2;
+    transform:     translateY(20px);
+    transition:    transform 0.4s ease 0.1s;
 }
 
-/* Short description — capped at 2 lines with ellipsis */
-.landmark-card-desc {
-    font-size:         0.875rem;
-    color:             var(--text-muted);
-    font-weight:       300;
-    line-height:       1.6;
+/* Hidden content wrapper */
+.landmark-card-hidden {
+    max-height: 0;
+    opacity:    0;
+    overflow:   hidden;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-    /* CSS multi-line text clamp — limits to 2 lines */
+/* Short description */
+.landmark-card-desc {
+    font-family:       var(--font-body);
+    font-size:         0.85rem;
+    color:             rgba(255, 255, 255, 0.8);
+    font-weight:       300;
+    line-height:       1.5;
+    margin-bottom:     1rem;
     display:           -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow:          hidden;
+}
+
+/* Quick preview button */
+.landmark-card-btn {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.5rem;
+    font-size:      0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:          var(--accent);
+    font-weight:    600;
+}
+
+.landmark-card-btn svg {
+    width:      18px;
+    height:     18px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover reveal animations */
+.landmark-card:hover .landmark-card-top,
+.landmark-card:hover .landmark-card-name {
+    transform: translateY(0);
+}
+
+.landmark-card:hover .landmark-card-hidden {
+    max-height: 150px;
+    opacity:    1;
+    margin-top: 1rem;
+}
+
+.landmark-card:hover .landmark-card-btn svg {
+    transform: translateX(5px);
 }
 
 
@@ -216,11 +294,30 @@
     width:         90%;
     max-width:     860px;
 
+    /* Ensure it is perfectly centered vertically and horizontally */
+    margin:        auto;
+
     /* Shadow for depth */
     box-shadow:    0 24px 60px rgba(0, 0, 0, 0.25);
 
     /* Transitions for theme changes */
     transition:    background-color var(--transition);
+}
+
+/* Entrance animation for the modal */
+.landmark-modal[open] {
+    animation: fadeInUp 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity:   0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity:   1;
+        transform: translateY(0);
+    }
 }
 
 /* The dim overlay behind the modal.
