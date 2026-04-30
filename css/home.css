@@ -1,0 +1,204 @@
+/* =============================================================
+   home.css — Styles for index.html ONLY
+   =============================================================
+   This file is loaded only by index.html.
+   It handles the hero section and the geographic region groups.
+   All shared styles (nav, footer, buttons) live in global.css.
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────────────────────
+   HERO SECTION
+   Full-width area at the top of the home page with a background
+   image and centered text. Creates the cinematic first impression.
+
+   min-height: 55vh means the hero is at least 55% of the screen
+   height, but can grow taller if content requires it.
+   ───────────────────────────────────────────────────────────── */
+.hero {
+    position:        relative;       /* needed so .hero-overlay can position itself inside */
+    min-height:      55vh;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    text-align:      center;
+    overflow:        hidden;         /* prevents the zoomed bg image from overflowing */
+    background-image:    url('../assets/images/Great_Pyramid_of_Giza/0.jpg');
+    background-size:     cover;
+    background-position: center;
+}
+
+/* Semi-transparent overlay that darkens the background image
+   so the white text is always readable regardless of the image */
+.hero-overlay {
+    position:         absolute;
+    inset:            0;             /* shorthand for top:0, right:0, bottom:0, left:0 */
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* The text content sits ABOVE the overlay (z-index: 1 > overlay's default 0) */
+.hero-content {
+    position: relative;
+    z-index:  1;
+    padding:  var(--space-lg);
+}
+
+/* Eyebrow text — small label above the main title */
+.hero-eyebrow {
+    display:        block;
+    font-family:    var(--font-body);
+    font-size:      0.8rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color:          var(--accent);
+    margin-bottom:  var(--space-xs);
+}
+
+/* Main hero heading */
+.hero-title {
+    font-family:   var(--font-heading);
+    font-size:     clamp(2.5rem, 6vw, 4.5rem); /* scales between 2.5rem and 4.5rem based on screen width */
+    font-weight:   700;
+    color:         #FFFFFF;
+    line-height:   1.1;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 2px;
+}
+
+/* Supporting subtitle below the title */
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size:   1rem;
+    font-weight: 300;
+    color:       rgba(255, 255, 255, 0.8);
+    max-width:   480px;
+    margin:      0 auto;
+    line-height: 1.7;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   REGIONS SECTION
+   The main content area below the hero, containing the
+   geographic groups and their region cards.
+   ───────────────────────────────────────────────────────────── */
+.regions-section {
+    padding: var(--space-xl) 0;
+}
+
+/* A single geographic group (e.g., "The Nile Valley")
+   Each group has a title, a divider line, and a row of region cards */
+.region-group {
+    margin-bottom: var(--space-xl);
+}
+
+/* Geographic group heading (e.g., "The Nile Valley") */
+.group-title {
+    font-family:    var(--font-heading);
+    font-size:      0.75rem;
+    font-weight:    500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:          var(--text-muted);
+    margin-bottom:  var(--space-md);
+
+    /* The decorative line after the title using CSS flexbox trick */
+    display:        flex;
+    align-items:    center;
+    gap:            var(--space-md);
+}
+
+/* The horizontal line that stretches after the group title */
+.group-title::after {
+    content:    '';         /* pseudo-elements need content, even if empty */
+    flex:       1;          /* takes all remaining horizontal space */
+    height:     1px;
+    background: var(--border-color);
+}
+
+/* Grid of region cards within a group.
+   auto-fill: creates as many columns as fit.
+   minmax(220px, 1fr): each column is at least 220px, max 1 fraction of space.
+   This is responsive without any media queries. */
+.region-grid {
+    display:               grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap:                   var(--space-md);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   REGION CARD
+   Each card links to a region page. It shows the region's
+   thumbnail image, name, and landmark count.
+   ───────────────────────────────────────────────────────────── */
+.region-card {
+    display:         block;           /* <a> tag is inline by default, we make it block */
+    position:        relative;
+    border-radius:   var(--radius-md);
+    overflow:        hidden;
+    aspect-ratio:    4 / 3;           /* consistent card proportions regardless of image size */
+    border:          1px solid var(--border-color);
+    transition:      transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    cursor:          pointer;
+}
+
+/* The thumbnail image fills the card completely */
+.region-card-img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;  /* crops and fits the image without distortion */
+    transition: transform 0.4s ease; /* smooth zoom on hover */
+}
+
+/* Dark gradient overlay — lets text be readable over any image */
+.region-card-overlay {
+    position:   absolute;
+    inset:      0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,      /* fully dark at the bottom where text is */
+        rgba(0, 0, 0, 0.2) 60%,     /* fades out toward the middle */
+        transparent 100%             /* transparent at the top */
+    );
+}
+
+/* Card text content — anchored to the bottom of the card */
+.region-card-body {
+    position: absolute;
+    bottom:   0;
+    left:     0;
+    right:    0;
+    padding:  var(--space-md);
+}
+
+/* Region name */
+.region-card-name {
+    font-family:   var(--font-heading);
+    font-size:     1.1rem;
+    font-weight:   700;
+    color:         #FFFFFF;
+    margin-bottom: 4px;
+}
+
+/* Landmark count — e.g., "22 Landmarks" */
+.region-card-count {
+    font-family:    var(--font-body);
+    font-size:      0.72rem;
+    font-weight:    400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color:          rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effects on the region card */
+.region-card:hover {
+    transform:    translateY(-4px);             /* subtle lift */
+    box-shadow:   0 12px 30px rgba(0,0,0,0.15);
+    border-color: var(--accent);                /* accent-coloured border on hover */
+}
+
+.region-card:hover .region-card-img {
+    transform: scale(1.06);  /* image gently zooms in */
+}

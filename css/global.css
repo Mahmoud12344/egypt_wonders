@@ -1,0 +1,431 @@
+/* =============================================================
+   global.css — Egypt Wonders Design System
+   =============================================================
+   This file is the single source of truth for all shared styles.
+   It is loaded by EVERY page in the project.
+
+   Table of Contents:
+   1. Font Import
+   2. CSS Custom Properties (Design Tokens)
+   3. Dark Mode Overrides
+   4. Region Accent Colors
+   5. CSS Reset
+   6. Base Body & Typography
+   7. Layout Utility (.container)
+   8. Navigation Bar
+   9. Footer
+   10. Shared Button Styles
+   11. Shared Badge / Tag Styles
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────────────────────
+   1. FONT IMPORT
+   We load both fonts in one <link> call for performance.
+   Playfair Display = headings (elegant, editorial, serif)
+   Inter = body text (modern, highly readable, sans-serif)
+   ───────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+
+
+/* ─────────────────────────────────────────────────────────────
+   2. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   Custom properties are CSS variables. They are declared on
+   :root so they are available to every element on every page.
+
+   Naming convention: --category-description
+   Example: --bg-body = background color for the body
+
+   WHY variables? If we want to change the body background,
+   we change ONE line here and it updates everywhere instantly.
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body:    'Inter', sans-serif;
+
+    /* Light mode background colors (default) */
+    --bg-body:      #F9F7F3; /* warm off-white — feels like aged paper */
+    --bg-card:      #FFFFFF; /* pure white for cards and modals */
+    --bg-nav:       #FFFFFF; /* navigation bar background */
+
+    /* Light mode text colors */
+    --text-main:    #1A1A1A; /* near-black for headings and primary text */
+    --text-muted:   #666666; /* grey for descriptions and secondary text */
+    --text-nav:     #333333; /* nav link color */
+
+    /* Light mode borders and dividers */
+    --border-color: #E8E4DC; /* warm, slightly beige border */
+
+    /* Default accent color — used on pages without a region context.
+       We use Giza gold as the global default because it is the most
+       iconic Egyptian symbol and works as a neutral "brand" color. */
+    --accent:       #C9A84C;
+
+    /* Navigation */
+    --nav-height:   68px; /* fixed height for the nav bar */
+
+    /* Spacing scale — consistent gaps throughout the project.
+       We use rem units: 1rem = 16px (browser default).
+       All spacing is relative to this, so if the user changes
+       their browser font size, everything scales correctly. */
+    --space-xs:  0.5rem;   /*  8px */
+    --space-sm:  0.75rem;  /* 12px */
+    --space-md:  1.5rem;   /* 24px */
+    --space-lg:  2.5rem;   /* 40px */
+    --space-xl:  4rem;     /* 64px */
+
+    /* Border radius — how rounded the corners are */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+
+    /* Transition — used for hover animations.
+       0.25s is fast enough to feel snappy, slow enough to be visible. */
+    --transition: 0.25s ease;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   3. DARK MODE OVERRIDES
+   When JavaScript adds data-mode="dark" to the <body> element,
+   these variables OVERRIDE the light-mode values defined in :root.
+   Every element using var(--bg-body) automatically updates.
+   JavaScript does NOT need to touch individual elements.
+   ───────────────────────────────────────────────────────────── */
+[data-mode="dark"] {
+    --bg-body:      #121110;
+    --bg-card:      #1E1D1B;
+    --bg-nav:       #1E1D1B;
+    --text-main:    #F4F4F4;
+    --text-muted:   #A0A0A0;
+    --text-nav:     #E0DDD8;
+    --border-color: #2D2A26;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   4. REGION ACCENT COLORS
+   Each region page sets a data-region attribute on its <body>.
+   Example: <body data-region="cairo">
+   These rules then override --accent for that entire page.
+   This means the nav underline, card tags, buttons — everything
+   automatically gets the right color for that region.
+
+   Light mode accents are defined here.
+   Dark mode accents (slightly brighter for legibility) follow.
+   ───────────────────────────────────────────────────────────── */
+
+/* Light mode region accents */
+[data-region="giza_pyramids"]  { --accent: #C9A84C; } /* Pyramid Gold        */
+[data-region="cairo"]          { --accent: #B85C3A; } /* Islamic Terracotta  */
+[data-region="luxor_thebes"]   { --accent: #9C7D50; } /* Temple Bronze       */
+[data-region="aswan_nubia"]    { --accent: #4A7A5A; } /* Nile Reed Green     */
+[data-region="alexandria"]     { --accent: #2266AA; } /* Mediterranean Blue  */
+[data-region="sinai_red_sea"]  { --accent: #B84040; } /* Coral Red           */
+[data-region="western_desert"] { --accent: #B8903A; } /* Sahara Amber        */
+[data-region="upper_egypt"]    { --accent: #7A5C40; } /* Nile Earth Brown    */
+[data-region="suez_canal"]     { --accent: #1A4A7A; } /* Deep Canal Navy     */
+
+/* Dark mode region accents — same hue, increased brightness */
+[data-mode="dark"][data-region="giza_pyramids"]  { --accent: #D4B86A; }
+[data-mode="dark"][data-region="cairo"]          { --accent: #D4724E; }
+[data-mode="dark"][data-region="luxor_thebes"]   { --accent: #B8956A; }
+[data-mode="dark"][data-region="aswan_nubia"]    { --accent: #5E9670; }
+[data-mode="dark"][data-region="alexandria"]     { --accent: #4D88CC; }
+[data-mode="dark"][data-region="sinai_red_sea"]  { --accent: #D45C5C; }
+[data-mode="dark"][data-region="western_desert"] { --accent: #D4A84C; }
+[data-mode="dark"][data-region="upper_egypt"]    { --accent: #9E7A58; }
+[data-mode="dark"][data-region="suez_canal"]     { --accent: #2E6AAA; }
+
+
+/* ─────────────────────────────────────────────────────────────
+   5. CSS RESET
+   Browsers apply their own default styles (margins, paddings).
+   These defaults differ between Chrome, Firefox, Safari, etc.
+   A reset removes all of them so we start from a clean slate
+   and every browser renders our site identically.
+
+   * means "select every element".
+   ::before and ::after are "pseudo-elements" — invisible elements
+   browsers can insert before or after any element's content.
+   ───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* padding/border counts INSIDE the element size, not outside */
+    margin:     0;
+    padding:    0;
+}
+
+/* Remove default list styling (we use <ul> for nav links) */
+ul {
+    list-style: none;
+}
+
+/* Make images behave like block elements and never overflow */
+img {
+    display:   block;
+    max-width: 100%;
+}
+
+/* Remove default anchor styling — we style links ourselves */
+a {
+    text-decoration: none;
+    color:           inherit;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   6. BASE BODY & TYPOGRAPHY
+   ───────────────────────────────────────────────────────────── */
+body {
+    font-family:      var(--font-body);
+    background-color: var(--bg-body);
+    color:            var(--text-main);
+    line-height:      1.65;    /* comfortable reading line height */
+    min-height:       100vh;   /* page always fills the full screen height */
+
+    /* Smooth transition when toggling dark/light mode */
+    transition: background-color var(--transition), color var(--transition);
+}
+
+/* All headings use the heading font */
+h1, h2, h3, h4, h5, h6 {
+    font-family:  var(--font-heading);
+    font-weight:  700;
+    line-height:  1.2; /* tighter line height for large text */
+    color:        var(--text-main);
+}
+
+/* Body text paragraphs */
+p {
+    color:     var(--text-muted);
+    font-weight: 300;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   7. LAYOUT UTILITY — .container
+   Every page wraps its content in <div class="container">.
+   This constrains the max width and centres the content,
+   preventing text from stretching too wide on large monitors.
+
+   max-width: 1280px = a comfortable reading width for most screens.
+   padding: 0 var(--space-lg) = horizontal breathing room.
+   margin: 0 auto = centres the container horizontally.
+   ───────────────────────────────────────────────────────────── */
+.container {
+    max-width: 1280px;
+    margin:    0 auto;
+    padding:   0 var(--space-lg);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   8. NAVIGATION BAR
+   Fixed at the top of the screen so it stays visible when scrolling.
+   position: fixed removes it from the document flow.
+   z-index: 1000 puts it in front of everything else.
+   ───────────────────────────────────────────────────────────── */
+.site-nav {
+    position:         fixed;
+    top:              0;
+    left:             0;
+    width:            100%;
+    height:           var(--nav-height);
+    background-color: var(--bg-nav);
+    border-bottom:    1px solid var(--border-color);
+    z-index:          1000;
+
+    /* Smooth background color change when switching modes */
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* The inner flex row: logo on left, links + toggle on right */
+.nav-inner {
+    height:          100%;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+}
+
+/* Logo — the site name in the top-left */
+.nav-logo {
+    font-family:   var(--font-heading);
+    font-size:     1.25rem;
+    font-weight:   700;
+    color:         var(--accent);
+    letter-spacing: 1px;
+    transition:    color var(--transition);
+}
+
+/* The group on the right: links + dark mode button */
+.nav-right {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-md);
+}
+
+/* The <ul> holding the nav links */
+.nav-links {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-md);
+}
+
+/* Individual nav link */
+.nav-links a {
+    font-size:      0.85rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:          var(--text-nav);
+    padding-bottom: 2px;
+
+    /* The underline effect on hover/active */
+    border-bottom:  2px solid transparent;
+    transition:     color var(--transition), border-color var(--transition);
+}
+
+/* Hover state: show accent-colored underline */
+.nav-links a:hover {
+    color:        var(--accent);
+    border-color: var(--accent);
+}
+
+/* Active state: set by nav.js on the current page's link */
+.nav-links a.active {
+    color:        var(--accent);
+    border-color: var(--accent);
+}
+
+/* Dark mode toggle button */
+.nav-mode-btn {
+    background:    none;
+    border:        1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    width:         36px;
+    height:        36px;
+    cursor:        pointer;
+    font-size:     1rem;
+
+    /* Centre the icon inside */
+    display:       flex;
+    align-items:   center;
+    justify-content: center;
+
+    /* Inherit font so the emoji icon renders correctly */
+    font-family:   inherit;
+    color:         var(--text-main);
+    transition:    border-color var(--transition), background-color var(--transition);
+}
+
+.nav-mode-btn:hover {
+    border-color:     var(--accent);
+    background-color: var(--bg-card);
+}
+
+/* Page body needs top padding equal to nav height so content
+   doesn't hide behind the fixed nav bar */
+.page-content {
+    padding-top: var(--nav-height);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   9. FOOTER
+   Simple, minimal footer at the bottom of every page.
+   ───────────────────────────────────────────────────────────── */
+.site-footer {
+    margin-top:    var(--space-xl);
+    padding:       var(--space-lg) 0;
+    border-top:    1px solid var(--border-color);
+    text-align:    center;
+    transition:    border-color var(--transition);
+}
+
+.site-footer p {
+    font-size:  0.8rem;
+    color:      var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* The accent-coloured dot separator between footer items */
+.footer-separator {
+    color:   var(--accent);
+    margin:  0 0.5rem;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   10. SHARED BUTTON STYLES
+   Two variants: solid (filled) and outline.
+   Used on the modal "See Full Details" button and similar CTAs.
+   ───────────────────────────────────────────────────────────── */
+
+/* Solid button — filled with accent color */
+.btn-solid {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.5rem;
+    padding:        0.65rem 1.4rem;
+    background:     var(--accent);
+    color:          #FFFFFF;
+    border:         1px solid var(--accent);
+    border-radius:  var(--radius-sm);
+    font-family:    var(--font-body);
+    font-size:      0.8rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor:         pointer;
+    transition:     opacity var(--transition);
+}
+
+.btn-solid:hover {
+    opacity: 0.85;
+}
+
+/* Outline button — transparent with accent border */
+.btn-outline {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.5rem;
+    padding:        0.65rem 1.4rem;
+    background:     transparent;
+    color:          var(--accent);
+    border:         1px solid var(--accent);
+    border-radius:  var(--radius-sm);
+    font-family:    var(--font-body);
+    font-size:      0.8rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor:         pointer;
+    transition:     background-color var(--transition), color var(--transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color:            #FFFFFF;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   11. SHARED BADGE / TAG STYLES
+   Small coloured labels used on landmark cards.
+   Example: "Ancient Temples", "Modern Marvels", "Nature"
+   ───────────────────────────────────────────────────────────── */
+.badge {
+    display:        inline-block;
+    padding:        3px 10px;
+    background:     var(--accent);
+    color:          #FFFFFF;
+    border-radius:  20px; /* pill shape */
+    font-size:      0.7rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
