@@ -54,7 +54,21 @@
     padding:  var(--space-lg);
 }
 
-/* Eyebrow text — small label above the main title */
+/* ─────────────────────────────────────────────────────────────
+   HERO ANIMATIONS
+   Staggered fade-in effect for the luxury cinematic feel
+   ───────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-eyebrow {
     display:        block;
     font-family:    var(--font-body);
@@ -64,9 +78,11 @@
     letter-spacing: 4px;
     color:          var(--accent);
     margin-bottom:  var(--space-xs);
+    opacity:        0; /* Initial state for animation */
+    animation:      fadeInUp 0.8s ease forwards;
+    animation-delay: 0.1s;
 }
 
-/* Main hero heading */
 .hero-title {
     font-family:   var(--font-heading);
     font-size:     clamp(2.5rem, 6vw, 4.5rem); /* scales between 2.5rem and 4.5rem based on screen width */
@@ -75,9 +91,11 @@
     line-height:   1.1;
     margin-bottom: var(--space-sm);
     letter-spacing: 2px;
+    opacity:        0;
+    animation:      fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
 }
 
-/* Supporting subtitle below the title */
 .hero-subtitle {
     font-family: var(--font-body);
     font-size:   1rem;
@@ -86,6 +104,9 @@
     max-width:   480px;
     margin:      0 auto;
     line-height: 1.7;
+    opacity:        0;
+    animation:      fadeInUp 0.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
 
@@ -104,15 +125,15 @@
     margin-bottom: var(--space-xl);
 }
 
-/* Geographic group heading (e.g., "The Nile Valley") */
 .group-title {
     font-family:    var(--font-heading);
-    font-size:      0.75rem;
-    font-weight:    500;
+    font-size:      0.85rem;
+    font-weight:    600;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
     color:          var(--text-muted);
-    margin-bottom:  var(--space-md);
+    margin-top:     var(--space-md);
+    margin-bottom:  var(--space-lg);
 
     /* The decorative line after the title using CSS flexbox trick */
     display:        flex;
@@ -134,8 +155,8 @@
    This is responsive without any media queries. */
 .region-grid {
     display:               grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap:                   var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:                   2rem;
 }
 
 
@@ -147,12 +168,13 @@
 .region-card {
     display:         block;           /* <a> tag is inline by default, we make it block */
     position:        relative;
-    border-radius:   var(--radius-md);
+    border-radius:   var(--radius-lg); /* More rounded corners for modern luxury feel */
     overflow:        hidden;
-    aspect-ratio:    4 / 3;           /* consistent card proportions regardless of image size */
-    border:          1px solid var(--border-color);
-    transition:      transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    aspect-ratio:    4 / 5;           /* Vertical/portrait aspect ratio for a premium magazine look */
+    border:          none;            /* Removed harsh border */
+    transition:      transform 0.4s ease, box-shadow 0.4s ease;
     cursor:          pointer;
+    background:      var(--bg-card);
 }
 
 /* The thumbnail image fills the card completely */
@@ -163,16 +185,16 @@
     transition: transform 0.4s ease; /* smooth zoom on hover */
 }
 
-/* Dark gradient overlay — lets text be readable over any image */
 .region-card-overlay {
     position:   absolute;
     inset:      0;
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.8) 0%,      /* fully dark at the bottom where text is */
-        rgba(0, 0, 0, 0.2) 60%,     /* fades out toward the middle */
-        transparent 100%             /* transparent at the top */
+        rgba(0, 0, 0, 0.9) 0%,      /* very dark at bottom for max text contrast */
+        rgba(0, 0, 0, 0.4) 40%,     /* smooth transition up */
+        transparent 100%
     );
+    transition: opacity 0.4s ease;
 }
 
 /* Card text content — anchored to the bottom of the card */
@@ -203,13 +225,11 @@
     color:          rgba(255, 255, 255, 0.7);
 }
 
-/* Hover effects on the region card */
 .region-card:hover {
-    transform:    translateY(-4px);             /* subtle lift */
-    box-shadow:   0 12px 30px rgba(0,0,0,0.15);
-    border-color: var(--accent);                /* accent-coloured border on hover */
+    transform:    translateY(-8px) scale(1.03); /* scale and lift */
+    box-shadow:   0 20px 40px rgba(0, 0, 0, 0.15); /* deeper, softer shadow */
 }
 
 .region-card:hover .region-card-img {
-    transform: scale(1.06);  /* image gently zooms in */
+    transform: scale(1.08);  /* image zooms in a bit more dramatically */
 }

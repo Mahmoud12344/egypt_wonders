@@ -25,7 +25,7 @@
    Playfair Display = headings (elegant, editorial, serif)
    Inter = body text (modern, highly readable, sans-serif)
    ───────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
 
 
 /* ─────────────────────────────────────────────────────────────
@@ -45,22 +45,20 @@
     --font-body:    'Inter', sans-serif;
 
     /* Light mode background colors (default) */
-    --bg-body:      #F9F7F3; /* warm off-white — feels like aged paper */
-    --bg-card:      #FFFFFF; /* pure white for cards and modals */
-    --bg-nav:       #FFFFFF; /* navigation bar background */
+    --bg-body:      #FFFFFF; /* crisp white */
+    --bg-card:      #FFFFFF; 
+    --bg-nav:       transparent;
 
     /* Light mode text colors */
-    --text-main:    #1A1A1A; /* near-black for headings and primary text */
-    --text-muted:   #666666; /* grey for descriptions and secondary text */
-    --text-nav:     #333333; /* nav link color */
+    --text-main:    #1C1C1C; /* deep charcoal */
+    --text-muted:   #666666; 
+    --text-nav:     #FFFFFF; /* white nav links to contrast against the video */
 
     /* Light mode borders and dividers */
-    --border-color: #E8E4DC; /* warm, slightly beige border */
+    --border-color: #EEEEEE; 
 
-    /* Default accent color — used on pages without a region context.
-       We use Giza gold as the global default because it is the most
-       iconic Egyptian symbol and works as a neutral "brand" color. */
-    --accent:       #C9A84C;
+    /* Default accent color */
+    --accent:       #D4AF37; /* metallic gold */
 
     /* Navigation */
     --nav-height:   68px; /* fixed height for the nav bar */
@@ -94,13 +92,13 @@
    JavaScript does NOT need to touch individual elements.
    ───────────────────────────────────────────────────────────── */
 [data-mode="dark"] {
-    --bg-body:      #121110;
-    --bg-card:      #1E1D1B;
-    --bg-nav:       #1E1D1B;
+    --bg-body:      #121212; /* deeper charcoal background */
+    --bg-card:      #1A1A1A;
+    --bg-nav:       transparent;
     --text-main:    #F4F4F4;
     --text-muted:   #A0A0A0;
-    --text-nav:     #E0DDD8;
-    --border-color: #2D2A26;
+    --text-nav:     #FFFFFF;
+    --border-color: #2A2A2A;
 }
 
 
@@ -234,8 +232,8 @@ p {
     left:             0;
     width:            100%;
     height:           var(--nav-height);
-    background-color: var(--bg-nav);
-    border-bottom:    1px solid var(--border-color);
+    background-color: transparent;
+    border-bottom:    none;
     z-index:          1000;
 
     /* Smooth background color change when switching modes */
@@ -271,7 +269,7 @@ p {
 .nav-links {
     display:     flex;
     align-items: center;
-    gap:         var(--space-md);
+    gap:         var(--space-lg); /* Increased spacing for minimal luxury feel */
 }
 
 /* Individual nav link */
@@ -317,7 +315,7 @@ p {
 
     /* Inherit font so the emoji icon renders correctly */
     font-family:   inherit;
-    color:         var(--text-main);
+    color:         var(--text-nav); /* Matches nav text */
     transition:    border-color var(--transition), background-color var(--transition);
 }
 
