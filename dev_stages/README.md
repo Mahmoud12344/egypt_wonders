@@ -1,5 +1,8 @@
 # Egypt Wonders — Dev Stages Index
 
+> **Looking for setup instructions?** See the main
+> [README.md](../README.md) in the project root.
+
 This folder contains one `.md` file per development stage.
 Each file explains **what** was built, **why** it was done that way,
 and **how** every part of the code works.
