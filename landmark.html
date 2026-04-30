@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    landmark.html — Landmark Detail Page
+    ======================================
+    Shows the complete information for ONE landmark.
+    Which landmark is determined by: landmark.html?id=11959
+
+    WHAT IS STATIC vs DYNAMIC:
+    - Nav, page skeleton, gallery shell, sidebar shell = STATIC HTML
+    - All content (title, images, description, metadata) = set by landmark.js
+
+    PAGE LAYOUT OVERVIEW:
+    1. Fixed nav bar
+    2. Hero (background image + landmark name overlaid)
+    3. Main content — two columns:
+       LEFT: image gallery (featured + thumbnails) + long description
+       RIGHT: sticky sidebar with metadata
+    4. Footer
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default title — landmark.js replaces this -->
+    <title>Landmark — Egypt Wonders</title>
+
+    <meta name="description" content="Detailed information, gallery, and history for this Egyptian landmark.">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/landmark.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         NAV — identical to all pages
+         ========================================================= -->
+    <header class="site-nav" role="banner">
+        <nav class="nav-inner container" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">Egypt Wonders</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- =========================================================
+         PAGE CONTENT — filled by landmark.js
+         id="landmark-page-content" is used by the error handler
+         to replace the entire content on failure.
+         ========================================================= -->
+    <main class="page-content" id="landmark-page-content">
+
+        <!-- ─────────────────────────────────────────────────────
+             HERO
+             background-image is set by landmark.js as an inline style.
+             The landmark name, breadcrumb, and badge are also set by JS.
+             ───────────────────────────────────────────────────── -->
+        <section class="landmark-hero" id="landmark-hero" aria-label="Landmark hero image">
+
+            <!-- Darkening overlay -->
+            <div class="landmark-hero-overlay" aria-hidden="true"></div>
+
+            <!-- Text overlaid on the hero, anchored to the bottom -->
+            <div class="landmark-hero-content container">
+
+                <!-- Breadcrumb: ← Cairo (links back to the region page) -->
+                <a
+                    class="landmark-breadcrumb"
+                    id="landmark-breadcrumb"
+                    href="index.html">
+                    ← Back
+                </a>
+
+                <!-- Category badge — e.g., "Ancient Temples" -->
+                <div class="landmark-hero-badge">
+                    <span class="badge" id="landmark-hero-badge"></span>
+                </div>
+
+                <!-- Landmark name — the page's main heading -->
+                <h1 class="landmark-hero-title" id="landmark-hero-title">Loading...</h1>
+
+            </div>
+        </section>
+
+
+        <!-- ─────────────────────────────────────────────────────
+             DETAIL SECTION — two-column layout
+             ───────────────────────────────────────────────────── -->
+        <section class="landmark-detail" aria-label="Landmark details">
+            <div class="container">
+                <div class="landmark-detail-layout">
+
+
+                    <!-- ── LEFT COLUMN ────────────────────────── -->
+                    <div class="landmark-main-content">
+
+                        <!-- GALLERY
+                             gallery-featured = the large displayed image
+                             gallery-thumbnails = the scrollable thumbnail strip
+                             Both are populated by landmark.js -->
+                        <figure class="gallery" aria-label="Landmark image gallery">
+
+                            <!-- Featured (large) image -->
+                            <img
+                                class="gallery-featured"
+                                id="gallery-featured"
+                                src=""
+                                alt=""
+                                loading="eager"> <!-- eager: load first image immediately, not lazy -->
+
+                            <!-- Thumbnail strip — thumbnails injected by JS -->
+                            <div
+                                class="gallery-thumbnails"
+                                id="gallery-thumbnails"
+                                role="list"
+                                aria-label="Gallery thumbnails">
+                            </div>
+
+                        </figure>
+
+
+                        <!-- LONG DESCRIPTION -->
+                        <div class="landmark-description-section">
+                            <span class="section-label">About This Landmark</span>
+                            <p class="landmark-long-desc" id="landmark-long-desc">
+                                <!-- Filled by landmark.js -->
+                            </p>
+                        </div>
+
+                    </div><!-- end left column -->
+
+
+                    <!-- ── RIGHT COLUMN — SIDEBAR ─────────────── -->
+                    <!-- sticky: stays visible as the user scrolls the long description -->
+                    <aside class="landmark-sidebar" aria-label="Landmark information">
+
+                        <!-- Thin accent bar at top of sidebar card -->
+                        <div class="sidebar-accent-line" aria-hidden="true"></div>
+
+                        <!-- Region -->
+                        <div class="sidebar-item">
+                            <span class="sidebar-label">Region</span>
+                            <span class="sidebar-value" id="sidebar-region">—</span>
+                        </div>
+
+                        <!-- Governorate -->
+                        <div class="sidebar-item">
+                            <span class="sidebar-label">Governorate</span>
+                            <span class="sidebar-value" id="sidebar-governorate">—</span>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="sidebar-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value" id="sidebar-category">—</span>
+                        </div>
+
+                        <!-- Importance — displayed as a filled progress bar -->
+                        <div class="sidebar-item">
+                            <span class="sidebar-label">Significance</span>
+                            <div class="importance-bar-wrapper">
+                                <div class="importance-bar-track">
+                                    <!-- Width set by landmark.js as a percentage -->
+                                    <div class="importance-bar-fill" id="importance-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="importance-score-text" id="importance-score-text">—</span>
+                            </div>
+                        </div>
+
+                        <!-- Coordinates — built by landmark.js with Google Maps link -->
+                        <div class="sidebar-item" id="sidebar-coords">
+                            <span class="sidebar-label">Location</span>
+                            <span class="sidebar-value">Loading...</span>
+                        </div>
+
+                    </aside><!-- end sidebar -->
+
+
+                </div><!-- end .landmark-detail-layout -->
+            </div><!-- end .container -->
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER — identical to all pages
+         ========================================================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>
+                Egypt Wonders
+                <span class="footer-separator">·</span>
+                Fourth Semester Web Project
+                <span class="footer-separator">·</span>
+                2026
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/nav.js"></script>
+    <script src="js/landmark.js"></script>
+
+</body>
+
+</html>

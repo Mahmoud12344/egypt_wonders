@@ -1,0 +1,281 @@
+/* =============================================================
+   landmark.css — Styles for landmark.html ONLY
+   =============================================================
+   This page shows the FULL detail for one landmark:
+   - A hero image (the thumbnail, full width)
+   - An image gallery with a large featured image + thumbnail strip
+   - A two-column layout: description on the left, metadata on the right
+   - A "Back to Region" link
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────────────────────
+   LANDMARK HERO
+   A large, full-width image at the top of the page.
+   Shows the landmark's primary photo (image 0).
+   Shorter than the home hero — this is a detail page, not a splash.
+   ───────────────────────────────────────────────────────────── */
+.landmark-hero {
+    position:            relative;
+    height:              45vh;
+    min-height:          280px;
+    background-size:     cover;
+    background-position: center;
+    /* The background-image is set inline by landmark.js */
+    overflow:            hidden;
+}
+
+/* Dark overlay so text on top is always readable */
+.landmark-hero-overlay {
+    position:         absolute;
+    inset:            0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Breadcrumb + landmark name overlaid on the hero */
+.landmark-hero-content {
+    position: absolute;
+    bottom:   var(--space-lg);
+    left:     0;
+    right:    0;
+}
+
+/* Breadcrumb navigation — "← Cairo" */
+.landmark-breadcrumb {
+    font-size:      0.75rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:          rgba(255, 255, 255, 0.75);
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.4rem;
+    margin-bottom:  var(--space-xs);
+}
+
+.landmark-breadcrumb:hover {
+    color: #FFFFFF;
+}
+
+/* The landmark name on the hero */
+.landmark-hero-title {
+    font-family:   var(--font-heading);
+    font-size:     clamp(1.8rem, 4vw, 3rem);
+    font-weight:   700;
+    color:         #FFFFFF;
+    line-height:   1.15;
+    text-shadow:   0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Category badge overlaid on hero */
+.landmark-hero-badge {
+    margin-bottom: var(--space-sm);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   DETAIL LAYOUT
+   Two-column layout below the hero:
+   Left (wider): long description + gallery
+   Right (narrower): metadata sidebar (region, category, coordinates)
+   ───────────────────────────────────────────────────────────── */
+.landmark-detail {
+    padding: var(--space-xl) 0;
+}
+
+.landmark-detail-layout {
+    display:               grid;
+    grid-template-columns: 1fr 340px; /* main content + sidebar */
+    gap:                   var(--space-xl);
+    align-items:           start;     /* sidebar doesn't stretch to match content height */
+}
+
+/* On medium screens: single column, sidebar moves below */
+@media (max-width: 900px) {
+    .landmark-detail-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   IMAGE GALLERY — LEFT COLUMN TOP
+   Layout: one large featured image above a scrollable row of thumbnails.
+   Clicking a thumbnail makes it the large featured image (JS handles this).
+   ───────────────────────────────────────────────────────────── */
+.gallery {
+    margin-bottom: var(--space-lg);
+}
+
+/* The large featured image */
+.gallery-featured {
+    width:         100%;
+    aspect-ratio:  16 / 9;  /* consistent widescreen proportions */
+    object-fit:    cover;
+    border-radius: var(--radius-md);
+    display:       block;
+    margin-bottom: var(--space-sm);
+    transition:    opacity 0.2s ease; /* brief fade when switching images */
+}
+
+/* The scrollable thumbnail strip */
+.gallery-thumbnails {
+    display:    flex;
+    gap:        var(--space-xs);
+    overflow-x: auto;  /* horizontal scroll if there are many thumbnails */
+    padding-bottom: 4px; /* space for the scrollbar so it doesn't clip thumbnails */
+
+    /* Hide the scrollbar visually on WebKit browsers while keeping it functional */
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+/* Individual thumbnail */
+.gallery-thumb {
+    flex-shrink: 0;          /* prevent thumbnails from shrinking to fit */
+    width:       88px;
+    height:      60px;
+    object-fit:  cover;
+    border-radius: var(--radius-sm);
+    cursor:      pointer;
+    border:      2px solid transparent; /* placeholder border — active state overrides */
+    opacity:     0.65;
+    transition:  opacity var(--transition), border-color var(--transition);
+}
+
+.gallery-thumb:hover {
+    opacity: 0.9;
+}
+
+/* Active thumbnail — currently displayed in the featured slot */
+.gallery-thumb.active {
+    border-color: var(--accent);
+    opacity:      1;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   LONG DESCRIPTION — LEFT COLUMN BELOW GALLERY
+   ───────────────────────────────────────────────────────────── */
+.landmark-description-section {
+    /* Small accent rule above the section title */
+}
+
+.section-label {
+    font-size:      0.72rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:          var(--accent);
+    margin-bottom:  var(--space-sm);
+    display:        block;
+}
+
+.landmark-long-desc {
+    font-size:   1rem;
+    color:       var(--text-muted);
+    font-weight: 300;
+    line-height: 1.9;  /* generous line height for long-form reading */
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   METADATA SIDEBAR — RIGHT COLUMN
+   Shows: region, governorate, category, importance, coordinates.
+   Styled as a card to visually separate it from the main content.
+   ───────────────────────────────────────────────────────────── */
+.landmark-sidebar {
+    background:    var(--bg-card);
+    border:        1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding:       var(--space-lg);
+    transition:    background-color var(--transition), border-color var(--transition);
+
+    /* Sticky: the sidebar stays visible while the user scrolls the long description */
+    position:      sticky;
+    top:           calc(var(--nav-height) + var(--space-md)); /* below the fixed nav */
+}
+
+/* A thin accent line at the top of the sidebar card */
+.sidebar-accent-line {
+    height:        3px;
+    background:    var(--accent);
+    border-radius: 2px;
+    margin-bottom: var(--space-md);
+}
+
+/* Each metadata row */
+.sidebar-item {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Last item has no bottom border */
+.sidebar-item:last-child {
+    margin-bottom:  0;
+    padding-bottom: 0;
+    border-bottom:  none;
+}
+
+/* Label above each metadata value (e.g., "Region", "Category") */
+.sidebar-label {
+    font-size:      0.68rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:          var(--text-muted);
+    margin-bottom:  4px;
+    display:        block;
+}
+
+/* The metadata value itself */
+.sidebar-value {
+    font-size:   0.9rem;
+    font-weight: 400;
+    color:       var(--text-main);
+}
+
+/* Coordinates link — opens Google Maps */
+.coordinates-link {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.3rem;
+    font-size:      0.85rem;
+    color:          var(--accent);
+    font-weight:    600;
+    margin-top:     var(--space-xs);
+    text-decoration: none;
+    transition:     opacity var(--transition);
+}
+
+.coordinates-link:hover {
+    opacity: 0.75;
+}
+
+/* Importance bar — a visual progress bar for the importance score */
+.importance-bar-wrapper {
+    margin-top: var(--space-xs);
+}
+
+.importance-bar-track {
+    height:        6px;
+    background:    var(--border-color);
+    border-radius: 3px;
+    overflow:      hidden;
+    margin-bottom: 4px;
+}
+
+/* The filled portion — width is set inline by landmark.js as a percentage */
+.importance-bar-fill {
+    height:        100%;
+    background:    var(--accent);
+    border-radius: 3px;
+    transition:    width 0.4s ease;
+}
+
+.importance-score-text {
+    font-size:  0.75rem;
+    color:      var(--text-muted);
+    font-weight: 400;
+}
