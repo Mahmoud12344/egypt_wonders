@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Immersive Creative Design - Egypt Wonders</title>
+
+        <!-- Importing 5 Premium Font Pairings -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;600&family=Lato:wght@300;400&family=Montserrat:wght@300;400&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet">
+
+        <style>
+            /* =========================================
+           FONT SYSTEM
+           ========================================= */
+            [data-font="pair1"] {
+                --font-heading: 'Playfair Display', serif;
+                --font-body: 'Inter', sans-serif;
+            }
+
+            [data-font="pair2"] {
+                --font-heading: 'Cinzel', serif;
+                --font-body: 'Lato', sans-serif;
+            }
+
+            [data-font="pair3"] {
+                --font-heading: 'Cormorant Garamond', serif;
+                --font-body: 'Montserrat', sans-serif;
+            }
+
+            [data-font="pair4"] {
+                --font-heading: 'Outfit', sans-serif;
+                --font-body: 'Outfit', sans-serif;
+            }
+
+            [data-font="pair5"] {
+                --font-heading: 'Amiri', serif;
+                --font-body: 'Roboto', sans-serif;
+            }
+
+            /* =========================================
+           THEME SYSTEM (10 Minimal Desert Variations)
+           ========================================= */
+            [data-theme="theme1"][data-mode="light"] {
+                --bg-body: #FDFBF7;
+                --bg-card: #FFFFFF;
+                --text-main: #1A1A1A;
+                --text-muted: #555555;
+                --accent-color: #B8905B;
+                --border-color: #E6E1D6;
+            }
+
+            [data-theme="theme1"][data-mode="dark"] {
+                --bg-body: #121110;
+                --bg-card: #1E1D1B;
+                --text-main: #F4F4F4;
+                --text-muted: #A0A0A0;
+                --accent-color: #D4AF37;
+                --border-color: #2D2A26;
+            }
+
+            [data-theme="theme2"][data-mode="light"] {
+                --bg-body: #F9F6F0;
+                --bg-card: #FFFFFF;
+                --text-main: #3E2723;
+                --text-muted: #6D4C41;
+                --accent-color: #C05A3B;
+                --border-color: #E7DED3;
+            }
+
+            [data-theme="theme2"][data-mode="dark"] {
+                --bg-body: #1A1412;
+                --bg-card: #241D1A;
+                --text-main: #EFEBE9;
+                --text-muted: #BCAAA4;
+                --accent-color: #E28765;
+                --border-color: #3E2723;
+            }
+
+            [data-theme="theme3"][data-mode="light"] {
+                --bg-body: #F5F2E9;
+                --bg-card: #FCFAF5;
+                --text-main: #2C2A26;
+                --text-muted: #736E64;
+                --accent-color: #9C7D50;
+                --border-color: #DFD7C7;
+            }
+
+            [data-theme="theme3"][data-mode="dark"] {
+                --bg-body: #171614;
+                --bg-card: #211F1C;
+                --text-main: #E6E4DF;
+                --text-muted: #9E9B93;
+                --accent-color: #C4A77D;
+                --border-color: #33312C;
+            }
+
+            [data-theme="theme4"][data-mode="light"] {
+                --bg-body: #FAF8F5;
+                --bg-card: #FFFFFF;
+                --text-main: #1C231F;
+                --text-muted: #5E6661;
+                --accent-color: #4A6B53;
+                --border-color: #E2E0D9;
+            }
+
+            [data-theme="theme4"][data-mode="dark"] {
+                --bg-body: #111412;
+                --bg-card: #1A1E1C;
+                --text-main: #E6E8E6;
+                --text-muted: #9BA39E;
+                --accent-color: #72997E;
+                --border-color: #2D3330;
+            }
+
+            [data-theme="theme5"][data-mode="light"] {
+                --bg-body: #F7F5F5;
+                --bg-card: #FFFFFF;
+                --text-main: #2A2626;
+                --text-muted: #6B6565;
+                --accent-color: #8C5E58;
+                --border-color: #E6DFDF;
+            }
+
+            [data-theme="theme5"][data-mode="dark"] {
+                --bg-body: #171515;
+                --bg-card: #211E1E;
+                --text-main: #EAE6E6;
+                --text-muted: #A39D9D;
+                --accent-color: #BA8A84;
+                --border-color: #383232;
+            }
+
+            [data-theme="theme6"][data-mode="light"] {
+                --bg-body: #FEF9F3;
+                --bg-card: #FFFFFF;
+                --text-main: #331E11;
+                --text-muted: #7A5C4A;
+                --accent-color: #D36738;
+                --border-color: #F0E2D5;
+            }
+
+            [data-theme="theme6"][data-mode="dark"] {
+                --bg-body: #1A110A;
+                --bg-card: #241A13;
+                --text-main: #F5EAE1;
+                --text-muted: #B8A191;
+                --accent-color: #ED8B61;
+                --border-color: #3D2D22;
+            }
+
+            [data-theme="theme7"][data-mode="light"] {
+                --bg-body: #F2EFEA;
+                --bg-card: #F9F7F4;
+                --text-main: #2B2824;
+                --text-muted: #69655E;
+                --accent-color: #635343;
+                --border-color: #DDD6CC;
+            }
+
+            [data-theme="theme7"][data-mode="dark"] {
+                --bg-body: #171513;
+                --bg-card: #211E1B;
+                --text-main: #E3DFD8;
+                --text-muted: #9E9A92;
+                --accent-color: #9E8E7D;
+                --border-color: #36322D;
+            }
+
+            [data-theme="theme8"][data-mode="light"] {
+                --bg-body: #FAFAFA;
+                --bg-card: #FFFFFF;
+                --text-main: #141924;
+                --text-muted: #596173;
+                --accent-color: #1F4B99;
+                --border-color: #E8EAEF;
+            }
+
+            [data-theme="theme8"][data-mode="dark"] {
+                --bg-body: #0C1017;
+                --bg-card: #151B26;
+                --text-main: #E8ECF5;
+                --text-muted: #8E98AD;
+                --accent-color: #4D81D8;
+                --border-color: #262E40;
+            }
+
+            [data-theme="theme9"][data-mode="light"] {
+                --bg-body: #FFFBF9;
+                --bg-card: #FFFFFF;
+                --text-main: #2E1B1A;
+                --text-muted: #755B5A;
+                --accent-color: #B24C45;
+                --border-color: #F0E1E0;
+            }
+
+            [data-theme="theme9"][data-mode="dark"] {
+                --bg-body: #170E0D;
+                --bg-card: #211615;
+                --text-main: #F5EAE9;
+                --text-muted: #B59C9B;
+                --accent-color: #D9736C;
+                --border-color: #3D2B2A;
+            }
+
+            [data-theme="theme10"][data-mode="light"] {
+                --bg-body: #FFFFFF;
+                --bg-card: #FFFFFF;
+                --text-main: #000000;
+                --text-muted: #777777;
+                --accent-color: #000000;
+                --border-color: #E0E0E0;
+            }
+
+            [data-theme="theme10"][data-mode="dark"] {
+                --bg-body: #050505;
+                --bg-card: #0A0A0A;
+                --text-main: #FFFFFF;
+                --text-muted: #888888;
+                --accent-color: #FFFFFF;
+                --border-color: #222222;
+            }
+
+            /* =========================================
+           CINEMATIC SPECIFIC OVERLAYS (Light vs Dark)
+           ========================================= */
+            [data-mode="light"] {
+                --card-gradient: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
+                --card-hover-gradient: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0.2) 100%);
+                --glass-bg: rgba(255, 255, 255, 0.85);
+                --glass-border: rgba(0, 0, 0, 0.1);
+                --hero-overlay: brightness(0.85);
+                --backdrop: rgba(255, 255, 255, 0.4);
+                --card-text: var(--text-main);
+            }
+
+            [data-mode="dark"] {
+                --card-gradient: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+                --card-hover-gradient: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 100%);
+                --glass-bg: rgba(12, 11, 10, 0.85);
+                --glass-border: rgba(255, 255, 255, 0.1);
+                --hero-overlay: brightness(0.4);
+                --backdrop: rgba(0, 0, 0, 0.8);
+                --card-text: var(--text-main);
+            }
+
+            /* Core */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-body);
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                line-height: 1.6;
+                overflow-x: hidden;
+                transition: all 0.4s ease;
+            }
+
+            h1,
+            h2,
+            h3,
+            .card-title,
+            #modalTitle {
+                font-family: var(--font-heading);
+                font-weight: 600;
+            }
+
+            /* Controls Area (Imported from Minimal Demo) */
+            .controls-container {
+                padding: 2rem 5%;
+                background-color: var(--bg-card);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .control-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .control-group label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: var(--text-muted);
+                font-weight: 600;
+            }
+
+            select,
+            button.control-btn {
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                border: 1px solid var(--border-color);
+                padding: 10px 18px;
+                font-size: 0.85rem;
+                font-family: var(--font-body);
+                cursor: pointer;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+                outline: none;
+            }
+
+            button.control-btn {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            select:hover,
+            button.control-btn:hover {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+            }
+
+            /* Nav Bar */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 5%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+            }
+
+            nav .logo {
+                font-family: var(--font-heading);
+                font-size: 1.5rem;
+                letter-spacing: 3px;
+                color: var(--accent-color);
+                text-transform: uppercase;
+            }
+
+            /* Hero Section with Parallax Effect */
+            .hero {
+                position: relative;
+                height: 70vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            .hero-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('images/Great_Pyramid_of_Giza/0.jpg');
+                background-size: cover;
+                background-position: center;
+                filter: var(--hero-overlay);
+                z-index: -1;
+                transform: scale(1.05);
+                animation: slowPan 30s infinite alternate linear;
+                transition: filter 0.4s ease;
+            }
+
+            @keyframes slowPan {
+                0% {
+                    transform: scale(1.05) translateY(0);
+                }
+
+                100% {
+                    transform: scale(1.1) translateY(-20px);
+                }
+            }
+
+            .hero-content h1 {
+                font-size: 4.5rem;
+                letter-spacing: 8px;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+                color: #FFFFFF;
+                /* Hero text usually stays white to contrast the image */
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                color: var(--accent-color);
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+
+            /* Container & Decorative Lines */
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 4rem 2rem;
+                position: relative;
+            }
+
+            .section-header {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                color: var(--text-main);
+                white-space: nowrap;
+            }
+
+            .line {
+                height: 1px;
+                width: 100%;
+                background: linear-gradient(90deg, var(--accent-color), transparent);
+                opacity: 0.5;
+            }
+
+            /* Highly Creative Immersive Grid */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 3rem;
+            }
+
+            /* The Card Design - Cinematic Reveal */
+            .card {
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                aspect-ratio: 3/4;
+                cursor: pointer;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+                border: 1px solid var(--border-color);
+                transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+
+            .card-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+
+            /* The Gradient Overlay */
+            .card-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--card-gradient);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 2rem;
+                transition: background 0.5s ease;
+            }
+
+            .card-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .card-tag {
+                display: inline-block;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--bg-body);
+                background-color: var(--accent-color);
+                padding: 6px 12px;
+                border-radius: 20px;
+                margin-bottom: 1rem;
+                font-weight: 600;
+                transition: transform 0.4s ease;
+                transform: translateY(20px);
+            }
+
+            .card-title {
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-bottom: 0.5rem;
+                color: var(--card-text);
+                transform: translateY(20px);
+                transition: transform 0.4s ease 0.1s;
+            }
+
+            /* Hidden Description that slides up on hover */
+            .card-hidden-content {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+
+            .card-desc {
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                margin-bottom: 1.5rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            .card-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--accent-color);
+                font-weight: 500;
+            }
+
+            .card-btn svg {
+                width: 20px;
+                height: 20px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hover Animations */
+            .card:hover {
+                transform: translateY(-10px);
+                border-color: var(--accent-color);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            }
+
+            .card:hover .card-image {
+                transform: scale(1.1);
+            }
+
+            .card:hover .card-overlay {
+                background: var(--card-hover-gradient);
+            }
+
+            .card:hover .card-hidden-content {
+                max-height: 150px;
+                opacity: 1;
+                margin-top: 1rem;
+            }
+
+            .card:hover .card-tag,
+            .card:hover .card-title {
+                transform: translateY(0);
+            }
+
+            .card:hover .card-btn svg {
+                transform: translateX(5px);
+            }
+
+            /* Modal Styles - Glassmorphism Extravaganza */
+            .modal {
+                margin: auto;
+                border: 1px solid var(--glass-border);
+                border-radius: 16px;
+                background: var(--glass-bg);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                color: var(--text-main);
+                max-width: 900px;
+                width: 90%;
+                box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+                padding: 0;
+                overflow: hidden;
+                outline: none;
+                transition: background 0.4s ease, color 0.4s ease;
+            }
+
+            .modal::backdrop {
+                background: var(--backdrop);
+                backdrop-filter: blur(10px);
+                transition: background 0.4s ease;
+            }
+
+            .modal-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media(max-width: 800px) {
+                .modal-layout {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .modal-image {
+                width: 100%;
+                height: 100%;
+                min-height: 400px;
+                object-fit: cover;
+            }
+
+            .modal-content {
+                padding: 4rem 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                background: var(--bg-body);
+                color: var(--accent-color);
+                border: 1px solid var(--border-color);
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                transition: all 0.3s ease;
+            }
+
+            .modal-close:hover {
+                background: var(--accent-color);
+                color: var(--bg-body);
+                transform: rotate(90deg);
+            }
+        </style>
+    </head>
+
+    <body data-theme="theme1" data-mode="dark" data-font="pair1">
+
+        <nav>
+            <div class="logo">Egypt Wonders</div>
+            <div style="color: var(--accent-color); letter-spacing: 2px; font-size: 0.9rem; font-weight: 600;">
+                EXPERIENCE THE HERITAGE</div>
+        </nav>
+
+        <!-- Immersive Hero -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <p>Discover</p>
+                <h1>Giza & Pyramids</h1>
+            </div>
+        </header>
+
+        <!-- THEME CONTROLS INJECTED INTO CINEMATIC DEMO -->
+        <div class="controls-container">
+            <div class="controls">
+                <!-- Color Theme Selector -->
+                <div class="control-group">
+                    <label>Color Palette</label>
+                    <select id="themeSelect" onchange="changeTheme()">
+                        <option value="theme1">1. Classic Ivory (Gold & Charcoal)</option>
+                        <option value="theme2">2. Desert Terracotta (Warm Clay)</option>
+                        <option value="theme3">3. Sahara Dune (Pale Beige & Bronze)</option>
+                        <option value="theme4">4. Oasis Green (Sand & Deep Palm)</option>
+                        <option value="theme5">5. Aswan Granite (Cool Pink-Gray)</option>
+                        <option value="theme6">6. Nubian Sunset (Warm Ivory & Amber)</option>
+                        <option value="theme7">7. Nile Silt (Muted Taupe & Earth)</option>
+                        <option value="theme8">8. Alabaster & Lapis (White & Deep Blue)</option>
+                        <option value="theme9">9. Sinai Coral (Off-White & Muted Red)</option>
+                        <option value="theme10">10. Pure Monochrome (Art Gallery)</option>
+                    </select>
+                </div>
+
+                <!-- Typography Selector -->
+                <div class="control-group">
+                    <label>Typography</label>
+                    <select id="fontSelect" onchange="changeFont()">
+                        <option value="pair1">1. Museum (Playfair Display + Inter)</option>
+                        <option value="pair2">2. Ancient Monument (Cinzel + Lato)</option>
+                        <option value="pair3">3. High Editorial (Cormorant Garamond + Montserrat)</option>
+                        <option value="pair4">4. Geometric Modern (Outfit + Outfit)</option>
+                        <option value="pair5">5. Heritage Script (Amiri + Roboto)</option>
+                    </select>
+                </div>
+
+                <!-- Light/Dark Toggle -->
+                <div class="control-group">
+                    <label>Color Mode</label>
+                    <button class="control-btn" id="modeBtn" onclick="toggleMode()">Switch to Light Mode</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2>The Ancient Horizon</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="grid">
+                <!-- Highly Creative Immersive Card 1 -->
+                <article class="card"
+                    onclick="openModal('Giza & Pyramids', 'Great Pyramid of Giza', 'The oldest and largest of the Giza pyramids, standing as the only surviving structure of the original Seven Wonders of the Ancient World.', 'images/Great_Pyramid_of_Giza/0.jpg')">
+                    <img src="images/Great_Pyramid_of_Giza/0.jpg" alt="Great Pyramid" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <span class="card-tag">Wonders</span>
+                            <h2 class="card-title">Great Pyramid of Giza</h2>
+
+                            <div class="card-hidden-content">
+                                <p class="card-desc">The oldest and largest of the Giza pyramids, standing as the only
+                                    surviving structure of the original Seven Wonders of the Ancient World.</p>
+                                <span class="card-btn">Explore History
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card"
+                    onclick="openModal('Cairo', 'Cairo Tower', 'A lotus-inspired concrete television tower that has been the iconic symbol of modern Cairo since 1961.', 'images/Cairo_Tower/0.jpg')">
+                    <img src="images/Cairo_Tower/0.jpg" alt="Cairo Tower" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <span class="card-tag">Modern</span>
+                            <h2 class="card-title">Cairo Tower</h2>
+
+                            <div class="card-hidden-content">
+                                <p class="card-desc">A lotus-inspired concrete television tower that has been the iconic
+                                    symbol of modern Cairo since 1961.</p>
+                                <span class="card-btn">Explore History
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card"
+                    onclick="openModal('Luxor & Thebes', 'Karnak Temple', 'An unimaginably vast religious complex of towering pillars and colossal statues dedicated to the god Amun-Ra.', 'images/Karnak_precinct_of_Amun-Ra/0.jpg')">
+                    <img src="images/Karnak_precinct_of_Amun-Ra/0.jpg" alt="Karnak Temple" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <span class="card-tag">Temples</span>
+                            <h2 class="card-title">Karnak Temple</h2>
+
+                            <div class="card-hidden-content">
+                                <p class="card-desc">An unimaginably vast religious complex of towering pillars and
+                                    colossal statues dedicated to the god Amun-Ra.</p>
+                                <span class="card-btn">Explore History
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Stunning 50/50 Glass Modal -->
+        <dialog class="modal" id="landmarkModal">
+            <div class="modal-layout">
+                <img id="modalImg" src="" alt="" class="modal-image">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeModal()">&times;</button>
+                    <span id="modalTag"
+                        style="color: var(--accent-color); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 1rem; display: block;"></span>
+                    <h2 id="modalTitle" style="font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;"></h2>
+                    <p id="modalDesc"
+                        style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;"></p>
+                    <div style="width: 50px; height: 2px; background: var(--accent-color);"></div>
+                </div>
+            </div>
+        </dialog>
+
+        <script>
+            function openModal(tag, title, desc, img) {
+                document.getElementById('modalTag').innerText = tag;
+                document.getElementById('modalTitle').innerText = title;
+                document.getElementById('modalDesc').innerText = desc;
+                document.getElementById('modalImg').src = img;
+                document.getElementById('landmarkModal').showModal();
+            }
+
+            function closeModal() { document.getElementById('landmarkModal').close(); }
+
+            document.getElementById('landmarkModal').addEventListener('click', function (event) {
+                const rect = this.getBoundingClientRect();
+                if (event.clientY < rect.top || event.clientY > rect.bottom || event.clientX < rect.left || event.clientX > rect.right) {
+                    closeModal();
+                }
+            });
+
+            // Theme Logic
+            function changeTheme() {
+                const theme = document.getElementById('themeSelect').value;
+                document.body.setAttribute('data-theme', theme);
+            }
+
+            function changeFont() {
+                const fontPair = document.getElementById('fontSelect').value;
+                document.body.setAttribute('data-font', fontPair);
+            }
+
+            function toggleMode() {
+                const body = document.body;
+                const btn = document.getElementById('modeBtn');
+
+                if (body.getAttribute('data-mode') === 'dark') {
+                    body.setAttribute('data-mode', 'light');
+                    btn.textContent = 'Switch to Dark Mode';
+                } else {
+                    body.setAttribute('data-mode', 'dark');
+                    btn.textContent = 'Switch to Light Mode';
+                }
+            }
+        </script>
+    </body>
+
+</html>

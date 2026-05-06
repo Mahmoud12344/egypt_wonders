@@ -1,0 +1,58 @@
+[
+  {
+    "id": "giza_pyramids",
+    "name": "Giza & Pyramids",
+    "landmark_count": 12,
+    "thumbnail": "images/Great_Pyramid_of_Giza/0.jpg",
+    "iconic_landmark": "Great Pyramid of Giza"
+  },
+  {
+    "id": "cairo",
+    "name": "Cairo",
+    "landmark_count": 22,
+    "thumbnail": "images/Cairo_Tower/0.jpg",
+    "iconic_landmark": "Cairo Tower"
+  },
+  {
+    "id": "luxor_thebes",
+    "name": "Luxor & Thebes",
+    "landmark_count": 12,
+    "thumbnail": "images/Karnak_precinct_of_Amun-Ra/0.jpg",
+    "iconic_landmark": "Karnak precinct of Amun-Ra"
+  },
+  {
+    "id": "aswan_nubia",
+    "name": "Aswan & Nubia",
+    "landmark_count": 10,
+    "thumbnail": "images/Temple_of_Isis_in_Philae/0.jpg",
+    "iconic_landmark": "Temple of Isis in Philae"
+  },
+  {
+    "id": "alexandria",
+    "name": "Alexandria",
+    "landmark_count": 9,
+    "thumbnail": "images/Citadel_of_Qaitbay/0.jpg",
+    "iconic_landmark": "Citadel of Qaitbay"
+  },
+  {
+    "id": "sinai_red_sea",
+    "name": "Sinai & Red Sea",
+    "landmark_count": 10,
+    "thumbnail": "images/Saint_Catherine's_Monastery,_Mount_Sinai/0.jpg",
+    "iconic_landmark": "Saint Catherine's Monastery, Mount Sinai"
+  },
+  {
+    "id": "western_desert",
+    "name": "Western Desert",
+    "landmark_count": 9,
+    "thumbnail": "images/Temple_of_Hibis/0.jpg",
+    "iconic_landmark": "Temple of Hibis"
+  },
+  {
+    "id": "upper_egypt",
+    "name": "Upper Egypt",
+    "landmark_count": 5,
+    "thumbnail": "images/Temple_of_Seti_I_in_Abydos/0.jpg",
+    "iconic_landmark": "Temple of Seti I in Abydos"
+  }
+]

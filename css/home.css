@@ -171,7 +171,7 @@
    This is responsive without any media queries. */
 .region-grid {
     display:               grid;
-    grid-template-columns: repeat(2, 1fr); /* strictly 2 columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:                   2rem;
 }
 
@@ -192,6 +192,10 @@
     transition:      all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     cursor:          pointer;
     background:      var(--bg-card);
+}
+
+.region-card:only-child {
+    aspect-ratio:    16 / 9;
 }
 
 /* The thumbnail image fills the card completely */

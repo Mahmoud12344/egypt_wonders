@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Theme Demonstration - Egypt Wonders</title>
+
+        <!-- Importing 5 Premium Font Pairings -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;600&family=Lato:wght@300;400&family=Montserrat:wght@300;400&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet">
+
+        <style>
+            /* =========================================
+           FONT SYSTEM
+           ========================================= */
+            [data-font="pair1"] {
+                --font-heading: 'Playfair Display', serif;
+                --font-body: 'Inter', sans-serif;
+            }
+
+            [data-font="pair2"] {
+                --font-heading: 'Cinzel', serif;
+                --font-body: 'Lato', sans-serif;
+            }
+
+            [data-font="pair3"] {
+                --font-heading: 'Cormorant Garamond', serif;
+                --font-body: 'Montserrat', sans-serif;
+            }
+
+            [data-font="pair4"] {
+                --font-heading: 'Outfit', sans-serif;
+                --font-body: 'Outfit', sans-serif;
+            }
+
+            [data-font="pair5"] {
+                --font-heading: 'Amiri', serif;
+                --font-body: 'Roboto', sans-serif;
+            }
+
+            /* =========================================
+           THEME SYSTEM (10 Minimal Desert Variations)
+           ========================================= */
+
+            /* 1. Classic Ivory (Base) */
+            [data-theme="theme1"][data-mode="light"] {
+                --bg-body: #FDFBF7;
+                --bg-card: #FFFFFF;
+                --text-main: #1A1A1A;
+                --text-muted: #555555;
+                --accent-color: #B8905B;
+                --border-color: #E6E1D6;
+                --backdrop: rgba(0, 0, 0, 0.4);
+            }
+
+            [data-theme="theme1"][data-mode="dark"] {
+                --bg-body: #121110;
+                --bg-card: #1E1D1B;
+                --text-main: #F4F4F4;
+                --text-muted: #A0A0A0;
+                --accent-color: #D4AF37;
+                --border-color: #2D2A26;
+                --backdrop: rgba(0, 0, 0, 0.7);
+            }
+
+            /* 2. Desert Terracotta (Warm clay) */
+            [data-theme="theme2"][data-mode="light"] {
+                --bg-body: #F9F6F0;
+                --bg-card: #FFFFFF;
+                --text-main: #3E2723;
+                --text-muted: #6D4C41;
+                --accent-color: #C05A3B;
+                --border-color: #E7DED3;
+                --backdrop: rgba(62, 39, 35, 0.4);
+            }
+
+            [data-theme="theme2"][data-mode="dark"] {
+                --bg-body: #1A1412;
+                --bg-card: #241D1A;
+                --text-main: #EFEBE9;
+                --text-muted: #BCAAA4;
+                --accent-color: #E28765;
+                --border-color: #3E2723;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 3. Sahara Dune (Ultra pale beige, muted bronze) */
+            [data-theme="theme3"][data-mode="light"] {
+                --bg-body: #F5F2E9;
+                --bg-card: #FCFAF5;
+                --text-main: #2C2A26;
+                --text-muted: #736E64;
+                --accent-color: #9C7D50;
+                --border-color: #DFD7C7;
+                --backdrop: rgba(44, 42, 38, 0.4);
+            }
+
+            [data-theme="theme3"][data-mode="dark"] {
+                --bg-body: #171614;
+                --bg-card: #211F1C;
+                --text-main: #E6E4DF;
+                --text-muted: #9E9B93;
+                --accent-color: #C4A77D;
+                --border-color: #33312C;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 4. Oasis Green (Pale sand, deep palm green) */
+            [data-theme="theme4"][data-mode="light"] {
+                --bg-body: #FAF8F5;
+                --bg-card: #FFFFFF;
+                --text-main: #1C231F;
+                --text-muted: #5E6661;
+                --accent-color: #4A6B53;
+                --border-color: #E2E0D9;
+                --backdrop: rgba(28, 35, 31, 0.4);
+            }
+
+            [data-theme="theme4"][data-mode="dark"] {
+                --bg-body: #111412;
+                --bg-card: #1A1E1C;
+                --text-main: #E6E8E6;
+                --text-muted: #9BA39E;
+                --accent-color: #72997E;
+                --border-color: #2D3330;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 5. Aswan Granite (Cool pale pink-gray, charcoal) */
+            [data-theme="theme5"][data-mode="light"] {
+                --bg-body: #F7F5F5;
+                --bg-card: #FFFFFF;
+                --text-main: #2A2626;
+                --text-muted: #6B6565;
+                --accent-color: #8C5E58;
+                --border-color: #E6DFDF;
+                --backdrop: rgba(42, 38, 38, 0.4);
+            }
+
+            [data-theme="theme5"][data-mode="dark"] {
+                --bg-body: #171515;
+                --bg-card: #211E1E;
+                --text-main: #EAE6E6;
+                --text-muted: #A39D9D;
+                --accent-color: #BA8A84;
+                --border-color: #383232;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 6. Nubian Sunset (Warm ivory, deep amber) */
+            [data-theme="theme6"][data-mode="light"] {
+                --bg-body: #FEF9F3;
+                --bg-card: #FFFFFF;
+                --text-main: #331E11;
+                --text-muted: #7A5C4A;
+                --accent-color: #D36738;
+                --border-color: #F0E2D5;
+                --backdrop: rgba(51, 30, 17, 0.4);
+            }
+
+            [data-theme="theme6"][data-mode="dark"] {
+                --bg-body: #1A110A;
+                --bg-card: #241A13;
+                --text-main: #F5EAE1;
+                --text-muted: #B8A191;
+                --accent-color: #ED8B61;
+                --border-color: #3D2D22;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 7. Nile Silt (Muted taupe/gray-brown) */
+            [data-theme="theme7"][data-mode="light"] {
+                --bg-body: #F2EFEA;
+                --bg-card: #F9F7F4;
+                --text-main: #2B2824;
+                --text-muted: #69655E;
+                --accent-color: #635343;
+                --border-color: #DDD6CC;
+                --backdrop: rgba(43, 40, 36, 0.4);
+            }
+
+            [data-theme="theme7"][data-mode="dark"] {
+                --bg-body: #171513;
+                --bg-card: #211E1B;
+                --text-main: #E3DFD8;
+                --text-muted: #9E9A92;
+                --accent-color: #9E8E7D;
+                --border-color: #36322D;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 8. Alabaster & Lapis (Pure alabaster, deep lapis blue) */
+            [data-theme="theme8"][data-mode="light"] {
+                --bg-body: #FAFAFA;
+                --bg-card: #FFFFFF;
+                --text-main: #141924;
+                --text-muted: #596173;
+                --accent-color: #1F4B99;
+                --border-color: #E8EAEF;
+                --backdrop: rgba(20, 25, 36, 0.4);
+            }
+
+            [data-theme="theme8"][data-mode="dark"] {
+                --bg-body: #0C1017;
+                --bg-card: #151B26;
+                --text-main: #E8ECF5;
+                --text-muted: #8E98AD;
+                --accent-color: #4D81D8;
+                --border-color: #262E40;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 9. Sinai Coral (Warm off-white, muted coral/red) */
+            [data-theme="theme9"][data-mode="light"] {
+                --bg-body: #FFFBF9;
+                --bg-card: #FFFFFF;
+                --text-main: #2E1B1A;
+                --text-muted: #755B5A;
+                --accent-color: #B24C45;
+                --border-color: #F0E1E0;
+                --backdrop: rgba(46, 27, 26, 0.4);
+            }
+
+            [data-theme="theme9"][data-mode="dark"] {
+                --bg-body: #170E0D;
+                --bg-card: #211615;
+                --text-main: #F5EAE9;
+                --text-muted: #B59C9B;
+                --accent-color: #D9736C;
+                --border-color: #3D2B2A;
+                --backdrop: rgba(0, 0, 0, 0.8);
+            }
+
+            /* 10. Pure Monochrome (Ultimate Minimalist) */
+            [data-theme="theme10"][data-mode="light"] {
+                --bg-body: #FFFFFF;
+                --bg-card: #FFFFFF;
+                --text-main: #000000;
+                --text-muted: #777777;
+                --accent-color: #000000;
+                --border-color: #E0E0E0;
+                --backdrop: rgba(0, 0, 0, 0.3);
+            }
+
+            [data-theme="theme10"][data-mode="dark"] {
+                --bg-body: #050505;
+                --bg-card: #0A0A0A;
+                --text-main: #FFFFFF;
+                --text-muted: #888888;
+                --accent-color: #FFFFFF;
+                --border-color: #222222;
+                --backdrop: rgba(0, 0, 0, 0.9);
+            }
+
+            /* Core CSS */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-body);
+                background-color: var(--bg-body);
+                color: var(--text-main);
+                transition: all 0.4s ease;
+                line-height: 1.6;
+                padding-bottom: 100px;
+            }
+
+            h1,
+            h2,
+            h3,
+            .card-title,
+            #modalTitle {
+                font-family: var(--font-heading);
+                font-weight: 600;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                color: var(--text-muted);
+                font-weight: 300;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+
+            .header {
+                padding: 4rem 0;
+                text-align: center;
+                border-bottom: 1px solid var(--border-color);
+                margin-bottom: 4rem;
+            }
+
+            /* Controls Area */
+            .controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                margin-top: 2.5rem;
+                flex-wrap: wrap;
+            }
+
+            .control-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .control-group label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: var(--text-muted);
+                font-weight: 600;
+            }
+
+            select,
+            button {
+                background-color: var(--bg-card);
+                color: var(--text-main);
+                border: 1px solid var(--border-color);
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                font-family: var(--font-body);
+                cursor: pointer;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+                outline: none;
+            }
+
+            button {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            select:hover,
+            button:hover {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+            }
+
+            /* Grid & Cards */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 2.5rem;
+            }
+
+            .card {
+                background-color: var(--bg-card);
+                border-radius: 8px;
+                overflow: hidden;
+                /* In minimalist themes, we rely more on borders than heavy shadows */
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+                border: 1px solid var(--border-color);
+                cursor: pointer;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                border-color: var(--accent-color);
+            }
+
+            .card-image {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .card-content {
+                padding: 1.5rem;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: var(--text-main);
+            }
+
+            .card-tag {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: var(--accent-color);
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                display: block;
+            }
+
+            .card-desc {
+                font-size: 0.95rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            /* Modal Styles */
+            .modal {
+                margin: auto;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                background-color: var(--bg-card);
+                color: var(--text-main);
+                max-width: 800px;
+                width: 90%;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+                padding: 0;
+                overflow: hidden;
+                outline: none;
+                transition: background-color 0.4s ease, color 0.4s ease;
+            }
+
+            .modal::backdrop {
+                background: var(--backdrop);
+                backdrop-filter: blur(5px);
+                transition: background 0.4s ease;
+            }
+
+            .modal-image {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .modal-content {
+                padding: 3rem;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                transition: background 0.2s;
+            }
+
+            .modal-close:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        </style>
+    </head>
+
+    <body data-theme="theme1" data-mode="light" data-font="pair1">
+
+        <div class="container">
+            <header class="header">
+                <h1>Minimal Desert Premium</h1>
+                <p>10 pristine color palettes and 5 premium typography pairings. Test them all.</p>
+
+                <div class="controls">
+                    <!-- Color Theme Selector -->
+                    <div class="control-group">
+                        <label>Color Palette</label>
+                        <select id="themeSelect" onchange="changeTheme()">
+                            <option value="theme1">1. Classic Ivory (Gold & Charcoal)</option>
+                            <option value="theme2">2. Desert Terracotta (Warm Clay)</option>
+                            <option value="theme3">3. Sahara Dune (Pale Beige & Bronze)</option>
+                            <option value="theme4">4. Oasis Green (Sand & Deep Palm)</option>
+                            <option value="theme5">5. Aswan Granite (Cool Pink-Gray)</option>
+                            <option value="theme6">6. Nubian Sunset (Warm Ivory & Amber)</option>
+                            <option value="theme7">7. Nile Silt (Muted Taupe & Earth)</option>
+                            <option value="theme8">8. Alabaster & Lapis (White & Deep Blue)</option>
+                            <option value="theme9">9. Sinai Coral (Off-White & Muted Red)</option>
+                            <option value="theme10">10. Pure Monochrome (Art Gallery)</option>
+                        </select>
+                    </div>
+
+                    <!-- Typography Selector -->
+                    <div class="control-group">
+                        <label>Typography</label>
+                        <select id="fontSelect" onchange="changeFont()">
+                            <option value="pair1">1. Museum (Playfair Display + Inter)</option>
+                            <option value="pair2">2. Ancient Monument (Cinzel + Lato)</option>
+                            <option value="pair3">3. High Editorial (Cormorant Garamond + Montserrat)</option>
+                            <option value="pair4">4. Geometric Modern (Outfit + Outfit)</option>
+                            <option value="pair5">5. Heritage Script (Amiri + Roboto)</option>
+                        </select>
+                    </div>
+
+                    <!-- Light/Dark Toggle -->
+                    <div class="control-group">
+                        <label>Color Mode</label>
+                        <button id="modeBtn" onclick="toggleMode()">Switch to Dark Mode</button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="grid">
+                <article class="card"
+                    onclick="openModal('Giza & Pyramids', 'Great Pyramid of Giza', 'The oldest and largest of the Giza pyramids, standing as the only surviving structure of the original Seven Wonders of the Ancient World.', 'images/Great_Pyramid_of_Giza/0.jpg')">
+                    <img src="images/Great_Pyramid_of_Giza/0.jpg" alt="Great Pyramid" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">Giza & Pyramids</span>
+                        <h2 class="card-title">Great Pyramid of Giza</h2>
+                        <p class="card-desc">The oldest and largest of the Giza pyramids, standing as the only surviving
+                            structure of the original Seven Wonders of the Ancient World.</p>
+                    </div>
+                </article>
+
+                <article class="card"
+                    onclick="openModal('Cairo', 'Cairo Tower', 'A lotus-inspired concrete television tower that has been the iconic symbol of modern Cairo since 1961.', 'images/Cairo_Tower/0.jpg')">
+                    <img src="images/Cairo_Tower/0.jpg" alt="Cairo Tower" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">Cairo</span>
+                        <h2 class="card-title">Cairo Tower</h2>
+                        <p class="card-desc">A lotus-inspired concrete television tower that has been the iconic symbol
+                            of modern Cairo since 1961.</p>
+                    </div>
+                </article>
+
+                <article class="card"
+                    onclick="openModal('Luxor & Thebes', 'Karnak Temple Complex', 'An unimaginably vast religious complex of towering pillars and colossal statues dedicated to the god Amun-Ra.', 'images/Karnak_precinct_of_Amun-Ra/0.jpg')">
+                    <img src="images/Karnak_precinct_of_Amun-Ra/0.jpg" alt="Karnak Temple" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">Luxor & Thebes</span>
+                        <h2 class="card-title">Karnak Temple Complex</h2>
+                        <p class="card-desc">An unimaginably vast religious complex of towering pillars and colossal
+                            statues dedicated to the god Amun-Ra.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <dialog class="modal" id="landmarkModal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImg" src="" alt="" class="modal-image">
+            <div class="modal-content">
+                <span class="card-tag" id="modalTag"></span>
+                <h2 class="card-title" id="modalTitle" style="font-size: 2.5rem; margin-bottom: 1rem;"></h2>
+                <p id="modalDesc" style="font-size: 1.1rem; line-height: 1.8;"></p>
+            </div>
+        </dialog>
+
+        <script>
+            // Modal Logic
+            function openModal(tag, title, desc, img) {
+                document.getElementById('modalTag').innerText = tag;
+                document.getElementById('modalTitle').innerText = title;
+                document.getElementById('modalDesc').innerText = desc;
+                document.getElementById('modalImg').src = img;
+                document.getElementById('landmarkModal').showModal();
+            }
+
+            function closeModal() { document.getElementById('landmarkModal').close(); }
+
+            document.getElementById('landmarkModal').addEventListener('click', function (event) {
+                if (event.target === this) closeModal();
+            });
+
+            // Theme Logic
+            function changeTheme() {
+                const theme = document.getElementById('themeSelect').value;
+                document.body.setAttribute('data-theme', theme);
+            }
+
+            function changeFont() {
+                const fontPair = document.getElementById('fontSelect').value;
+                document.body.setAttribute('data-font', fontPair);
+            }
+
+            function toggleMode() {
+                const body = document.body;
+                const btn = document.getElementById('modeBtn');
+
+                if (body.getAttribute('data-mode') === 'dark') {
+                    body.setAttribute('data-mode', 'light');
+                    btn.textContent = 'Switch to Dark Mode';
+                } else {
+                    body.setAttribute('data-mode', 'dark');
+                    btn.textContent = 'Switch to Light Mode';
+                }
+            }
+        </script>
+    </body>
+
+</html>

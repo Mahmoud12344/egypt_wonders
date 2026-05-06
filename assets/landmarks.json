@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "64325",
+    "name": "Great Pyramid of Giza",
+    "description": "The oldest and largest of the Giza pyramids, and the only surviving structure of the original Seven Wonders of the Ancient World.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.97915,
+      "longitude": 31.13422
+    },
+    "imagePath": "images/Great_Pyramid_of_Giza/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "The Great Pyramid of Giza is an architectural masterpiece of unmatched precision and scale, built as the tomb for the Fourth Dynasty Pharaoh Khufu. Composed of an estimated 2.3 million massive stone blocks, it held the title of the tallest man-made structure in the world for over 3,800 years. Its construction is a testament to the advanced engineering, mathematics, and logistical capabilities of the ancient Egyptians. Inside, a complex system of narrow shafts and soaring passages leads to the magnificent Grand Gallery and the King's Chamber, which houses a solitary granite sarcophagus. It remains the only intact structure of the original Seven Wonders of the Ancient World.",
+    "thumbnail": "images/Great_Pyramid_of_Giza/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "156969",
+    "name": "Great Sphinx of Giza",
+    "description": "A colossal limestone statue of a mythical creature with a lion's body and human head, standing guard over the plateau.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.97527,
+      "longitude": 31.13768
+    },
+    "imagePath": "images/Great_Sphinx_of_Giza/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Carved directly from a single massive ridge of natural limestone, the Great Sphinx of Giza is one of the largest and oldest monolithic statues in the world. Featuring the body of a reclining lion and a human head generally believed to represent the Pharaoh Khafre, it measures a staggering 73 meters long and 20 meters high. The monument was designed to stand as a divine guardian facing the rising sun, watching over the vast Giza necropolis. Despite centuries of weathering, sand burials, and vandalism—including the famous loss of its nose—the Sphinx remains an enduring, enigmatic symbol of ancient Egypt's grandeur and mystery.",
+    "thumbnail": "images/Great_Sphinx_of_Giza/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "185949",
+    "name": "KV62",
+    "description": "The world-famous Tomb of Tutankhamun, discovered in 1922 with its magnificent royal treasures largely intact.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.740361111,
+      "longitude": 32.601444444
+    },
+    "imagePath": "images/KV62/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "KV62 is the globally famous tomb of the young Pharaoh Tutankhamun. Although it is one of the smallest and least decorated architectural tombs in the Valley of the Kings, it is by far the most significant due to its contents. When British archaeologist Howard Carter peered through a small hole in the sealed door in 1922 and declared he saw 'wonderful things,' he unveiled the only royal tomb found virtually intact. The cramped chambers were packed to the ceiling with over 5,000 priceless artifacts, including gilded chariots, statues, and the iconic solid gold death mask, fundamentally reshaping the modern world's understanding of ancient Egyptian wealth.",
+    "thumbnail": "images/KV62/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "43121",
+    "name": "Karnak precinct of Amun-Ra",
+    "description": "A vast open-air museum and ancient temple complex featuring a breathtaking forest of giant sandstone pillars.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.71875,
+      "longitude": 32.65760803
+    },
+    "imagePath": "images/Karnak_precinct_of_Amun-Ra/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Luxor & Thebes",
+    "long_description": "Karnak is simply the largest religious complex ever constructed in the ancient world, developed continuously over a period of 2,000 years by generations of pharaohs. Dedicated primarily to the Theban triad of Amun, Mut, and Khonsu, it covers an area so vast that several major European cathedrals could fit inside its walls. At its absolute heart lies the Great Hypostyle Hall, a magnificent architectural feat containing 134 massive columns, the largest of which are 21 meters tall. Walking through this stone forest, visitors are surrounded by deeply carved hieroglyphs and towering obelisks, completely overwhelmed by the sheer scale of ancient devotion.",
+    "thumbnail": "images/Karnak_precinct_of_Amun-Ra/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "154752",
+    "name": "Pyramid of Djoser",
+    "description": "The Step Pyramid of Saqqara, widely considered the earliest colossal stone building and large-scale cut stone construction in history.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.871111111,
+      "longitude": 31.216666666
+    },
+    "imagePath": "images/Pyramid_of_Djoser/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Located in the vast Saqqara necropolis, the Pyramid of Djoser is the absolute prototype for all Egyptian pyramids. Designed by the legendary architect Imhotep during the 27th century BC, it revolutionized ancient construction by transitioning from traditional mud-brick mastabas to massive, cut-stone blocks. Imhotep ingeniously stacked six progressively smaller mastabas on top of one another to create the iconic 'stepped' appearance. Standing 62 meters tall, it is recognized as the world's oldest large-scale stone monument. The pyramid sits at the center of a massive mortuary complex featuring pavilions, courtyards, and a deep labyrinth of subterranean tunnels and chambers.",
+    "thumbnail": "images/Pyramid_of_Djoser/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "63599",
+    "name": "Temple of Isis in Philae",
+    "description": "A breathtaking island temple complex saved from the rising waters of Lake Nasser and meticulously rebuilt on Agilkia Island.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.0257642,
+      "longitude": 32.8841999
+    },
+    "imagePath": "images/Temple_of_Isis_in_Philae/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Aswan & Nubia",
+    "long_description": "The Temple of Philae is one of the most romantic and beautiful sites in Egypt, originally built on an island in the Nile dedicated to the goddess Isis. When the Aswan Low Dam was constructed in 1902, the temple was partially submerged for most of the year. To save it from permanent destruction upon the building of the High Dam, a monumental UNESCO rescue operation dismantled the entire complex block by block and painstakingly reassembled it on the nearby, higher Agilkia Island. Approached by boat, the temple's magnificent pylons and colonnades seem to rise magically directly out of the shimmering waters of the Nile.",
+    "thumbnail": "images/Temple_of_Isis_in_Philae/0.jpg",
+    "importance": 10
+  },
+  {
+    "id": "11959",
+    "name": "Cairo Citadel",
+    "description": "A medieval Islamic-era fortification built by Salah ad-Din, serving as the seat of the Egyptian government for nearly 700 years.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0294,
+      "longitude": 31.2614
+    },
+    "imagePath": "images/Cairo_Citadel/0.jpg",
+    "category": "Palaces & Fortresses",
+    "region": "Cairo",
+    "long_description": "The Saladin Citadel of Cairo is a massive medieval Islamic fortification perched strategically on Mokattam Hill near the center of the city. Founded in 1176 by the legendary Muslim commander Salah ad-Din (Saladin) to protect against the Crusaders, it served as the royal residence and seat of the Egyptian government for nearly 700 years. Behind its towering defensive walls, the complex houses a fascinating array of museums, historic palaces, and three distinct mosques. The most famous is the imposing Muhammad Ali Mosque, whose domes dominate the skyline. Today, it stands as one of the world's most impressive remaining medieval military fortresses.",
+    "thumbnail": "images/Cairo_Citadel/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "201845",
+    "name": "Cairo Tower",
+    "governorate": "Cairo Governorate",
+    "category": "Modern Marvels",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0458,
+      "lng": 31.2243
+    },
+    "description": "A lotus-inspired concrete television tower that has been the iconic symbol of modern Cairo since 1961.",
+    "long_description": "Standing 187 meters tall on Gezira Island, the Cairo Tower was the tallest structure in Egypt and North Africa for over 50 years. Built in 1961, its striking open-lattice design is meant to evoke the pharaonic lotus plant, a symbol of ancient Egypt. At night, it is beautifully illuminated in vibrant colors, serving as a beacon across the sprawling city. Visitors can take a rapid elevator to the top to experience an open-air observation deck and a revolving restaurant, offering unmatched, sweeping 360-degree panoramic views of the Nile, the historic cityscape, and the distant Pyramids of Giza.",
+    "thumbnail": "images/Cairo_Tower/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "172063",
+    "name": "Citadel of Qaitbay",
+    "description": "A defensive 15th-century fortress established on the Mediterranean coast, built upon the ruins of the legendary Lighthouse of Alexandria.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.213,
+      "longitude": 29.8852
+    },
+    "imagePath": "images/Citadel_of_Qaitbay/0.jpg",
+    "category": "Palaces & Fortresses",
+    "region": "Alexandria",
+    "long_description": "The Citadel of Qaitbay is a majestic, impenetrable defensive fortress that stands at the very tip of Pharos Island, commanding the entrance to Alexandria's eastern harbor. It was built in 1477 by the Mamluk Sultan Qaitbay to protect against the advancing threat of the Ottoman Empire. Remarkably, the fortress was constructed on the exact site—and using some of the fallen stones—of the legendary Lighthouse of Alexandria, one of the original Seven Wonders of the Ancient World, which had been destroyed by earthquakes. Today, its sturdy stone battlements offer visitors the best panoramic views of the Mediterranean Sea and the sweeping Alexandrian corniche.",
+    "thumbnail": "images/Citadel_of_Qaitbay/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "77731",
+    "name": "Grand Egyptian Museum",
+    "description": "The largest archaeological museum in the world dedicated to a single civilization, housing the complete Tutankhamun collection.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.993611,
+      "longitude": 31.119722
+    },
+    "imagePath": "images/Grand_Egyptian_Museum/0.jpg",
+    "category": "Museums",
+    "region": "Giza & Pyramids",
+    "long_description": "The Grand Egyptian Museum (GEM) is a monumental, state-of-the-art facility located just two kilometers from the Giza Pyramids. Decades in the making, it stands as the largest archaeological museum in the world dedicated entirely to a single civilization. Its striking modern architecture is designed to align visually with the ancient pyramids on the horizon. The museum's crown jewel is the complete, unprecedented display of the entire Tutankhamun collection—over 5,000 pristine artifacts reunited for the first time since their discovery. Beyond King Tut, the museum houses tens of thousands of pharaonic treasures, setting a new global standard for historical preservation and display.",
+    "thumbnail": "images/Grand_Egyptian_Museum/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "201844",
+    "name": "Iconic Tower",
+    "governorate": "Cairo Governorate",
+    "category": "Modern Megaprojects",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0152,
+      "lng": 31.7202
+    },
+    "description": "The tallest skyscraper in Africa, representing Egypt's modern economic ambitions.",
+    "long_description": "Located in the heart of the New Administrative Capital, the Iconic Tower is a monumental skyscraper that stands as the crown jewel of Egypt's modern urban development. Rising to a height of nearly 400 meters, it is officially the tallest building in Africa. Its sleek, twisting design is inspired by the shape of a pharaonic obelisk and the lotus flower, blending ancient heritage with cutting-edge 21st-century engineering. The tower serves as a massive commercial and residential hub, anchoring the new Central Business District and symbolizing the country's rapid leap into the future.",
+    "thumbnail": "images/Iconic_Tower/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "93943",
+    "name": "Luxor Temple",
+    "description": "A massive ancient Egyptian temple complex on the east bank of the Nile, known for its majestic statues and towering obelisks.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.7,
+      "longitude": 32.639166666
+    },
+    "imagePath": "images/Luxor_Temple/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Luxor & Thebes",
+    "long_description": "Unlike most other temples in Thebes that were dedicated to cults of the gods or the pharaoh in death, Luxor Temple was dedicated to the rejuvenation of kingship itself. Built largely by Amenhotep III and Ramesses II, it sits gracefully on the east bank of the Nile right in the center of modern Luxor. The temple's grand entrance is guarded by colossal statues of Ramesses and a towering pink granite obelisk. During the annual Opet Festival, statues of the gods were paraded from Karnak down the three-kilometer Avenue of Sphinxes to this very sanctuary. It is particularly magical when illuminated at night.",
+    "thumbnail": "images/Luxor_Temple/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "201846",
+    "name": "National Museum of Egyptian Civilization",
+    "governorate": "Cairo Governorate",
+    "category": "Museums",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0083,
+      "lng": 31.2483
+    },
+    "description": "A striking modern museum in Fustat, internationally famous for housing the Royal Mummies.",
+    "long_description": "The National Museum of Egyptian Civilization (NMEC) is a state-of-the-art facility located in Fustat, the first Islamic capital of Egypt. Opened fully in 2021 with the globally broadcast 'Pharaohs' Golden Parade,' it is the first museum in the Arab world dedicated entirely to the sweeping continuity of Egyptian civilization across all its historical periods. The museum's absolute highlight is the Royal Mummies Hall, designed to resemble the Valley of the Kings, where 22 ancient pharaohs and queens are displayed in climate-controlled, respectful serenity. The museum beautifully overlooks the natural Ain El Sira lake.",
+    "thumbnail": "images/National_Museum_of_Egyptian_Civilization/0.jpg",
+    "importance": 9
+  },
+  {
+    "id": "176312",
+    "name": "Al-Azhar Park (Cairo)",
+    "description": "A stunning modern public park offering lush gardens and panoramic views of Historic Cairo's minarets.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "lat": 30.0408,
+      "lng": 31.2644
+    },
+    "imagePath": "images/Al-Azhar_Park_(Cairo)/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Cairo",
+    "long_description": "Al-Azhar Park is a spectacular modern oasis of green built over what was once a massive 500-year-old rubble dump in the center of Cairo. Created by the Aga Khan Trust for Culture, the park transformed a derelict area into 30 hectares of beautifully landscaped gardens, fountains, and traditional Islamic geometry. During its construction, sections of the ancient 12th-century Ayyubid city wall were discovered and meticulously restored. The park serves as a vital 'green lung' for the bustling city and is a beloved gathering place for local families. Its terraced design provides breathtaking, unobstructed sunset views over the 'City of a Thousand Minarets'.",
+    "thumbnail": "images/Al-Azhar_Park_(Cairo)/0.jpg",
+    "importance": 8
+  },
+  {
+    "id": "166191",
+    "name": "Aswan High Dam",
+    "description": "An engineering marvel of the 20th century that tamed the flooding of the Nile and created Lake Nasser.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 23.971431,
+      "longitude": 32.880192
+    },
+    "imagePath": "images/Aswan_High_Dam/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Aswan & Nubia",
+    "long_description": "The Aswan High Dam is one of the most important and monumental engineering achievements of 20th-century Egypt. Constructed between 1960 and 1970 with Soviet assistance, the massive rock-fill dam finally tamed the unpredictable annual flooding of the mighty Nile River. It provides crucial water storage for agriculture, generates massive amounts of hydroelectric power, and protects the country from devastating droughts. The dam's construction resulted in the creation of Lake Nasser, one of the largest man-made lakes in the world, which stretches over 500 kilometers south into Sudan. Its creation also necessitated the historic UNESCO campaign to move ancient temples like Abu Simbel.",
+    "thumbnail": "images/Aswan_High_Dam/0.jpg",
+    "importance": 8
+  },
+  {
+    "id": "184952",
+    "name": "Saint Catherine's Monastery, Mount Sinai",
+    "description": "An ancient Christian monastery located at the foot of Mount Sinai, home to a legendary collection of early manuscripts.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": null,
+    "imagePath": "images/Saint_Catherine's_Monastery,_Mount_Sinai/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Sinai & Red Sea",
+    "long_description": "Built between 548 and 565 AD by the Byzantine Emperor Justinian, Saint Catherine's is one of the oldest continuously functioning Christian monasteries in the world. It is situated deep in the rugged, dramatic granite mountains of the Sinai Peninsula, at the very foot of Mount Sinai, where tradition states Moses received the Ten Commandments. Heavily fortified behind massive stone walls, the monastery houses the legendary 'Burning Bush' and a world-renowned library of ancient manuscripts and early icons, second only to the Vatican in historical importance. Its remote, austere environment has preserved its profound spiritual atmosphere for nearly fifteen centuries.",
+    "thumbnail": "images/Saint_Catherine's_Monastery,_Mount_Sinai/0.jpg",
+    "importance": 8
+  },
+  {
+    "id": "201855",
+    "name": "Tahrir Square",
+    "governorate": "Cairo Governorate",
+    "category": "Culture & Arts",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0444,
+      "lng": 31.2357
+    },
+    "description": "The historic and political focal point of modern downtown Cairo, recently beautifully renovated and landscaped.",
+    "long_description": "Tahrir Square (Liberation Square) is the beating heart of modern downtown Cairo and the site of some of the most pivotal events in contemporary Egyptian history, most notably the 2011 revolution. Surrounded by monumental architecture, including the original Egyptian Museum and the Arab League headquarters, the vast plaza was recently subjected to a stunning, comprehensive renovation. Today, it serves as a beautiful, dignified public space, illuminated at night and anchored in the center by a towering ancient pharaonic obelisk and four magnificent ram-headed sphinxes transported from Luxor.",
+    "thumbnail": "images/Tahrir_Square/0.jpg",
+    "importance": 8
+  },
+  {
+    "id": "201847",
+    "name": "Tahya Misr Bridge",
+    "governorate": "Cairo Governorate",
+    "category": "Modern Megaprojects",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0886,
+      "lng": 31.2422
+    },
+    "description": "A magnificent cable-stayed bridge crossing the Nile, holding the Guinness World Record for the widest in the world.",
+    "long_description": "The Tahya Misr Bridge, part of the massive Rod El Farag Axis project, is an absolute marvel of modern engineering. Completed in 2019, it officially holds the Guinness World Record as the widest cable-stayed bridge in the world, spanning an incredible 67.3 meters across. Suspended majestically over the Nile by towering 160-meter-high pylons, it has drastically transformed Cairo's traffic flow. The bridge features striking pedestrian walkways equipped with reinforced glass floor panels, offering visitors a thrilling, dizzying view of the swirling waters of the Nile directly beneath their feet.",
+    "thumbnail": "images/Tahya_Misr_Bridge/0.jpg",
+    "importance": 8
+  },
+  {
+    "id": "201849",
+    "name": "Al-Fattah Al-Aleem Mosque",
+    "governorate": "Cairo Governorate",
+    "category": "Religious Sites",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0247,
+      "lng": 31.6917
+    },
+    "description": "A sprawling, monumental mega-mosque acting as the grand architectural gateway to the New Administrative Capital.",
+    "long_description": "The Al-Fattah Al-Aleem Mosque is a massive modern religious complex that dominates the entrance to Egypt's New Administrative Capital. Blending traditional Fatimid architecture with colossal modern scale, it is one of the largest mosques in the world, spanning over 100 acres. The mosque features 21 stunning domes and four soaring minarets that reach a height of 95 meters. Capable of hosting nearly 17,000 worshippers simultaneously, its vast, immaculately landscaped courtyards and intricate marble interiors project an atmosphere of immense peace and state grandeur.",
+    "thumbnail": "images/Al-Fattah_Al-Aleem_Mosque/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "188174",
+    "name": "Bibliotheca Alexandrina",
+    "description": "A striking piece of modern architecture designed to commemorate the Library of Alexandria, serving as a major cultural center.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.208889,
+      "longitude": 29.909167
+    },
+    "imagePath": "images/Bibliotheca_Alexandrina/0.jpg",
+    "category": "Cultural & Modern",
+    "region": "Alexandria",
+    "long_description": "The Bibliotheca Alexandrina is a monumental, state-of-the-art library and cultural center built to commemorate the legendary ancient Library of Alexandria, which was lost to history. Opened in 2002, its stunning architecture is designed as a massive, tilted solar disc rising from the Mediterranean shore, symbolizing the rising sun of knowledge. The exterior granite walls are beautifully carved with characters from 120 different human scripts. Inside, its vast, multi-terraced main reading room can accommodate eight million books. Beyond a library, it houses four museums, a planetarium, art galleries, and a manuscript restoration laboratory, reestablishing Alexandria as a global center of learning.",
+    "thumbnail": "images/Bibliotheca_Alexandrina/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "201850",
+    "name": "Cairo Opera House",
+    "governorate": "Cairo Governorate",
+    "category": "Culture & Arts",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0425,
+      "lng": 31.2236
+    },
+    "description": "The premier cultural hub of Egypt, featuring beautiful modern Islamic architecture on Gezira Island.",
+    "long_description": "The modern Cairo Opera House, officially the National Cultural Centre, was inaugurated in 1988 with the assistance of the Japanese government after the original royal opera house burned down in 1971. Located in the lush grounds of Gezira Island, the sprawling complex is a masterpiece of modern Islamic architecture, featuring elegant arches, geometric motifs, and sprawling manicured gardens. It houses multiple world-class theaters, art galleries, and open-air venues. As the beating cultural heart of Egypt, it regularly hosts spectacular ballets, symphonies, and traditional Arabic music concerts.",
+    "thumbnail": "images/Cairo_Opera_House/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "201848",
+    "name": "Cathedral of the Nativity of Christ",
+    "governorate": "Cairo Governorate",
+    "category": "Religious Sites",
+    "region": "Cairo",
+    "coordinates": {
+      "lat": 30.0158,
+      "lng": 31.7311
+    },
+    "description": "A monumental Coptic Orthodox cathedral in the New Capital, officially the largest church in the Middle East.",
+    "long_description": "Inaugurated in 2019 on the exact same day as the nearby Al-Fattah Al-Aleem Mosque, the Cathedral of the Nativity of Christ stands as a powerful symbol of national unity. Located in the New Administrative Capital, it is the largest church in the Middle East, capable of accommodating over 8,000 worshippers. The cathedral's architecture is deeply rooted in traditional Coptic design, featuring a massive, sweeping central dome and two towering bell towers. Its expansive, pristine interior is flooded with natural light and decorated with stunning, modern Coptic iconography depicting biblical scenes.",
+    "thumbnail": "images/Cathedral_of_the_Nativity_of_Christ/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "7666",
+    "name": "Colossi of Memnon",
+    "description": "Two massive stone statues of the Pharaoh Amenhotep III that have stood in the Theban Necropolis for over 3,400 years.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.720555555,
+      "longitude": 32.610555555
+    },
+    "imagePath": "images/Colossi_of_Memnon/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "The Colossi of Memnon are twin massive statues of the Pharaoh Amenhotep III, carved from single blocks of quartzite sandstone brought from Cairo. Standing 18 meters high and weighing an estimated 720 tons each, they originally flanked the entrance to Amenhotep's massive mortuary temple, which was long ago destroyed by floods and earthquakes. In antiquity, a crack in the northern statue caused it to 'sing' or whistle at dawn when the stone warmed up, drawing tourists from across the Roman Empire who believed it was the voice of the mythological hero Memnon. Though the singing stopped after a Roman repair, the colossi remain an iconic symbol of the West Bank.",
+    "thumbnail": "images/Colossi_of_Memnon/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "201857",
+    "name": "El Gouna",
+    "governorate": "Red Sea Governorate",
+    "category": "Modern Marvels",
+    "region": "Sinai & Red Sea",
+    "coordinates": {
+      "lat": 27.3942,
+      "lng": 33.6782
+    },
+    "description": "A pristine, modern resort town built across a network of lagoons, often called the 'Venice of the Red Sea'.",
+    "long_description": "El Gouna is an immaculately planned, self-contained modern resort town located just north of Hurghada on the Red Sea coast. Built entirely from scratch starting in the 1990s, the town is uniquely constructed across a network of natural and artificial islands connected by winding turquoise lagoons and picturesque stone bridges. Earning it the nickname 'The Venice of the Red Sea,' El Gouna is celebrated for its award-winning, Nubian-inspired architecture, strict environmental sustainability practices, and world-class amenities. It hosts international film festivals, professional kite-surfing tournaments, and offers an exceptionally premium, tranquil lifestyle.",
+    "thumbnail": "images/El_Gouna/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "65321",
+    "name": "Mortuary Temple of Hatshepsut",
+    "description": "A masterpiece of ancient architecture consisting of three terraced colonnades rising dramatically from the desert floor.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.738056,
+      "longitude": 32.606944
+    },
+    "imagePath": "images/Mortuary_Temple_of_Hatshepsut/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "The Mortuary Temple of Hatshepsut, known as Djeser-Djeseru ('Holy of Holies'), is a masterclass in architectural harmony. Designed by her architect Senenmut, the temple is built into the sheer, rising limestone cliffs of Deir el-Bahari. It features three massive, terraced courtyards connected by long ramps, with beautifully proportioned colonnades that perfectly mirror the vertical fault lines of the cliff face behind it. The temple walls are adorned with famous reliefs depicting the divine birth of the female pharaoh and the historic, exotic trade expedition she launched to the distant Land of Punt. It stands as a brilliant monument to one of Egypt's most successful female rulers.",
+    "thumbnail": "images/Mortuary_Temple_of_Hatshepsut/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "201854",
+    "name": "New Alamein City",
+    "governorate": "Matrouh Governorate",
+    "category": "Modern Megaprojects",
+    "region": "Western Desert",
+    "coordinates": {
+      "lat": 30.8242,
+      "lng": 28.9541
+    },
+    "description": "A futuristic, sustainable coastal megacity rising along the pristine turquoise waters of the Mediterranean.",
+    "long_description": "New Alamein City represents a massive shift in Egypt's urban development, transforming the historic North Coast from a seasonal summer retreat into a bustling, year-round 'fourth-generation' sustainable megacity. The city's skyline is defined by a row of soaring, modern skyscrapers—the Alamein Towers—that overlook a spectacular 14-kilometer public corniche bordering crystal-clear, Maldivian-blue Mediterranean waters. Beyond luxury tourism, the city includes a massive heritage city, top-tier universities, and cutting-edge residential zones, marking it as the new jewel of the Egyptian Riviera.",
+    "thumbnail": "images/New_Alamein_City/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "201852",
+    "name": "Stanley Bridge",
+    "governorate": "Alexandria Governorate",
+    "category": "Modern Marvels",
+    "region": "Alexandria",
+    "coordinates": {
+      "lat": 31.2355,
+      "lng": 29.9486
+    },
+    "description": "A beautiful, iconic modern bridge spanning Stanley Bay, known for its distinct neo-Islamic towers.",
+    "long_description": "The Stanley Bridge is arguably the most romantic and recognizable modern landmark in Alexandria. Built to widen the city's coastal corniche, the 400-meter-long bridge elegantly spans the waters of Stanley Bay. It is architecturally unique, featuring four towering pillars designed in a beautiful neo-Islamic style that mirrors the aesthetic of the nearby Montaza Palace. The bridge is a beloved gathering spot for locals; at night, its warm, golden illumination reflects off the Mediterranean waves, creating a magical atmosphere for evening strolls and wedding photography.",
+    "thumbnail": "images/Stanley_Bridge/0.jpg",
+    "importance": 7
+  },
+  {
+    "id": "141303",
+    "name": "Bent Pyramid",
+    "description": "An ancient pyramid at Dahshur representing a crucial transitional step in pyramid construction, famed for its sudden change in angle.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.790277777,
+      "longitude": 31.209166666
+    },
+    "imagePath": "images/Bent_Pyramid/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Located in the royal necropolis of Dahshur, the Bent Pyramid is a fascinating and crucial transitional monument in the history of Egyptian architecture. Built under the Old Kingdom Pharaoh Sneferu, it represents the first major attempt to build a smooth-sided pyramid. However, as it rose at a steep 54-degree angle, the structure began to show signs of instability, forcing the builders to abruptly change the angle to a shallower 43 degrees near the top. This mid-construction panic resulted in its unique, 'bent' appearance. Remarkably, it retains a larger percentage of its original polished white limestone casing than any other pyramid in Egypt.",
+    "thumbnail": "images/Bent_Pyramid/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "167581",
+    "name": "Coptic Museum in Cairo",
+    "description": "Housing the largest collection of Egyptian Christian artifacts in the world, tracing the history of Egypt's Coptic era.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.005916666,
+      "longitude": 31.230666666
+    },
+    "imagePath": "images/Coptic_Museum_in_Cairo/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Cairo",
+    "long_description": "The Coptic Museum is located within the ancient Roman fortress of Babylon in Old Cairo. Founded in 1908 by Marcus Simaika Pasha, it serves to trace the rich history of Egypt from its Pharaonic roots through the Christian era and into the Islamic period. The museum boasts the largest collection of Coptic Christian artifacts in the world, including exquisite textiles, frescoes, and ancient manuscripts. Its stunning architecture blends beautifully with the surrounding historic churches, featuring intricately carved wooden ceilings and mashrabiya windows. It stands as a vital monument to Egypt's diverse cultural and religious heritage.",
+    "thumbnail": "images/Coptic_Museum_in_Cairo/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "2743",
+    "name": "Dendera Temple complex",
+    "description": "One of the best-preserved temple complexes in Egypt, celebrated for its brilliant blue astronomical ceiling.",
+    "governorate": "Qena Governorate",
+    "coordinates": {
+      "latitude": 26.141667,
+      "longitude": 32.670278
+    },
+    "imagePath": "images/Dendera_Temple_complex/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Upper Egypt",
+    "long_description": "Located just north of Luxor, the Dendera Temple Complex is dominated by the visually stunning Temple of Hathor, the goddess of love, joy, and music. Built largely during the late Ptolemaic and Roman periods, it is one of the most remarkably intact religious structures in all of Egypt. Visitors can explore the temple completely intact from the dark, mysterious subterranean crypts all the way up the winding staircases to the roof. The temple's true masterpiece was recently revealed after decades of soot were carefully cleaned away: a breathtaking, vibrantly colored, massive astronomical ceiling depicting the zodiac, stars, and the sky goddess Nut.",
+    "thumbnail": "images/Dendera_Temple_complex/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "164762",
+    "name": "Edfu Temple",
+    "description": "One of the best-preserved shrines in Egypt, dedicated to the falcon god Horus and built during the Ptolemaic Kingdom.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.977777777,
+      "longitude": 32.873333333
+    },
+    "imagePath": "images/Edfu_Temple/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Aswan & Nubia",
+    "long_description": "The Temple of Edfu is an architectural marvel and the second largest temple in Egypt, dedicated to Horus, the falcon-headed god of the sky. Built between 237 and 57 BC during the Ptolemaic period, it was buried under desert sand and built over by a local village for millennia, which incredibly preserved its roof, columns, and walls. Today, it stands as the most completely intact monumental temple in the country. Its massive entrance pylon stands 36 meters high and is covered in giant reliefs of Ptolemaic kings smiting their enemies. Walking into its dark, atmospheric inner sanctuary feels like stepping entirely into the ancient past.",
+    "thumbnail": "images/Edfu_Temple/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "15037",
+    "name": "Luxor Museum",
+    "description": "An elegantly curated museum displaying masterpieces of pharaonic art discovered in the Theban area.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.707725,
+      "longitude": 32.644489
+    },
+    "imagePath": "images/Luxor_Museum/0.jpg",
+    "category": "Museums",
+    "region": "Luxor & Thebes",
+    "long_description": "The Luxor Museum is renowned for its beautifully lit and highly selective display of masterworks, prioritizing quality and presentation over sheer quantity. Located on the corniche overlooking the Nile, it houses an exceptional collection of antiquities discovered entirely within the Theban area. Highlights include a stunning cache of remarkably preserved statues found buried beneath Luxor Temple in 1989, and the royal mummies of two pharaohs, beautifully displayed in a darkened room. The museum provides an intimate, uncrowded environment to appreciate the incredible artistry, precise carving, and exquisite details of New Kingdom sculpture.",
+    "thumbnail": "images/Luxor_Museum/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "56733",
+    "name": "Pyramid of Khafra",
+    "description": "The second-tallest and second-largest of the Giza Pyramids, uniquely retaining some of its original casing stones at the apex.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "lat": 29.9758,
+      "lng": 31.1308
+    },
+    "imagePath": "images/Pyramid_of_Khafra/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Built for Pharaoh Khafre, the son of Khufu, this pyramid is the second largest of the famous trio at Giza. Because it was constructed on slightly higher bedrock and features a steeper angle, it often creates an optical illusion that makes it appear taller than the Great Pyramid. Its most distinguishing feature is the visible cap of smooth, white Tura limestone casing stones that still survive at its very peak, giving viewers a glimpse of how pristine all the pyramids once looked. At its base lies Khafre's mortuary temple, which connects via a long causeway directly to the Great Sphinx, solidifying the pharaoh's divine legacy.",
+    "thumbnail": "images/Pyramid_of_Khafra/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "94728",
+    "name": "Pyramid of Menkaure",
+    "description": "The smallest of the three main Pyramids of Giza, distinct for its beautiful use of red granite on the lower courses.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.9725,
+      "longitude": 31.128333
+    },
+    "imagePath": "images/Pyramid_of_Menkaure/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "The Pyramid of Menkaure is the smallest of the three iconic pyramids on the Giza plateau, standing at less than half the height of the Great Pyramid. Despite its smaller size, it was designed with a striking aesthetic twist: while the upper portion was cased in traditional white limestone, the bottom sixteen courses were clad in beautiful, incredibly hard red granite brought all the way from Aswan. A massive vertical gash on its northern face stands as a permanent scar from a 12th-century Sultan's failed attempt to demolish the pyramid. Inside, explorers found a magnificent basalt sarcophagus, which was tragically lost at sea while being transported to England in 1838.",
+    "thumbnail": "images/Pyramid_of_Menkaure/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "68682",
+    "name": "Pyramid of Unas",
+    "description": "A smooth-sided pyramid at Saqqara containing the earliest known example of the magical Pyramid Texts carved on its burial chamber walls.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.868333,
+      "longitude": 31.214722
+    },
+    "imagePath": "images/Pyramid_of_Unas/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "From the outside, the Pyramid of Unas at Saqqara appears as little more than a large, ruinous mound of rubble, having suffered heavily from ancient stone robbers. However, its true treasure lies deep within. Upon entering the burial chamber, visitors are surrounded by walls covered from floor to ceiling in meticulously carved, blue-painted hieroglyphs. These are the famous 'Pyramid Texts'—the oldest known collection of religious spells and magical incantations in the world. These texts were designed to protect the pharaoh's soul and guide him safely through the perils of the underworld. It is a mesmerizing and crucial site for understanding ancient Egyptian theology.",
+    "thumbnail": "images/Pyramid_of_Unas/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "96754",
+    "name": "Red Pyramid",
+    "description": "The largest of the pyramids located at the Dahshur necropolis, named for the rusty reddish hue of its limestone stones.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.808333333,
+      "longitude": 31.205833333
+    },
+    "imagePath": "images/Red_Pyramid/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Built by Pharaoh Sneferu after the flawed experiment of the Bent Pyramid, the Red Pyramid at Dahshur represents a massive architectural triumph. It is the first successful, true smooth-sided pyramid built in Egypt, laying the engineering groundwork for the Great Pyramid at Giza that would follow. Originally, it was encased in gleaming white Tura limestone, but after millennia of local builders stripping the white casing, the underlying reddish limestone core was exposed, giving the pyramid its modern name. Visitors willing to brave its steep, narrow descent shaft are rewarded with access to three magnificent, corbel-vaulted inner chambers that showcase flawless ancient masonry.",
+    "thumbnail": "images/Red_Pyramid/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "142997",
+    "name": "Temple of Hibis",
+    "description": "The largest and best-preserved ancient Egyptian temple in the Kharga Oasis, dedicated to the Theban triad.",
+    "governorate": "New Valley Governorate",
+    "coordinates": {
+      "latitude": 25.476805555,
+      "longitude": 30.556041666
+    },
+    "imagePath": "images/Temple_of_Hibis/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Western Desert",
+    "long_description": "The Temple of Hibis is the largest, most significant, and best-preserved ancient Egyptian temple found in the Western Desert, located in the Kharga Oasis. Constructed primarily during the Persian period under King Darius I in the 6th century BC, it offers a rare, monumental glimpse into an era when Egypt was ruled by foreign conquerors who adopted pharaonic traditions. Surrounded by a beautiful palm grove, the temple features a massive gateway, a sphinx-lined avenue, and heavily inscribed sanctuary walls dedicated to Amun, Mut, and Khonsu. Its remote location protected it from later destruction, preserving unique theological texts not found anywhere in the Nile Valley.",
+    "thumbnail": "images/Temple_of_Hibis/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "107673",
+    "name": "Temple of Kom Ombo",
+    "description": "A unique double temple dedicated symmetrically to the crocodile god Sobek and the falcon god Horus the Elder.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.451944444,
+      "longitude": 32.928055555
+    },
+    "imagePath": "images/Temple_of_Kom_Ombo/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Aswan & Nubia",
+    "long_description": "Standing on a scenic bend of the Nile, the Temple of Kom Ombo is totally unique in Egypt due to its perfectly symmetrical 'double' design. The complex is split evenly down the middle: the southern half is dedicated to the crocodile god Sobek, god of fertility and creator of the world, while the northern half honors the falcon god Horus the Elder. Everything here is duplicated, with two entrances, two courts, two colonnades, and two sanctuaries. In ancient times, sacred crocodiles were kept in the temple pools, and hundreds of their mummified remains have been found nearby, many now displayed in the adjacent Crocodile Museum.",
+    "thumbnail": "images/Temple_of_Kom_Ombo/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "137763",
+    "name": "Temple of Seti I in Abydos",
+    "description": "An ancient Egyptian temple complex famed for its exquisite raised reliefs and the historically crucial Abydos King List.",
+    "governorate": "Sohag Governorate",
+    "coordinates": {
+      "lat": 26.1843,
+      "lng": 31.9189
+    },
+    "imagePath": "images/Temple_of_Seti_I_in_Abydos/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Upper Egypt",
+    "long_description": "The Temple of Seti I is located in the ancient, sacred city of Abydos, which was believed to be the burial place of Osiris, the god of the underworld. Built by the great 19th Dynasty pharaoh Seti I and finished by his son Ramesses II, the temple is an L-shaped limestone masterpiece. It is universally celebrated by art historians for possessing the finest, most delicately carved raised reliefs in all of Egyptian art, retaining much of their original, brilliant paint. A long corridor within the temple houses the 'Abydos King List,' a comprehensively carved chronological list of 76 pharaohs that has been vital to modern Egyptologists.",
+    "thumbnail": "images/Temple_of_Seti_I_in_Abydos/0.jpg",
+    "importance": 6
+  },
+  {
+    "id": "57825",
+    "name": "Agiba beach",
+    "description": "A spectacular cove on the Mediterranean coast near Marsa Matruh, famous for its crystal-clear turquoise waters and dramatic cliffs.",
+    "governorate": "Matrouh Governorate",
+    "coordinates": {
+      "latitude": 31.414722222,
+      "longitude": 27.006944444
+    },
+    "imagePath": "images/Agiba_beach/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Western Desert",
+    "long_description": "Agiba, which translates literally to 'Miracle' in Arabic, is arguably the most breathtaking beach on Egypt's Mediterranean coast. Located west of the city of Marsa Matruh, the beach is a small, stunningly picturesque cove sheltered by high, dramatic limestone cliffs. The water here is famous for its intense, crystal-clear, multi-layered shades of bright turquoise and deep blue. Visitors access the small strip of white sand via a winding path carved down the side of the cliffs. While the waters can be rough, the sheer, unspoiled natural beauty of the cove makes it a beloved summer escape from the heat of the city.",
+    "thumbnail": "images/Agiba_beach/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "201856",
+    "name": "Al-Sahaba Mosque",
+    "governorate": "South Sinai Governorate",
+    "category": "Religious Sites",
+    "region": "Sinai & Red Sea",
+    "coordinates": {
+      "lat": 27.8642,
+      "lng": 34.2922
+    },
+    "description": "A stunning, incredibly ornate modern mosque built in 2016 combining Ottoman and Fatimid architectural styles.",
+    "long_description": "Located in the Old Market area of Sharm El Sheikh, the Al-Sahaba Mosque is a breathtaking piece of contemporary religious architecture. Completed in 2016, the massive structure is a highly ornate, eclectic fusion of Fatimid, Mamluk, and Ottoman styles. Its exterior is incredibly intricate, featuring golden domes, highly detailed stone carvings, and two soaring 76-meter-high minarets that dominate the surrounding skyline. At night, the entire building is spectacularly illuminated, creating a fairy-tale aesthetic. It stands as a profound symbol of cultural richness in a city predominantly known for its beach tourism.",
+    "thumbnail": "images/Al-Sahaba_Mosque/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "65297",
+    "name": "Alexandria Opera House",
+    "description": "A historic cultural venue in Alexandria, famously known as the Sayed Darwish Theatre.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.197029,
+      "longitude": 29.901707
+    },
+    "imagePath": "images/Alexandria_Opera_House/0.jpg",
+    "category": "Cultural & Modern",
+    "region": "Alexandria",
+    "long_description": "The Alexandria Opera House, originally opened in 1921 as the Mohamed Ali Theatre, is a stunning architectural gem located in the heart of the city. Designed by French architect Georges Barocq, the building perfectly blends elegant European Beaux-Arts design with subtle oriental flourishes. In 1962, it was officially renamed the Sayed Darwish Theatre in honor of the legendary Alexandrian composer and singer who revolutionized Egyptian music. After undergoing extensive and meticulous restoration in the early 2000s, it now serves as Alexandria's premier venue for ballet, classical music, and opera, keeping the city's rich artistic legacy vibrantly alive.",
+    "thumbnail": "images/Alexandria_Opera_House/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "127969",
+    "name": "Aswan Botanical Garden",
+    "description": "A lush, tranquil oasis of exotic plants and trees located entirely on Kitchener's Island in the Nile.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.09366,
+      "longitude": 32.88695
+    },
+    "imagePath": "images/Aswan_Botanical_Garden/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Aswan & Nubia",
+    "long_description": "Occupying the entirety of Kitchener's Island in the middle of the Nile at Aswan, the Aswan Botanical Garden is a lush, vibrant oasis of greenery. The island was gifted to Lord Horatio Kitchener in the 1890s as a reward for his military campaigns. A passionate botanist, Kitchener transformed the small island by importing exotic seeds, trees, and flowering plants from across Africa, India, and the Far East. Today, it is a serene public park featuring paved walkways completely shaded by towering mahogany trees, royal palms, and vibrant bougainvillea. It offers a cool, peaceful retreat from the intense desert sun and is accessible only by traditional felucca boats.",
+    "thumbnail": "images/Aswan_Botanical_Garden/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "161614",
+    "name": "Bab Zuwayla",
+    "description": "One of the three remaining medieval gates in the walls of the Old City, offering stunning views from its minarets.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0428,
+      "longitude": 31.2578
+    },
+    "imagePath": "images/Bab_Zuwayla/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Cairo",
+    "long_description": "Bab Zuwayla is a monumental gateway built in the 11th century as part of the defensive walls of Fatimid Cairo. It is one of the only three remaining gates of the Old City and stands as a prime example of medieval Islamic military architecture. Historically, it was a place of high drama, serving as the site for public executions and the display of severed heads to deter criminals. Today, visitors can climb to the top of its twin minarets, which were added later by the Mamluk Sultan al-Mu'ayyad. The ascent rewards climbers with some of the most breathtaking panoramic views over the sprawling historic district.",
+    "thumbnail": "images/Bab_Zuwayla/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "56583",
+    "name": "Bagawat",
+    "description": "An early Christian necropolis in the Kharga Oasis featuring hundreds of mud-brick domes and remarkably preserved biblical murals.",
+    "governorate": "New Valley Governorate",
+    "coordinates": {
+      "lat": 25.4855,
+      "lng": 30.5552
+    },
+    "imagePath": "images/Bagawat/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Western Desert",
+    "long_description": "El Bagawat is an incredibly atmospheric, sprawling early Christian necropolis located in the heart of the Kharga Oasis in the Western Desert. Dating from the 3rd to the 7th centuries AD, it consists of over 260 distinct, domed mud-brick mausoleums built closely together, resembling a silent, abandoned city in the sand. It served as a refuge for Coptic Christians fleeing Roman persecution. The true treasures of Bagawat are found inside several of the larger chapels, where the domes are painted with remarkably vivid, naive-style frescoes depicting Old Testament stories like the Exodus, Adam and Eve, and Noah's Ark, perfectly preserved by the hyper-arid desert climate.",
+    "thumbnail": "images/Bagawat/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "186683",
+    "name": "Baron Empain Palace",
+    "description": "A distinctively unique Hindu temple-inspired mansion built by a Belgian industrialist in the Cairo suburb of Heliopolis.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.086667,
+      "longitude": 31.330278
+    },
+    "imagePath": "images/Baron_Empain_Palace/0.jpg",
+    "category": "Palaces & Fortresses",
+    "region": "Cairo",
+    "long_description": "Standing out sharply from Cairo's traditional architecture, the Baron Empain Palace is a striking, Hindu temple-inspired mansion built in the early 20th century. It was the brainchild of Édouard Empain, a wealthy Belgian industrialist who founded the modern Cairo suburb of Heliopolis. Designed by a French architect, its exterior is heavily decorated with elaborate concrete sculptures of elephants, snakes, and Hindu deities, drawing inspiration from Angkor Wat in Cambodia. For decades, the abandoned palace was the subject of urban legends and ghost stories. Recently fully restored by the Egyptian government, it now serves as a fascinating museum detailing the history of the Heliopolis neighborhood.",
+    "thumbnail": "images/Baron_Empain_Palace/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "122463",
+    "name": "Bayt Al-Suhaymi",
+    "description": "An impeccably preserved Ottoman-era house showcasing exquisite wooden mashrabiya windows and peaceful courtyards.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0522,
+      "longitude": 31.2625
+    },
+    "imagePath": "images/Bayt_Al-Suhaymi/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Cairo",
+    "long_description": "Bayt Al-Suhaymi is a magnificent, impeccably preserved traditional Arab mansion located on a quiet alley branching off Muizz Street. Built in 1648 and later expanded in 1796, it provides a fascinating glimpse into the domestic lifestyle of Cairo's wealthy elite during the Ottoman era. The house is centered around a lush, tranquil interior courtyard filled with plants and a cooling marble fountain. Its rooms feature exquisite carved wooden ceilings, beautiful colorful tiles, and intricately screened mashrabiya windows that allowed women to look out without being seen. Wandering through its halls is a peaceful retreat from the modern city's chaos.",
+    "thumbnail": "images/Bayt_Al-Suhaymi/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "128891",
+    "name": "Ben Ezra Synagogue",
+    "description": "A historic synagogue in Old Cairo, believed by local tradition to be located where baby Moses was found.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.005794,
+      "longitude": 31.231022
+    },
+    "imagePath": "images/Ben_Ezra_Synagogue/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Cairo",
+    "long_description": "The Ben Ezra Synagogue is one of the most important Jewish sites in Egypt, situated deep in the heart of Old Cairo. According to local folklore, it marks the exact spot where the baby Moses was discovered in the reeds of the Nile. The current building dates back to the 1890s, replacing an older synagogue that stood for nearly a millennium. In the late 19th century, researchers discovered the famous 'Cairo Geniza' hidden in its walls—a massive collection of over 300,000 medieval manuscripts. These documents have provided historians with an unparalleled window into the daily life, trade, and culture of the Mediterranean world during the Middle Ages.",
+    "thumbnail": "images/Ben_Ezra_Synagogue/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "148754",
+    "name": "Blue Hole (Red Sea)",
+    "description": "A famous and dramatic submarine sinkhole on the coast of the Red Sea, beloved by daring scuba and free divers.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": {
+      "lat": 28.5721,
+      "lng": 34.5372
+    },
+    "imagePath": "images/Blue_Hole_(Red_Sea)/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "The Blue Hole is a world-renowned submarine sinkhole dropping almost vertically just offshore from the small Bedouin town of Dahab on the Red Sea coast. Plunging to a depth of roughly 120 meters, its deep, mesmerizing azure waters contrast sharply with the surrounding vibrant coral reefs. It is considered a global mecca for advanced scuba divers and competitive free divers, drawn by the sheer, dramatic drop-off and the infamous 'Arch,' a deep underwater tunnel connecting the hole to the open sea. While breathtakingly beautiful, it is also notoriously dangerous, standing as both a natural wonder and a somber challenge to extreme divers.",
+    "thumbnail": "images/Blue_Hole_(Red_Sea)/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "42601",
+    "name": "Coloured Canyon",
+    "description": "A stunning natural gorge in Sinai featuring vibrantly colored sandstone walls shaped by millennia of wind and water.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": {
+      "latitude": 29.14255,
+      "longitude": 34.598269444
+    },
+    "imagePath": "images/Coloured_Canyon/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "Hidden deep within the stark, arid mountains of the Sinai Peninsula lies the Coloured Canyon, a spectacular natural geological wonder. Shaped by millions of years of wind and occasional water erosion, the narrow, winding gorge cuts deep through the desert floor. Its name comes from the vivid, mesmerizing layers of multi-colored sandstone, limestone, and basalt that make up its towering, undulating walls. Veins of brilliant reds, yellows, purples, and gold run through the smooth rock, changing beautifully with the shifting desert sunlight. Hiking through its narrowest sections, where the walls almost touch, is an unforgettable adventure into Egypt's wild natural beauty.",
+    "thumbnail": "images/Coloured_Canyon/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "14197",
+    "name": "Deir el-Bahari",
+    "description": "A complex of mortuary temples and tombs situated in a spectacular natural amphitheater of cliffs on the west bank of the Nile.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.7375,
+      "longitude": 32.6075
+    },
+    "imagePath": "images/Deir_el-Bahari/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "Deir el-Bahari is a breathtaking archaeological zone nestled in a dramatic, sweeping amphitheater of sheer limestone cliffs on the Theban west bank. The site is totally dominated by the Mortuary Temple of Hatshepsut, which rises from the desert floor in a series of grand, colonnaded terraces. The area is also home to the earlier, ruined mortuary temple of Mentuhotep II and the temple of Thutmose III. The contrast between the stark, vertical cliffs and the precise, horizontal architectural lines of the temples makes this one of the most visually striking and dramatic locations in all of ancient Egypt.",
+    "thumbnail": "images/Deir_el-Bahari/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "178580",
+    "name": "Deir el-Medina",
+    "description": "The exceptionally well-preserved remains of the ancient village that housed the artisans who built the royal tombs in the Valley of the Kings.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.728333333,
+      "longitude": 32.601388888
+    },
+    "imagePath": "images/Deir_el-Medina/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "Deir el-Medina is arguably the most important site for understanding the daily life of ordinary, albeit highly skilled, ancient Egyptians. It was a purpose-built, isolated village that housed the generations of artisans, stonemasons, and painters who secretly excavated and decorated the royal tombs in the nearby Valley of the Kings. Because the village was abandoned and preserved in the dry desert, archaeologists have recovered thousands of ostraca (limestone flakes) inscribed with letters, receipts, and even complaints about delayed wages, marking the first recorded labor strike in history. The workers' own nearby tombs feature some of the most vibrant and personal artwork of the era.",
+    "thumbnail": "images/Deir_el-Medina/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "201853",
+    "name": "El Galala City",
+    "governorate": "Suez Governorate",
+    "category": "Modern Megaprojects",
+    "region": "Sinai & Red Sea",
+    "coordinates": {
+      "lat": 29.4124,
+      "lng": 32.4047
+    },
+    "description": "A massive, futuristic resort and university city built directly into the dramatic cliffs of the Red Sea mountains.",
+    "long_description": "El Galala City is one of Egypt's most ambitious new megaprojects, rising dramatically from the barren, rocky plateau of the Galala Mountains 700 meters above the Red Sea. This brand-new city is a masterpiece of modern urban planning, featuring a world-class university, luxury hotels, and a massive water park. Its most thrilling feature is a 4.5-kilometer cable car system that transports visitors from the pristine coastal beaches directly up the sheer mountain face to the city center, offering absolutely breathtaking, sweeping views of the Red Sea and the surrounding desert peaks.",
+    "thumbnail": "images/El_Galala_City/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "81351",
+    "name": "Elephantine",
+    "description": "An island in the Nile at Aswan containing ancient ruins, Nilometers, and traditional Nubian villages.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.09,
+      "longitude": 32.89
+    },
+    "imagePath": "images/Elephantine/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Aswan & Nubia",
+    "long_description": "Elephantine is the largest island in the Aswan area and is deeply steeped in history, serving as the ancient border town between Egypt and Nubia. Named for the large grey boulders at its southern tip that resemble bathing elephants, it was originally the center of the cult of Khnum, the ram-headed god who controlled the waters of the Nile. The island boasts extensive archaeological ruins, including ancient temples and a famous 'Nilometer' used to measure the height of the annual flood to set taxes. Today, its northern end is home to two vibrant, traditional Nubian villages characterized by their brightly painted, colorful mud-brick homes.",
+    "thumbnail": "images/Elephantine/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "9301",
+    "name": "Gebel el-Silsila",
+    "description": "An ancient sandstone quarry bordering the Nile, dotted with rock-cut chapels and monuments from the New Kingdom.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.633333333,
+      "longitude": 32.933333333
+    },
+    "imagePath": "images/Gebel_el-Silsila/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Aswan & Nubia",
+    "long_description": "Gebel el-Silsila is a narrow, rocky gorge located north of Aswan, where the sandstone cliffs come right down to the edge of the Nile. In antiquity, this was the most important sandstone quarry in all of Egypt, providing the massive stone blocks used to build the monumental temples of Luxor, Karnak, and Edfu. Today, the site is a fascinating archaeological zone deeply scarred by ancient stonecutters' marks. The riverbanks are dotted with dozens of beautifully carved, rock-cut chapels, stele, and cenotaphs dedicated by various pharaohs to the Nile god Hapi and the crocodile god Sobek, celebrating the annual flooding of the river.",
+    "thumbnail": "images/Gebel_el-Silsila/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "48085",
+    "name": "Giza Plateau",
+    "description": "The legendary rocky plateau that hosts the iconic Great Pyramids, the Sphinx, and numerous ancient tombs.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.97611111,
+      "longitude": 31.13277778
+    },
+    "imagePath": "images/Giza_Plateau/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "The Giza Plateau is an elevated rocky expanse on the outskirts of modern Cairo that serves as the foundation for the most famous archaeological site on Earth. Its solid limestone bedrock provided both the building material and the structural support needed for the massive weight of the pyramids. Beyond the iconic trio of great pyramids, the plateau is deeply scarred with ancient quarries, sprawling cemeteries for nobles and pyramid builders, and hidden causeways. Exploring the plateau reveals the immense logistical operation required to construct these monuments. It is a harsh, sun-baked landscape that perfectly frames the enduring legacy of the Old Kingdom pharaohs.",
+    "thumbnail": "images/Giza_Plateau/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "72150",
+    "name": "Giza pyramid complex",
+    "description": "A world-famous archaeological site encompassing the three main pyramids, the Sphinx, and surrounding worker villages.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.976111,
+      "longitude": 31.132778
+    },
+    "imagePath": "images/Giza_pyramid_complex/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "The Giza pyramid complex is the defining symbol of ancient Egypt and one of the most recognizable historic sites in the world. Constructed over a span of roughly 80 years during the Fourth Dynasty, it consists of the Great Pyramid of Khufu, the slightly smaller Pyramid of Khafre, and the modest Pyramid of Menkaure. The complex is much more than just the pyramids; it includes the enigmatic Great Sphinx, several smaller 'queens' pyramids, mortuary temples, and the sprawling remnants of the workers' village. This highly organized royal necropolis reflects the absolute zenith of Egypt's Old Kingdom power and its profound religious focus on the afterlife.",
+    "thumbnail": "images/Giza_pyramid_complex/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "189349",
+    "name": "Hanging Church (Cairo)",
+    "description": "One of the oldest churches in Egypt, famously suspended above the gatehouse of an ancient Roman fortress.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "lat": 30.0053,
+      "lng": 31.2301
+    },
+    "imagePath": "images/Hanging_Church_(Cairo)/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Cairo",
+    "long_description": "Saint Virgin Mary's Coptic Orthodox Church, widely known as the Hanging Church, is one of the oldest and most iconic churches in Egypt. It earns its unique name because its nave is suspended over the passage of the Roman Babylon Fortress gatehouse. Approached via a steep flight of 29 steps, the church's interior is a marvel of religious art, featuring 110 spectacular icons, some dating back to the 8th century. Its beautiful wooden roof is constructed in the shape of Noah's Ark, a symbolic design meant to represent salvation. For centuries, it has served as the seat of the Coptic Pope and remains a spiritual center today.",
+    "thumbnail": "images/Hanging_Church_(Cairo)/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "110912",
+    "name": "Islamic Cairo",
+    "description": "A sprawling historic district renowned for its dense concentration of majestic mosques, tombs, and medieval architecture.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.046,
+      "longitude": 31.2627
+    },
+    "imagePath": "images/Islamic_Cairo/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Cairo",
+    "long_description": "Islamic Cairo is not a single monument, but a sprawling, vibrant historic district that captures the essence of medieval Egypt. Recognized as a UNESCO World Heritage site, it contains one of the highest concentrations of historic architectural monuments in the Islamic world. Walking through its labyrinthine streets feels like stepping back in time, surrounded by hundreds of mosques, madrasas, hammams, and towering minarets spanning the Fatimid, Ayyubid, Mamluk, and Ottoman eras. Beyond its stunning architecture, it remains a bustling, living neighborhood filled with local markets and traditional artisans. It is a true open-air museum of Islamic history.",
+    "thumbnail": "images/Islamic_Cairo/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "47971",
+    "name": "KV17",
+    "description": "The tomb of Seti I, recognized as one of the best-decorated, deepest, and longest tombs in the Valley of the Kings.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.75,
+      "longitude": 32.6143
+    },
+    "imagePath": "images/KV17/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "KV17, the tomb of the great 19th Dynasty Pharaoh Seti I, is widely considered the most magnificent and completely decorated tomb in the Valley of the Kings. Plunging over 137 meters deep into the bedrock, it features a complex series of descending corridors, pillared halls, and a spectacular vaulted burial chamber. Unlike many other tombs, almost every square inch of its walls and ceilings is covered in deeply carved, exquisitely painted bas-reliefs depicting the king's journey through the treacherous underworld. Giovanni Belzoni famously discovered it in 1817, and its stunning astronomical ceiling remains one of the high points of ancient Egyptian art.",
+    "thumbnail": "images/KV17/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "56727",
+    "name": "Khan el-Khalili",
+    "description": "A famous historic bazaar and souk in the heart of Cairo, bustling with artisans and merchants since the 14th century.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0475,
+      "longitude": 31.262222
+    },
+    "imagePath": "images/Khan_el-Khalili/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Cairo",
+    "long_description": "Established in the 14th century, Khan el-Khalili is the legendary historic bazaar located in the bustling heart of Islamic Cairo. Originally built as a caravanserai—a large inn for traveling merchants—it quickly evolved into the economic epicenter of the city. Today, its narrow, labyrinthine alleyways are packed with colorful stalls selling everything from traditional silver and brassware to exotic spices and handcrafted textiles. The air is constantly filled with the scent of incense and the sound of craftsmen working copper. It is also home to historic coffeehouses, like the famous Fishawi's, where artists and writers have gathered for generations.",
+    "thumbnail": "images/Khan_el-Khalili/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "110375",
+    "name": "Kitchener's Island",
+    "description": "A small, teardrop-shaped island in the Nile River entirely devoted to a world-class botanical garden.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.093611111,
+      "longitude": 32.886944444
+    },
+    "imagePath": "images/Kitchener's_Island/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Aswan & Nubia",
+    "long_description": "Kitchener's Island, formally known as El Nabatat Island, is a small, teardrop-shaped oasis located in the Nile River near Aswan. It is entirely occupied by the Aswan Botanical Garden. The island's unique microclimate, surrounded by the cooling waters of the river, allows a diverse array of exotic, non-native plants to thrive here in the deep desert. Visitors can stroll along quiet, paved paths under the canopy of massive, century-old trees brought from across the British Empire. Alive with the sound of tropical birds and the gentle rustle of palm fronds, it is a beloved sunset destination for both locals and tourists seeking tranquility.",
+    "thumbnail": "images/Kitchener's_Island/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "138861",
+    "name": "Kom el-Shoqafa",
+    "description": "A historical archaeological site and necropolis blending Egyptian, Greek, and Roman architectural styles into a mesmerizing catacomb.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "lat": 31.1786,
+      "lng": 29.8931
+    },
+    "imagePath": "images/Kom_el-Shoqafa/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Alexandria",
+    "long_description": "The Catacombs of Kom el-Shoqafa represent one of the most fascinating and bizarre archaeological discoveries in Alexandria, famously stumbled upon by a donkey that fell into a shaft in 1900. Descending a spiral staircase deep underground, visitors enter a multi-level necropolis from the 2nd century AD that served as a burial site for the city's wealthy elite. The tombs are a masterful, sometimes surreal, fusion of ancient Egyptian, Greek, and Roman iconography. Reliefs show the jackal god Anubis dressed as a Roman legionnaire, and Egyptian gods depicted with Greek poses and hairstyles, perfectly capturing the uniquely multicultural essence of ancient Alexandria.",
+    "thumbnail": "images/Kom_el-Shoqafa/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "69841",
+    "name": "Mausoleum of Aga Khan",
+    "description": "A sleek, pink granite tomb perched high on the west bank of the Nile, offering sweeping views of Aswan.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.088333333,
+      "longitude": 32.878888888
+    },
+    "imagePath": "images/Mausoleum_of_Aga_Khan/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Aswan & Nubia",
+    "long_description": "Perched prominently on a high, sandy ridge overlooking the Nile on Aswan's west bank is the Mausoleum of the Aga Khan. Built in the late 1950s, it is the resting place of Sir Sultan Muhammad Shah, the 48th Imam of the Nizari Ismaili Muslims, who deeply loved the dry, healing climate of Aswan. The elegant, domed structure is modeled after Fatimid architecture in Cairo and is constructed of beautiful pink granite and white Carrara marble. For decades after his death, his devoted widow, the Begum Om Habibeh, ensured a fresh red rose was placed on his white marble tomb every single day.",
+    "thumbnail": "images/Mausoleum_of_Aga_Khan/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "201843",
+    "name": "Medinet Madi",
+    "description": "An archaeological site in Faiyum containing an impressively preserved Middle Kingdom temple dedicated to the cobra goddess Renenutet.",
+    "governorate": "Faiyum Governorate",
+    "coordinates": {
+      "latitude": 29.193119444,
+      "longitude": 30.642130555
+    },
+    "imagePath": "images/Medinet_Madi/0.jpg",
+    "category": "Ancient Temples",
+    "region": "Western Desert",
+    "long_description": "Medinet Madi, meaning 'City of the Past,' is a highly significant archaeological site hidden in the southwestern edge of the Faiyum oasis. It boasts one of the very few surviving temples from the Middle Kingdom of ancient Egypt, built by Amenemhat III and Amenemhat IV. The temple was uniquely dedicated to Sobek, the crocodile god, and Renenutet, the cobra goddess of the harvest. Because the site was buried under shifting desert sands for millennia, its dark, basalt inner sanctuary and finely carved hieroglyphs have been exceptionally preserved. Later Ptolemaic kings expanded the site, adding a processional avenue lined with imposing sphinxes and lion statues.",
+    "thumbnail": "images/Medinet_Madi/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "131755",
+    "name": "Montaza Palace",
+    "description": "A beautiful palatial complex and extensive royal gardens perched along the Mediterranean coastline of Alexandria.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.2886,
+      "longitude": 30.0159
+    },
+    "imagePath": "images/Montaza_Palace/0.jpg",
+    "category": "Palaces & Fortresses",
+    "region": "Alexandria",
+    "long_description": "Montaza Palace is a lavish royal complex built on a scenic promontory overlooking the Mediterranean Sea at the eastern edge of Alexandria. The original Salamlek Palace was built in 1892 as a royal hunting lodge, while the larger, striking Haramlek Palace was added in the 1930s by King Fuad I. The architecture is a unique, whimsical blend of Florentine Renaissance and traditional Moorish styles, famous for its distinct, towering red-and-white striped towers. The real draw for locals, however, is the expansive 150-acre royal gardens surrounding the palaces, filled with tall palm trees, manicured lawns, and beautiful hidden coves along the sea.",
+    "thumbnail": "images/Montaza_Palace/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "101108",
+    "name": "Mosque of Ibn Tulun",
+    "description": "The oldest and largest mosque in Cairo surviving in its original form, famed for its unique spiral minaret.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.02875,
+      "longitude": 31.249528
+    },
+    "imagePath": "images/Mosque_of_Ibn_Tulun/0.jpg",
+    "category": "Mosques",
+    "region": "Cairo",
+    "long_description": "Completed in 879 AD, the Mosque of Ibn Tulun is the oldest mosque in Cairo that still survives in its original, unadulterated form. Built by the Abbasid governor Ahmad ibn Tulun, it is a masterpiece of early Islamic architecture, constructed entirely of red brick and stunningly decorated with carved stucco. Its massive, unpaved courtyard and deeply shaded arcades create an atmosphere of profound peace and monumental scale. The mosque's most distinctive feature is its spiral minaret, inspired by the Great Mosque of Samarra in Iraq, making it unique in Egypt. Climbing the minaret offers incredible views over the surrounding historic neighborhoods.",
+    "thumbnail": "images/Mosque_of_Ibn_Tulun/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "192770",
+    "name": "Mosque-Madrassa of Sultan Hassan",
+    "description": "A massive, monumental 14th-century mosque considered an absolute masterpiece of Mamluk architecture.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0319,
+      "longitude": 31.2567
+    },
+    "imagePath": "images/Mosque-Madrassa_of_Sultan_Hassan/0.jpg",
+    "category": "Mosques",
+    "region": "Cairo",
+    "long_description": "The Mosque-Madrassa of Sultan Hassan is a colossal architectural triumph built during the Mamluk era in the mid-14th century. Located near the Cairo Citadel, its sheer scale and monumental proportions were designed to project the absolute power and wealth of the sultan. The complex is remarkable for its enormous central courtyard, surrounded by four towering vaulted halls (iwans) dedicated to the four main schools of Sunni Islamic law. Its massive entrance portal and soaring minarets are intricately decorated with stone carvings and muqarnas. It remains one of the most magnificent and imposing religious structures in the entire Islamic world.",
+    "thumbnail": "images/Mosque-Madrassa_of_Sultan_Hassan/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "81611",
+    "name": "Muhammad Ali Mosque",
+    "description": "Known as the Alabaster Mosque, this stunning Ottoman-style landmark dominates the Cairo skyline from the Citadel.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.028611111,
+      "longitude": 31.259722222
+    },
+    "imagePath": "images/Muhammad_Ali_Mosque/0.jpg",
+    "category": "Mosques",
+    "region": "Cairo",
+    "long_description": "Perched at the highest point of the Cairo Citadel, the Great Mosque of Muhammad Ali Pasha is one of the city's most recognizable and visible landmarks. Built between 1830 and 1848, it was designed in the classic Ottoman style, featuring a massive central dome surrounded by smaller half-domes and twin pencil-thin minarets. The interior and lower exterior walls are extensively coated in gleaming alabaster, earning it the nickname 'The Alabaster Mosque'. The courtyard contains an ornate brass clock tower, gifted by King Louis Philippe of France in exchange for the obelisk that now stands in Paris. Its courtyard offers what is arguably the best panoramic view of Cairo.",
+    "thumbnail": "images/Muhammad_Ali_Mosque/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "197645",
+    "name": "Muizz Street",
+    "description": "One of the oldest streets in Cairo, acting as a stunning open-air museum for unparalleled medieval Islamic architecture.",
+    "governorate": "Cairo Governorate",
+    "coordinates": {
+      "latitude": 30.0467,
+      "longitude": 31.26
+    },
+    "imagePath": "images/Muizz_Street/0.jpg",
+    "category": "Historic Architecture",
+    "region": "Cairo",
+    "long_description": "Al-Muizz li-Din Allah al-Fatimi Street is one of the oldest and most atmospheric thoroughfares in Cairo. Running through the heart of the historic city, it was the main axis of the original Fatimid capital founded in the 10th century. The United Nations describes it as having the greatest concentration of medieval architectural treasures in the Islamic world. Walking down the street, visitors are flanked on both sides by spectacular mosques, schools, hospitals, and palaces built by successive sultans seeking to leave their mark. A nighttime stroll here, when the ancient facades are beautifully illuminated, is a magical experience.",
+    "thumbnail": "images/Muizz_Street/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "143048",
+    "name": "Na'ama Bay",
+    "description": "The bustling heart of Sharm El Sheikh, renowned for its pristine beaches, vibrant coral reefs, and lively promenade.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": {
+      "latitude": 27.905277777,
+      "longitude": 34.324166666
+    },
+    "imagePath": "images/Na'ama_Bay/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "Na'ama Bay is the vibrant, beating heart of the famous resort city of Sharm El Sheikh on the southern tip of the Sinai Peninsula. Originally a quiet stretch of pristine Red Sea coastline, it has developed into a bustling, cosmopolitan bay packed with luxury hotels, dive centers, and palm-lined beaches. By day, visitors flock to its warm, crystal-clear waters to snorkel and dive among incredibly rich and accessible coral reefs just meters from the shore. By night, the area transforms into a lively entertainment hub, with its long pedestrian promenade illuminated by bustling cafes, traditional shisha lounges, and energetic open-air markets.",
+    "thumbnail": "images/Na'ama_Bay/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "196950",
+    "name": "Nabq Protected Area",
+    "description": "A diverse nature reserve in South Sinai encompassing rich coral reefs, mangrove forests, and dramatic desert landscapes.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": {
+      "latitude": 28.278,
+      "longitude": 34.38
+    },
+    "imagePath": "images/Nabq_Protected_Area/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "The Nabq Protected Area is a massive, ecologically diverse coastal and desert nature reserve located just north of Sharm El Sheikh along the Gulf of Aqaba. Covering over 600 square kilometers, it is unique for its stark, dramatic contrasts. Here, harsh, arid desert mountains sweep down to meet pristine beaches and some of the most northern mangrove forests in the world, thriving in the salty shallows. The area is a vital sanctuary for migratory birds, gazelles, and the local Bedouin tribes who continue to live harmoniously with the land. Its untouched, shallow coral reefs offer some of the best and quietest snorkeling in Sinai.",
+    "thumbnail": "images/Nabq_Protected_Area/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "80156",
+    "name": "Osireion",
+    "description": "A mysterious, subterranean megalithic structure at Abydos believed to symbolize the mythical tomb of the god Osiris.",
+    "governorate": "Sohag Governorate",
+    "coordinates": {
+      "latitude": 26.184025,
+      "longitude": 31.918253
+    },
+    "imagePath": "images/Osireion/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Upper Egypt",
+    "long_description": "Located directly behind the Temple of Seti I at Abydos, the Osireion is one of the most mysterious and unique structures in all of Egypt. Built out of colossal, unadorned blocks of red granite—some weighing up to 100 tons—its architectural style is severe, megalithic, and completely devoid of the intricate reliefs found in the adjacent temple. Seti I deliberately built it deep underground to tap into the natural water table, creating a central island surrounded by a channel of water. This ingenious design was meant to physically recreate the primeval mound of creation and serve as the symbolic, eternal tomb for the god Osiris.",
+    "thumbnail": "images/Osireion/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "130292",
+    "name": "Qaed Ibrahim Mosque",
+    "description": "A prominent modern mosque featuring a distinct, slender minaret overlooking the Mediterranean coast.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.20324,
+      "longitude": 29.90393
+    },
+    "imagePath": "images/Qaed_Ibrahim_Mosque/0.jpg",
+    "category": "Mosques",
+    "region": "Alexandria",
+    "long_description": "Located prominently at Raml Station in the heart of Alexandria, the Qaed Ibrahim Mosque is one of the city's most recognizable religious and architectural landmarks. Built in 1948, it was designed by Mario Rossi, an Italian architect who became deeply passionate about Islamic architecture. The mosque elegantly combines elements of traditional Mamluk and Andalusian design, distinguished by its tall, exceptionally slender minaret and graceful arches. Because of its central location overlooking the Mediterranean Sea and public squares, it serves as a major gathering point for Alexandrians during Friday prayers, religious festivals, and times of civic importance.",
+    "thumbnail": "images/Qaed_Ibrahim_Mosque/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "26706",
+    "name": "Qasr Qarun",
+    "description": "A well-preserved Ptolemaic temple in the Faiyum oasis dedicated to Sobek-Re, the ancient crocodile god.",
+    "governorate": "Faiyum Governorate",
+    "coordinates": {
+      "latitude": 29.405630555,
+      "longitude": 30.418288888
+    },
+    "imagePath": "images/Qasr_Qarun/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Western Desert",
+    "long_description": "Located on the desolate western edge of Lake Qarun in the Faiyum depression, Qasr Qarun is an impressively preserved temple built during the Ptolemaic era. Dedicated to Sobek-Re, the fearsome crocodile god revered throughout the Faiyum region, the temple sits at the edge of the ancient, now-ruined town of Dionysias. From the outside, it resembles a stark, windowless, square fortress. However, its interior is a fascinating, unlit labyrinth of small chambers, hidden staircases, and subterranean tunnels that priests once used for ceremonies. Every year on the winter solstice, the rising sun aligns perfectly to illuminate the sanctuary's holy of holies.",
+    "thumbnail": "images/Qasr_Qarun/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "2430",
+    "name": "Qubbet el-Hawa",
+    "description": "A striking, rocky ridge on the Nile's west bank harboring the rock-cut tombs of Old and Middle Kingdom nobles.",
+    "governorate": "Aswan Governorate",
+    "coordinates": {
+      "latitude": 24.1025,
+      "longitude": 32.88888889
+    },
+    "imagePath": "images/Qubbet_el-Hawa/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Aswan & Nubia",
+    "long_description": "Rising sharply from the west bank of the Nile opposite Aswan is Qubbet el-Hawa, a stark, wind-swept rocky ridge literally translating to 'Dome of the Wind.' High up on its sandy slopes lie the rock-cut tombs of powerful ancient Egyptian nobles, governors, and explorers from the Old and Middle Kingdoms. These officials controlled the southern border and led dangerous trading expeditions deep into Africa. Though less elaborate than the tombs in Luxor, the wall paintings here offer fascinating, unvarnished accounts of historical expeditions and daily life. The steep climb to the top is rewarded with one of the most spectacular, sweeping views of Aswan and the Nile.",
+    "thumbnail": "images/Qubbet_el-Hawa/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "149906",
+    "name": "Ramesseum",
+    "description": "The memorial temple of Pharaoh Ramesses II, renowned for its colossal fallen statues and poetic inspiration.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.727777777,
+      "longitude": 32.610555555
+    },
+    "imagePath": "images/Ramesseum/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "The Ramesseum is the vast, ruined mortuary temple of the legendary Pharaoh Ramesses II, dedicated to his cult and the god Amun. Once a magnificent complex intended to showcase his eternal greatness, it now lies in romantic ruins on the Theban west bank. The site's most famous feature is the shattered, 1,000-ton colossal granite statue of Ramesses lying broken in the dust. This specific fallen giant directly inspired Percy Bysshe Shelley's famous poem 'Ozymandias,' which reflects on the hubris and inevitable decay of supreme power. Despite the destruction, its surviving pylons still display deeply carved battle scenes from the pharaoh's famous military campaigns.",
+    "thumbnail": "images/Ramesseum/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "183636",
+    "name": "Ras Muhammad",
+    "description": "Egypt's premier national park, situated at the southern tip of the Sinai Peninsula and famous for world-class diving.",
+    "governorate": "South Sinai Governorate",
+    "coordinates": {
+      "latitude": 27.769444444,
+      "longitude": 34.209722222
+    },
+    "imagePath": "images/Ras_Muhammad/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "Situated at the extreme southern tip of the Sinai Peninsula, where the Gulf of Suez meets the Gulf of Aqaba, Ras Muhammad is Egypt's first and most famous national park. It is globally celebrated as one of the finest scuba diving destinations on the planet. The park protects incredibly vibrant, vertical coral walls that drop hundreds of meters into the deep blue sea, teeming with an astonishing density of marine life, including sharks, rays, and massive schools of pelagic fish. Above water, the park features stark, beautiful desert landscapes, hidden saltwater lakes, and a massive, iconic stone gate marking the entrance to this pristine wilderness.",
+    "thumbnail": "images/Ras_Muhammad/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "129427",
+    "name": "Red Monastery",
+    "description": "A 6th-century Coptic monastery near Sohag, internationally renowned for its vividly restored late-antique wall paintings.",
+    "governorate": "Sohag Governorate",
+    "coordinates": {
+      "latitude": 26.5218,
+      "longitude": 31.6374
+    },
+    "imagePath": "images/Red_Monastery/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Upper Egypt",
+    "long_description": "The Red Monastery, named for the baked red bricks used in its construction, is an extraordinary, hidden jewel of Coptic history located near the city of Sohag. Founded in the 4th century, its current main church dates back to the 6th century. From the outside, its massive, fortress-like walls give no hint of the breathtaking beauty inside. Thanks to an extensive, decade-long international restoration project, the soot of centuries was removed to reveal an incredibly vivid, complete interior painted from floor to ceiling with saints, angels, and intricate geometric patterns. It stands as one of the most important surviving examples of late-antique, pre-Islamic art in the world.",
+    "thumbnail": "images/Red_Monastery/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "121569",
+    "name": "Sadat museum",
+    "description": "A museum within the Bibliotheca Alexandrina dedicated to the life and legacy of the late Egyptian President Anwar Sadat.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.208834,
+      "longitude": 29.909122
+    },
+    "imagePath": "images/Sadat_museum/0.jpg",
+    "category": "Museums",
+    "region": "Alexandria",
+    "long_description": "The Sadat Museum is an intimate, deeply personal exhibition space housed within the cultural complex of the Bibliotheca Alexandrina. It is dedicated to chronicling the life, political career, and legacy of the late Egyptian President, Anwar Sadat, a pivotal figure in modern Middle Eastern history. The museum displays a wide array of his personal belongings donated by his family, including his military uniforms, his personal desk, his famous pipe, and the Nobel Peace Prize medal he was awarded in 1978. It also features a poignant display of the blood-stained military suit he was wearing on the day of his tragic assassination in 1981.",
+    "thumbnail": "images/Sadat_museum/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "14736",
+    "name": "Saqqara",
+    "description": "A vast, ancient burial ground in Egypt, serving as the legendary necropolis for the Ancient Egyptian capital, Memphis.",
+    "governorate": "Giza Governorate",
+    "coordinates": {
+      "latitude": 29.85,
+      "longitude": 31.233333333
+    },
+    "imagePath": "images/Saqqara/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Giza & Pyramids",
+    "long_description": "Saqqara is an immense and incredibly dense archaeological site that served as the primary necropolis for the ancient capital city of Memphis. Stretching for over six kilometers, the site was actively used for burials for more than 3,000 years, from the dawn of the First Dynasty through the Greco-Roman period. It is most famous for the Step Pyramid of Djoser, but the desert sands here hide hundreds of other tombs, mastabas, and ruined pyramids belonging to high priests, nobles, and pharaohs. The underground tombs of Saqqara contain some of the most beautifully preserved, vividly painted reliefs of daily Egyptian life ever discovered.",
+    "thumbnail": "images/Saqqara/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "35012",
+    "name": "Siwa",
+    "description": "A remote, enchanting desert oasis steeped in Berber culture, ancient ruins, and breathtaking natural salt lakes.",
+    "governorate": "Matrouh Governorate",
+    "coordinates": {
+      "lat": 29.2033,
+      "lng": 25.5197
+    },
+    "imagePath": "images/Siwa/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Western Desert",
+    "long_description": "Siwa Oasis is a magical, deeply isolated pocket of life situated in the vast, barren expanse of the Western Desert, close to the Libyan border. Culturally and geographically distinct from the rest of Egypt, Siwa has its own Berber language and unique traditions. The oasis is famous for the crumbling, 13th-century mud-brick fortress of Shali that dominates the town center, and the ancient Temple of the Oracle, where Alexander the Great famously traveled to be declared the son of Amun. Surrounded by dense palm groves and crystal-clear, hyper-saline lakes where you can float effortlessly, Siwa is a tranquil, otherworldly escape.",
+    "thumbnail": "images/Siwa/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "164427",
+    "name": "Soma Bay",
+    "description": "An exclusive coastal resort destination on the Red Sea, offering pristine beaches, kite surfing, and luxury amenities.",
+    "governorate": "Red Sea Governorate",
+    "coordinates": {
+      "latitude": 26.84735,
+      "longitude": 33.9905
+    },
+    "imagePath": "images/Soma_Bay/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Sinai & Red Sea",
+    "long_description": "Soma Bay is an exclusive, luxury resort peninsula stretching out into the brilliant turquoise waters of the Red Sea, south of Hurghada. Unlike older, more crowded coastal cities, Soma Bay was developed specifically as an upscale, tranquil haven. It boasts some of the most pristine, powdery white-sand beaches in Egypt, contrasting beautifully with the barren desert mountains in the background. The bay is famous for its consistent, strong offshore winds, making it a premier global destination for kite surfing and windsurfing. With its championship golf course, world-class thalassotherapy spa, and spectacular house reefs, it offers a premium slice of Red Sea paradise.",
+    "thumbnail": "images/Soma_Bay/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "113740",
+    "name": "St. Catherine's Cathedral, Alexandria",
+    "description": "A beautiful Roman Catholic cathedral serving as a spiritual center for the city's Catholic community.",
+    "governorate": "Alexandria Governorate",
+    "coordinates": {
+      "latitude": 31.19463889,
+      "longitude": 29.89458333
+    },
+    "imagePath": "images/St._Catherine's_Cathedral,_Alexandria/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Alexandria",
+    "long_description": "St. Catherine's Cathedral is the primary Roman Catholic church in Alexandria and serves as the seat of the Apostolic Vicariate of Alexandria of Egypt. Built in the mid-19th century in a beautiful Neo-Baroque architectural style, the cathedral is named in honor of Saint Catherine of Alexandria, a revered early Christian martyr. Its grand interior features soaring ceilings, classical marble columns, and beautiful stained-glass windows that provide a serene, contemplative atmosphere. Historically, it has been the spiritual heart for Alexandria's diverse expatriate communities, including Italians, Maltese, and French, reflecting the city's uniquely cosmopolitan and Mediterranean heritage.",
+    "thumbnail": "images/St._Catherine's_Cathedral,_Alexandria/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "194636",
+    "name": "Theban Necropolis",
+    "description": "The vast area on the west bank of the Nile at Luxor containing the Valley of the Kings, Queens, and countless noble tombs.",
+    "governorate": "New Valley Governorate",
+    "coordinates": {
+      "latitude": 25.720833333,
+      "longitude": 32.61
+    },
+    "imagePath": "images/Theban_Necropolis/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Western Desert",
+    "long_description": "The Theban Necropolis is a sprawling, awe-inspiring area of the western desert across the Nile from modern-day Luxor. For over a millennium, this stark, rocky landscape served as the ultimate burial ground for the pharaohs, queens, high priests, and elite artisans of the New Kingdom. It encompasses world-famous sites like the Valley of the Kings, the Valley of the Queens, the dramatic mortuary temples of Hatshepsut and Ramesses III, and the beautifully intimate Tombs of the Nobles. The entire area is a testament to the ancient Egyptians' profound obsession with the afterlife, representing the greatest open-air archaeological museum in the world.",
+    "thumbnail": "images/Theban_Necropolis/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "139024",
+    "name": "Tomb of Nefertari",
+    "description": "The most spectacular tomb in the Valley of the Queens, celebrated for its brilliantly vivid and beautifully preserved wall paintings.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.7333,
+      "longitude": 32.6
+    },
+    "imagePath": "images/Tomb_of_Nefertari/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "The Tomb of Queen Nefertari (QV66) is universally acknowledged as the 'Sistine Chapel of Ancient Egypt.' As the beloved great royal wife of Ramesses II, her tomb in the Valley of the Queens was decorated with an unparalleled level of care, artistry, and expense. The walls are covered entirely in brilliantly vivid, highly detailed paintings depicting the queen making offerings to the gods and navigating her journey into the afterlife. The level of preservation is breathtaking, with the colors still as vibrant as the day the artisans put down their brushes over 3,000 years ago. Strict conservation limits access, making a visit a rare and unforgettable privilege.",
+    "thumbnail": "images/Tomb_of_Nefertari/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "195466",
+    "name": "Valley of the Queens",
+    "description": "The burial site of many wives of Pharaohs from the 18th, 19th, and 20th dynasties, nestled in a hidden wadi.",
+    "governorate": "Luxor Governorate",
+    "coordinates": {
+      "latitude": 25.7275,
+      "longitude": 32.593055555
+    },
+    "imagePath": "images/Valley_of_the_Queens/0.jpg",
+    "category": "Pyramids & Ancient Tombs",
+    "region": "Luxor & Thebes",
+    "long_description": "The Valley of the Queens, known in ancient times as 'The Place of Beauty,' is a secluded necropolis located at the southern end of the Theban hills. Over 90 tombs have been discovered here, serving as the final resting place for the great royal wives, princesses, and princes of the New Kingdom. While generally smaller and less structurally complex than the tombs in the Valley of the Kings, many of these tombs feature exceptionally beautiful and delicate artwork. The jewel of the valley is undeniably the meticulously restored tomb of Queen Nefertari, whose brilliantly painted chambers remain one of the absolute pinnacles of ancient Egyptian art.",
+    "thumbnail": "images/Valley_of_the_Queens/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "34170",
+    "name": "Wadi el-Raiyan",
+    "description": "A stunning natural depression in Faiyum featuring Egypt's only waterfalls and two beautiful interconnected lakes.",
+    "governorate": "Faiyum Governorate",
+    "coordinates": {
+      "latitude": 29.082222222,
+      "longitude": 30.284444444
+    },
+    "imagePath": "images/Wadi_el-Raiyan/0.jpg",
+    "category": "Nature & Beaches",
+    "region": "Western Desert",
+    "long_description": "Wadi el-Raiyan is a spectacular protected nature reserve located in the deep desert of the Faiyum depression. The area is most famous for its two massive, beautiful man-made lakes, created in the 1970s to channel agricultural runoff. As water flows from the higher upper lake to the lower lake, it creates the Wadi el-Raiyan Waterfalls—the largest and essentially the only waterfalls in Egypt. The contrast between the stark, golden sand dunes and the rushing, reed-lined blue water is incredibly striking. The lower lake also serves as a vital wintering ground for massive flocks of migratory birds.",
+    "thumbnail": "images/Wadi_el-Raiyan/0.jpg",
+    "importance": 5
+  },
+  {
+    "id": "186018",
+    "name": "White Monastery",
+    "description": "An ancient Coptic Orthodox monastery built from the white limestone blocks of ruined Pharaonic temples.",
+    "governorate": "Sohag Governorate",
+    "coordinates": {
+      "latitude": 26.534561111,
+      "longitude": 31.645669444
+    },
+    "imagePath": "images/White_Monastery/0.jpg",
+    "category": "Churches & Monasteries",
+    "region": "Upper Egypt",
+    "long_description": "The White Monastery, located near Sohag, is one of the most historically important and architecturally imposing Coptic Christian sites in Upper Egypt. Founded in the 4th century by Saint Shenouda the Archimandrite, a towering figure in Coptic literature and monasticism, it once housed over 2,000 monks. The monastery was remarkably constructed by recycling massive, smooth white limestone blocks taken from nearby ruined pharaonic temples, giving its sloping exterior the distinct, intimidating appearance of an ancient Egyptian temple rather than a church. Inside, the surviving basilica features beautiful granite columns and intricate architectural details that speak to the power and scale of early Egyptian monasticism.",
+    "thumbnail": "images/White_Monastery/0.jpg",
+    "importance": 5
+  }
+]
