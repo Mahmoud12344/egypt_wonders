@@ -179,7 +179,7 @@ So `mkdir -p css js` creates both the `css/` and `js/` folders in one command.
 - [x] `css/` folder created
 - [x] `js/` folder created
 - [x] All 5 HTML files created (empty)
-- [x] All 4 CSS files created (empty)
+- [x] All 4 CSS files created (empty)a
 - [x] All 3 JS files created (empty)
 - [x] Git initialized at project root
 - [x] First commit made

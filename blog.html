@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog — Egypt Wonders</title>
     <meta name="description" content="Stories, history, and travel insights from Egypt's most remarkable landmarks and regions.">
-    <link rel="stylesheet" href="css/global.css?v=5">
+    <link rel="stylesheet" href="css/global.css?v=6">
 
     <style>
         /* ── Blog-specific styles ──
@@ -115,8 +115,10 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <a href="auth.html" id="nav-signin" class="nav-auth-btn btn-solid" aria-label="Sign in to your account">Sign In</a>
                 <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
             </div>
         </nav>
@@ -206,6 +208,44 @@
 
             </div>
 
+            <!-- =========================================================
+                 COMMUNITY SECTION
+                 User generated posts managed by js/blog.js
+                 ========================================================= -->
+            <section class="community-section" id="community-section">
+                
+                <header class="blog-header" style="margin-top: var(--space-xxl);">
+                    <h2>Community Voices</h2>
+                    <p>Share your experiences, travel tips, and memories from Egypt.</p>
+                </header>
+
+                <!-- Post Creation Form -->
+                <div class="community-form-box">
+                    <form id="community-form" novalidate>
+                        
+                        <!-- Name is hidden if logged in -->
+                        <div class="form-group" id="name-group">
+                            <input class="form-input" type="text" id="post-name" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-input" id="post-content" rows="4" placeholder="Write your experience..."></textarea>
+                        </div>
+
+                        <button class="btn-solid btn-black" type="submit" id="btn-post">
+                            Post
+                        </button>
+                    </form>
+                    <div id="post-message" class="form-message" role="alert"></div>
+                </div>
+
+                <!-- Grid for User Posts -->
+                <div class="blog-grid" id="community-posts">
+                    <!-- Posts will be injected here by blog.js -->
+                </div>
+
+            </section>
+
         </div>
     </main>
 
@@ -221,7 +261,9 @@
         </div>
     </footer>
 
+    <script src="js/auth.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/blog.js"></script>
 
 </body>
 

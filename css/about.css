@@ -1,0 +1,152 @@
+.about-hero {
+    text-align: center;
+    padding: var(--space-xl) 0 var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-xs);
+    color: var(--text-main);
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* The Contributor Grid */
+.contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+/* Premium Glassmorphism Card */
+.contributor-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+[data-mode="dark"] .contributor-card {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.contributor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+}
+
+/* Faint watermark letter in the background of each card */
+.contributor-watermark {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-family: var(--font-heading);
+    font-size: 9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    opacity: 0.04;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.contributor-name {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: var(--space-xs);
+    position: relative;
+    z-index: 1;
+}
+
+.contributor-id {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--space-md);
+}
+
+.contributor-email {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: .8rem;
+    color: var(--accent);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    transition: opacity var(--transition);
+    word-break: break-all;
+}
+
+.contributor-email:hover {
+    opacity: 0.8;
+}
+
+/* Contact Banner at the bottom */
+.contact-banner {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-mode="dark"] .contact-banner {
+    background: rgba(18, 18, 18, 0.5);
+}
+
+.contact-banner-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-main);
+}
+
+.contact-banner p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: .5rem;
+    transition: opacity var(--transition);
+}
+
+.contact-email:hover {
+    opacity: 0.8;
+}

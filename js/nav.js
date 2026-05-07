@@ -37,7 +37,7 @@ const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 const navLinks = document.querySelectorAll('.nav-links a');
 
 /* Loop through each link and check if its href matches the current page */
-navLinks.forEach(function(link) {
+navLinks.forEach(function (link) {
     /* link.getAttribute('href') returns the href value, e.g. "index.html" */
     if (link.getAttribute('href') === currentPage) {
         link.classList.add('active'); /* add the "active" CSS class */
@@ -83,7 +83,7 @@ if (savedMode === 'dark') {
 /* --- Handle toggle button click ---
    When the button is clicked, we check the current mode and flip it. */
 if (modeBtn) {
-    modeBtn.addEventListener('click', function() {
+    modeBtn.addEventListener('click', function () {
         /* Read the current mode from the body attribute */
         const currentMode = document.body.getAttribute('data-mode');
 
@@ -106,7 +106,7 @@ if (modeBtn) {
    ───────────────────────────────────────────────────────────── */
 const siteNav = document.querySelector('.site-nav');
 if (siteNav && siteNav.classList.contains('transparent')) {
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             siteNav.classList.remove('transparent');
         } else {
@@ -114,3 +114,61 @@ if (siteNav && siteNav.classList.contains('transparent')) {
         }
     });
 }
+
+
+/* ─────────────────────────────────────────────────────────────
+   PART 4: SESSION-AWARE AUTH BUTTON
+   ─────────────────────────────────────────────────────────────
+   Every page has a static <a id="nav-signin"> link in the HTML
+   that always points to auth.html. This is always visible by
+   default (no JS needed to show it).
+
+   When a user IS logged in, we:
+     1. Hide the static Sign In link
+     2. Inject a "Hi, Name + Sign Out" section next to it
+
+   This approach is more reliable than pure JS injection because
+   the link is always present in the DOM regardless of JS state.
+   ───────────────────────────────────────────────────────────── */
+(function () {
+    /* Only run if auth.js was loaded */
+    if (typeof getCurrentUser !== 'function') return;
+
+    const user       = getCurrentUser();
+    const signInLink = document.getElementById('nav-signin');
+    const navRight   = document.querySelector('.nav-right');
+
+    if (user && signInLink && navRight) {
+        /* ── Logged in: hide the static Sign In link ── */
+        signInLink.style.display = 'none';
+
+        /* Build the greeting + sign-out group */
+        const userArea = document.createElement('div');
+        userArea.className = 'nav-user-area';
+        userArea.id        = 'nav-user-area';
+
+        /* Show only the first name so it fits neatly */
+        const firstName = user.name.split(' ')[0];
+        const greeting  = document.createElement('span');
+        greeting.className   = 'nav-user-name';
+        greeting.textContent = `Hi, ${firstName}`;
+
+        const signOutBtn = document.createElement('button');
+        signOutBtn.className   = 'nav-auth-btn btn-solid';
+        signOutBtn.id          = 'nav-signout-btn';
+        signOutBtn.textContent = 'Sign Out';
+        signOutBtn.setAttribute('aria-label', 'Sign out of your account');
+
+        /* signOut() is defined in auth.js — clears session + redirects */
+        signOutBtn.addEventListener('click', function () {
+            signOut();
+        });
+
+        userArea.appendChild(greeting);
+        userArea.appendChild(signOutBtn);
+
+        /* Insert right before (or after) the mode toggle */
+        navRight.appendChild(userArea);
+    }
+    /* If user is null — do nothing; the static Sign In link is already visible */
+}());

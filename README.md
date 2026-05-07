@@ -20,30 +20,51 @@ HTML5, CSS3, and vanilla JavaScript** — zero frameworks, zero build tools.
 > runtime. Browsers block `fetch()` on `file://` URLs for security
 > reasons, so you **must** serve the files over HTTP.
 
-### Quick Start
+### 1. Obtain the Project
 
+There are three ways to get this project onto your local machine:
+
+**Option A: Clone via Git (Recommended)**
 ```bash
-# 1. Clone or navigate to the project directory
-cd project/
-
-# 2. Start a local server on port 8000
-python3 -m http.server 8000
-
-# 3. Open in your browser
-#    http://localhost:8000
+git clone https://github.com/yourusername/egypt_wonders.git
+cd egypt_wonders
 ```
 
-That's it. No `npm install`, no build step, no dependencies.
+**Option B: Download as ZIP**
+1. Click the green **Code** button at the top right of the repository.
+2. Select **Download ZIP**.
+3. Extract the ZIP file and open the extracted folder in your terminal.
 
-### Alternative Servers
-
+**Option C: Fetch via Terminal (No Git Setup)**
+If you don't have Git installed and just want to download the code directly from the terminal via a ZIP URL (replace the URL with the actual repo link):
 ```bash
-# Node.js (if you prefer)
+wget https://github.com/yourusername/egypt_wonders/archive/refs/heads/main.zip
+unzip main.zip
+cd egypt_wonders-main
+```
+
+### 2. Start the Local Server
+
+Because this project uses the native `fetch()` API to load JSON data, you **must** serve the files over an HTTP server. Browsers block `fetch()` on local `file://` paths for security reasons.
+
+**Start a Python Server (Standard)**
+```bash
+# Start a local server on port 8000
+python3 -m http.server 8000
+```
+
+**Alternative Servers (If Python is unavailable)**
+```bash
+# Node.js (via npx)
 npx -y serve . -l 8000
 
 # PHP
 php -S localhost:8000
 ```
+
+### 3. View the Project
+Once the server is running, open your web browser and navigate to:
+[http://localhost:8000](http://localhost:8000)
 
 ---
 
@@ -62,7 +83,7 @@ project/
 ├── css/
 │   ├── global.css           # Design system — variables, nav, footer, utilities
 │   ├── home.css             # Home page styles — hero, region cards, sidebar
-│   ├── region.css           # Region page styles — landmark grid, modal
+│   ├── landmarks-grid.css           # Region page styles — landmark grid, modal
 │   └── landmark.css         # Landmark detail styles — gallery, metadata sidebar
 │
 ├── js/

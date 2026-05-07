@@ -1,0 +1,267 @@
+/* =============================================================
+   auth.css — Authentication Page Styles
+   =============================================================
+   Page-specific styles for auth.html (Login / Sign-Up).
+   Relies on variables defined in global.css (colors, spacing,
+   fonts, radius). This file only handles the layout and look
+   of the auth card and its inner panels.
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────────────────────
+   1. PAGE LAYOUT
+   Center the card vertically and horizontally on the full screen.
+   ───────────────────────────────────────────────────────────── */
+.auth-page {
+    /* Fill the full viewport height so the card centers correctly
+       even when the page has very little content */
+    min-height: 100vh;
+
+    /* Flexbox column so the card stacks neatly */
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* center horizontally */
+    justify-content: center;   /* center vertically */
+
+    /* Match the page background from global.css */
+    background-color: var(--bg-main);
+
+    /* Breathing room on small screens */
+    padding: var(--space-lg) var(--space-md);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   2. THE AUTH CARD
+   Glassmorphism card — same technique as contributor cards in
+   about.css (semi-transparent + backdrop blur).
+   ───────────────────────────────────────────────────────────── */
+.auth-card {
+    /* Frosted-glass background: 40% white over whatever is behind */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari */
+
+    /* Thin border so the glass edge is visible */
+    border: 1px solid var(--border-color);
+
+    /* Rounded corners consistent with global --radius-lg */
+    border-radius: var(--radius-lg);
+
+    /* Inner spacing */
+    padding: var(--space-xl) var(--space-xl);
+
+    /* Wider card — was 440px, now 520px for more breathing room */
+    width: 100%;
+    max-width: 520px;
+
+    /* Soft shadow to lift the card off the background */
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark-mode override: white glass is too bright on dark bg */
+[data-mode="dark"] .auth-card {
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   3. LOGO / BRAND AT TOP OF CARD
+   ───────────────────────────────────────────────────────────── */
+.auth-brand {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.auth-brand-logo {
+    /* Display block so margin auto works for centering */
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;   /* was 1.4rem — bigger brand name */
+    font-weight: 700;
+    color: var(--accent);   /* gold accent to match nav logo */
+    text-decoration: none;
+    margin-bottom: var(--space-xs);
+}
+
+.auth-brand-tagline {
+    font-size: 1rem;   /* was 0.85rem */
+    color: var(--text-muted);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   4. TAB TOGGLE (Login | Sign Up)
+   Two pill-shaped tab buttons that switch between the panels.
+   ───────────────────────────────────────────────────────────── */
+.auth-tabs {
+    display: flex;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;  /* full pill shape */
+    padding: 4px;
+    margin-bottom: var(--space-md);
+    gap: 4px;
+}
+
+.auth-tab {
+    /* Grows equally to share the tab bar width */
+    flex: 1;
+    text-align: center;
+
+    padding: 10px 0;    /* was 8px — taller tabs */
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 1rem;    /* was 0.9rem — bigger tab labels */
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+
+    transition: background var(--transition), color var(--transition);
+}
+
+/* The currently active tab: black pill + forced white text.
+   We use a hardcoded #FDFBF7 instead of var(--bg-main) because
+   CSS variable inheritance from body can sometimes override it
+   due to specificity order in browsers. */
+.auth-tab.active {
+    background: var(--text-main);
+    color: #FDFBF7 !important;   /* explicit — prevents body color bleeding in */
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   5. PANELS (Login / Sign-Up content area)
+   Only one panel is visible at a time. JS toggles the class.
+   ───────────────────────────────────────────────────────────── */
+.auth-panel {
+    /* Hidden by default; JS adds .visible to show the active one */
+    display: none;
+}
+
+.auth-panel.visible {
+    display: block;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   6. FORM ELEMENTS
+   Reuses the same visual language as contact.html inputs.
+   ───────────────────────────────────────────────────────────── */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm); /* 1rem gap between each field group */
+}
+
+.auth-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* small gap between label and input */
+}
+
+.auth-label {
+    font-size: 0.88rem;  /* was 0.78rem — more readable label */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.auth-input {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1.1rem;  /* was 0.75rem 1rem — taller inputs */
+    font-family: var(--font-body);
+    font-size: 1rem;         /* was 0.95rem */
+    color: var(--text-main);
+    width: 100%;
+
+    /* Remove the browser's default focus ring; we add our own */
+    outline: none;
+
+    transition: border-color var(--transition);
+}
+
+/* Gold border on focus — consistent with contact.html */
+.auth-input:focus {
+    border-color: var(--accent);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   7. SUBMIT BUTTON
+   Full-width version of the global .btn-solid style.
+   ───────────────────────────────────────────────────────────── */
+.auth-submit {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--space-sm);  /* was --space-xs — more gap above button */
+    padding: 16px;               /* was 14px — taller button */
+    font-size: 1.05rem;          /* was 1rem */
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   8. ERROR / SUCCESS MESSAGES
+   Small inline feedback shown below the form on bad input.
+   ───────────────────────────────────────────────────────────── */
+.auth-message {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-xs);
+
+    /* Hidden by default — JS removes 'hidden' class to show it */
+    display: none;
+}
+
+.auth-message.visible {
+    display: block;
+}
+
+.auth-message.error {
+    /* Soft red tones that work on both light and dark backgrounds */
+    background: rgba(220, 53, 69, 0.1);
+    color: #c0392b;
+    border: 1px solid rgba(220, 53, 69, 0.25);
+}
+
+.auth-message.success {
+    background: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.25);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   9. FOOTER LINK BELOW CARD
+   e.g. "Already have an account? Sign in" — subtle text link.
+   ───────────────────────────────────────────────────────────── */
+.auth-footer-note {
+    text-align: center;
+    margin-top: var(--space-md);
+    font-size: 1rem;   /* was 0.85rem */
+    color: var(--text-muted);
+}
+
+.auth-footer-note button {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    font-family: var(--font-body);
+}
+
+.auth-footer-note button:hover {
+    text-decoration: underline;
+}

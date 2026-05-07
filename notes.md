@@ -6,7 +6,7 @@
  tasks | name |
  :--   |:--
  mohamed Ahmed | contact us
- hossam & shawki | home nav fotter
+ hossam & shawki | home nav fatter
  mahmoud & said|gov pages
 salah| blog
 

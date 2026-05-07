@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    about.html — About Us Page
+    ==========================
+    Displays the team members who built the Egypt Wonders project.
+    Features a responsive CSS grid with premium glassmorphism cards.
+    Each card highlights the contributor's name, role, and student ID.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Egypt Wonders</title>
+    <meta name="description" content="Meet the team behind the Egypt Wonders project.">
+    <link rel="stylesheet" href="css/global.css?v=6">
+    <link rel="stylesheet" href="css/about.css?v=1">
+
+</head>
+
+<body>
+
+    <div class="bg-watermark" aria-hidden="true">TEAM</div>
+
+    <!-- Navigation Bar -->
+    <header class="site-nav" role="banner">
+        <nav class="nav-inner container" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">Egypt Wonders</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="auth.html" id="nav-signin" class="nav-auth-btn btn-solid"
+                    aria-label="Sign in to your account">Sign In</a>
+                <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <header class="about-hero">
+                <h1>Project Contributors</h1>
+                <p>The team behind the Fourth Semester Web Project.</p>
+            </header>
+
+            <!-- Contributors Grid -->
+            <div class="contributors-grid">
+
+                <!-- Card 1 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Mahmoud Mohsen Hashem </h2>
+                    <div class="contributor-id">ID: 2402637</div>
+                    <a href="mailto:2402637@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2402637@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Mohamed Elsayed</h2>
+                    <div class="contributor-id">ID: 2402590</div>
+                    <a href="mailto:2402590@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2402590@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Ahmed Orabi</h2>
+                    <div class="contributor-id">ID:2402785</div>
+                    <a href="mailto:2402785@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2402785@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Hossam Ibrahim</h2>
+                    <div class="contributor-id">ID: 2403405</div>
+                    <a href="mailto:2403405@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2403405@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Ahmed Gamal Mohamed Ahmed</h2>
+                    <div class="contributor-id">ID: 2202086</div>
+                    <a href="mailto:2202086@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2202086@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Ahmed Shawky</h2>
+                    <div class="contributor-id">ID: 2401615</div>
+                    <a href="mailto:2401615@studnt.eelu.edu.eg" class="contributor-email">✉
+                        2401615@studnt.eelu.edu.eg</a>
+                </article>
+
+                <!-- Card 7 -->
+                <article class="contributor-card reveal-element">
+                    <span class="contributor-watermark">C</span>
+                    <h2 class="contributor-name">Ahmed Gamal Salah</h2>
+                    <div class="contributor-id">ID: 2401202</div>
+                    <a href="mailto:2401202" class="contributor-email">✉
+                        2401202@studnt.eelu.edu.eg</a>
+                </article>
+
+            </div>
+
+            <!-- Contact Banner -->
+            <div class="contact-banner reveal-element">
+                <h2 class="contact-banner-title">Have a question?</h2>
+                <p>Reach out to the project team for inquiries and feedback.</p>
+                <a href="mailto:contact@egyptwonders.edu" class="contact-email">
+                    ✉ contact@egyptwonders.edu
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>
+                Egypt Wonders
+                <span class="footer-separator">·</span>
+                Fourth Semester Web Project
+                <span class="footer-separator">·</span>
+                2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/reveal.js"></script>
+
+</body>
+
+</html>

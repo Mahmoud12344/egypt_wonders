@@ -1,0 +1,49 @@
+# Egypt Wonders: Academic Discussion & Presentation Plan
+
+Since your project has exactly 7 distinct HTML pages, the most logical way to structure the discussion is to assign **one specific page** (and its associated CSS/JS files) to each of the 7 team members.
+
+This ensures there are no abstract roles (like a standalone "designer"). **Every member has physical files they own** and can demonstrate their knowledge of HTML, CSS, and JS.
+
+---
+
+### Member 1: The Home Page & Navigation Manager
+- **Physical Files:** `index.html`, `js/nav.js`
+- **HTML:** Explains the semantic structure of the homepage, the `nav` element, and how the "Featured Regions" grid is built.
+- **CSS:** Discusses the CSS Grid layout for the home page cards and the responsive navigation styling.
+- **JS:** Explains how `nav.js` handles the active link highlighting across all pages and the logic behind the Dark/Light mode toggle using `localStorage`.
+
+### Member 2: The Region & Data Loading Developer
+- **Physical Files:** `region.html`, `css/region.css`, `js/region.js`
+- **HTML:** Discusses the empty shell structure (`div` containers) in the HTML waiting for dynamic content.
+- **CSS:** Explains the specific styling for the dynamic region grid, hover effects, and card layouts.
+- **JS:** Explains the `fetch()` API used to load `landmarks.json`, parsing URL parameters (`?id=luxor`), and dynamic DOM manipulation (`innerHTML`).
+
+### Member 3: The Landmark Interactive Developer
+- **Physical Files:** `landmark.html`, `css/landmark.css`, `js/landmark.js`
+- **HTML:** Explains the structure of the modal wrapper and the image gallery layout.
+- **CSS:** Discusses the styling of the glassmorphism overlay, z-index management, and smooth transition animations for the modal.
+- **JS:** Explains the logic behind the image slider (clicking thumbnails to change the main image `src`), loading images from `landmark_images.json`, and modal open/close state management.
+
+### Member 4: The Authentication & Security Developer
+- **Physical Files:** `auth.html`, `css/auth.css`, `js/auth.js`
+- **HTML:** Walks through the Login and Sign-Up form structures and HTML5 validation attributes (`required`, `type="email"`).
+- **CSS:** Explains the styling of the glassmorphism auth card and the CSS used to hide/show the active tabs.
+- **JS:** Demonstrates the user data validation logic, how credentials are saved and retrieved via `localStorage`, and how active sessions are checked.
+
+### Member 5: The Community Blog Developer
+- **Physical Files:** `blog.html`, `js/blog.js`
+- **HTML:** Explains the layout of the editorial blog cards versus the new interactive community post form.
+- **CSS:** Discusses the styling of the form inputs (borders, white backgrounds) and the dynamic community posts grid.
+- **JS:** Explains the logic for the "Share Your Experience" form, array manipulation, handling the logged-in user's name, and saving/rendering posts from `localStorage`.
+
+### Member 6: The Contact Form Developer
+- **Physical Files:** `contact.html`, `css/global.css` (Contact Section)
+- **HTML:** Discusses the semantic structure of the contact form and the banner sections.
+- **CSS:** Explains the layout styling for the dual-column contact page and the responsive design that stacks them on mobile.
+- **JS:** Explains the inline/script logic used to simulate the contact form submission (preventing the default page reload, clearing fields, and showing success alerts).
+
+### Member 7: The Team Page Developer
+- **Physical Files:** `about.html`, `css/about.css`
+- **HTML:** Discusses the layout of the team contributor cards and the overall page hierarchy.
+- **CSS:** Explains the specific styles for the contributor grid, the animated hover effects on the cards, and the watermark styling.
+- **JS:** Discusses any shared JavaScript interactions applied to this page (like how the navigation scripts affect the dark mode of the contributor cards).

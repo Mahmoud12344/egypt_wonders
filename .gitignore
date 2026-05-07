@@ -22,6 +22,9 @@ desktop.ini        # Windows folder settings
 # so git will NOT track it (git never tracks other .git directories).
 # No action needed here — just documenting it for clarity.
 
+
+
+
 # ── Temp / scratch files ───────────────────────────────
 *.tmp
 *.bak

@@ -34,7 +34,7 @@
     <!-- Load our two CSS files. Order matters: global first, then page-specific.
          global.css provides the foundation (variables, nav, footer).
          home.css adds the home-page-specific styles on top. -->
-    <link rel="stylesheet" href="css/global.css?v=5">
+    <link rel="stylesheet" href="css/global.css?v=6">
     <link rel="stylesheet" href="css/home.css?v=4">
 </head>
 
@@ -55,14 +55,18 @@
             <!-- Logo — links back to the home page -->
             <a href="index.html" class="nav-logo">Egypt Wonders</a>
 
-            <!-- Right side: links + mode toggle -->
+            <!-- Right side: links + mode toggle + sign in -->
             <div class="nav-right">
                 <ul class="nav-links">
                     <!-- href must match the exact filename for nav.js to detect active state -->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+
+                <!-- Static Sign In link. nav.js hides this and shows greeting when logged in. -->
+                <a href="auth.html" id="nav-signin" class="nav-auth-btn btn-solid" aria-label="Sign in to your account">Sign In</a>
 
                 <!-- Dark mode toggle. JS in nav.js handles the click.
                      aria-label makes it accessible for screen readers. -->
@@ -109,29 +113,24 @@
 
 
         <!-- ─────────────────────────────────────────────────────
-             REGIONS SECTION
-             9 regions organized into 4 geographic groups.
-             Each card links to region.html?id=[region-id]
+             CTA SECTION
+             ───────────────────────────────────────────────────── -->
+        <section class="cta-section reveal-element">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Start Exploring</h2>
+                    <p class="cta-text">Choose a region below to discover its unique landmarks, historical significance, and exact coordinates.</p>
+                </div>
+            </div>
+        </section>
 
-             The region IDs here must match exactly the IDs used
-             in regions.json and landmarks.json:
-               giza_pyramids, cairo, luxor_thebes, aswan_nubia,
-               alexandria, sinai_red_sea, western_desert,
-               upper_egypt, suez_canal
+        <!-- ─────────────────────────────────────────────────────
+             REGIONS SECTION
+             8 regions displayed in a unified grid.
              ───────────────────────────────────────────────────── -->
         <section class="regions-section reveal-element" aria-label="Explore by region">
-            <div class="container main-layout">
-                
-                <!-- Left Column: The Region Cards -->
-                <div class="regions-column">
-
-                <!-- ── GROUP 1: THE NILE VALLEY ────────────────
-                     The regions along the Nile from north to south:
-                     Cairo, Giza, Luxor, Aswan, Upper Egypt.
-                     This is the historic heart of ancient Egypt. -->
-                <div class="region-group">
-                    <h2 class="group-title">The Nile Valley</h2>
-                    <div class="region-grid">
+            <div class="container">
+                <div class="region-grid">
 
                         <!-- Cairo — 22 landmarks, most diverse region -->
                         <a class="region-card" href="region.html?id=cairo" aria-label="Explore Cairo region">
@@ -223,16 +222,7 @@
                             </div>
                         </a>
 
-                    </div>
-                </div>
 
-
-                <!-- ── GROUP 2: THE MEDITERRANEAN ──────────────
-                     Alexandria — Egypt's window to the world.
-                     9 landmarks blending Greek, Roman, and Arab history. -->
-                <div class="region-group">
-                    <h2 class="group-title">The Mediterranean</h2>
-                    <div class="region-grid">
 
                         <!-- Alexandria — 9 landmarks, coastal and cosmopolitan -->
                         <a class="region-card" href="region.html?id=alexandria" aria-label="Explore Alexandria region">
@@ -251,17 +241,6 @@
                                 </div>
                             </div>
                         </a>
-
-                    </div>
-                </div>
-
-
-                <!-- ── GROUP 3: THE EASTERN FRONTIER ───────────
-                     Sinai and the Red Sea.
-                     Nature and spirituality. -->
-                <div class="region-group">
-                    <h2 class="group-title">The Eastern Frontier</h2>
-                    <div class="region-grid">
 
                         <!-- Sinai & Red Sea — 10 landmarks, coral reefs and monasteries -->
                         <a class="region-card" href="region.html?id=sinai_red_sea" aria-label="Explore Sinai and Red Sea region">
@@ -282,17 +261,6 @@
                         </a>
 
 
-                    </div>
-                </div>
-
-
-                <!-- ── GROUP 4: THE WESTERN DESERT ─────────────
-                     Ancient oases, remote temples, and vast dunes.
-                     9 landmarks for the adventurous traveler. -->
-                <div class="region-group">
-                    <h2 class="group-title">The Western Desert</h2>
-                    <div class="region-grid">
-
                         <!-- Western Desert — 9 landmarks, off the beaten path -->
                         <a class="region-card" href="region.html?id=western_desert" aria-label="Explore Western Desert region">
                             <img class="region-card-img" src="assets/images/Temple_of_Hibis/0.jpg" alt="The Temple of Hibis in the Kharga Oasis" loading="lazy">
@@ -311,32 +279,24 @@
                             </div>
                         </a>
 
-                    </div>
+                </div><!-- end .region-grid -->
+            </div><!-- end .container -->
+        </section>
+
+        <!-- ─────────────────────────────────────────────────────
+             ABOUT SECTION
+             ───────────────────────────────────────────────────── -->
+        <section class="about-section reveal-element">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="about-title">About the Project</h2>
+                    <p class="about-text">
+                        Egypt Wonders is a comprehensive documentary experience exploring the 
+                        monuments, temples, and natural beauty that have shaped human history for 
+                        seven millennia.
+                    </p>
                 </div>
-
-                </div><!-- end .regions-column -->
-
-                <!-- Right Column: Sidebar -->
-                <aside class="home-sidebar">
-                    <div class="sidebar-widget">
-                        <h3 class="widget-title">About the Project</h3>
-                        <p class="widget-text">
-                            Egypt Wonders is a comprehensive documentary experience exploring the 
-                            monuments, temples, and natural beauty that have shaped human history for 
-                            seven millennia.
-                        </p>
-                    </div>
-                    
-                    <div class="sidebar-widget">
-                        <h3 class="widget-title">Start Exploring</h3>
-                        <p class="widget-text">
-                            Choose a region on the left to discover its unique landmarks, historical
-                            significance, and exact coordinates.
-                        </p>
-                    </div>
-                </aside>
-
-            </div><!-- end .container.main-layout -->
+            </div>
         </section>
 
     </main>
@@ -366,6 +326,7 @@
          This ensures the DOM elements (nav, button) exist in memory
          before JavaScript tries to find and use them.
          ========================================================= -->
+    <script src="js/auth.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/reveal.js"></script>
 

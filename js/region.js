@@ -32,7 +32,7 @@
    URLSearchParams parses that string into a usable object.
    .get('id') extracts the value for the key 'id' → "cairo"
    ───────────────────────────────────────────────────────────── */
-const params   = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const regionId = params.get('id'); /* e.g., "cairo", "giza_pyramids" */
 
 
@@ -49,15 +49,15 @@ const regionId = params.get('id'); /* e.g., "cairo", "giza_pyramids" */
    This object maps the URL id to both values.
    ───────────────────────────────────────────────────────────── */
 const REGION_CONFIG = {
-    cairo:          { label: 'Cairo',             cssId: 'cairo'          },
-    giza_pyramids:  { label: 'Giza & Pyramids',   cssId: 'giza_pyramids'  },
-    luxor_thebes:   { label: 'Luxor & Thebes',    cssId: 'luxor_thebes'   },
-    aswan_nubia:    { label: 'Aswan & Nubia',      cssId: 'aswan_nubia'    },
-    alexandria:     { label: 'Alexandria',         cssId: 'alexandria'     },
-    sinai_red_sea:  { label: 'Sinai & Red Sea',   cssId: 'sinai_red_sea'  },
-    western_desert: { label: 'Western Desert',    cssId: 'western_desert' },
-    upper_egypt:    { label: 'Upper Egypt',        cssId: 'upper_egypt'    },
-    suez_canal:     { label: 'Suez Canal',         cssId: 'suez_canal'     }
+    cairo: { label: 'Cairo', cssId: 'cairo' },
+    giza_pyramids: { label: 'Giza & Pyramids', cssId: 'giza_pyramids' },
+    luxor_thebes: { label: 'Luxor & Thebes', cssId: 'luxor_thebes' },
+    aswan_nubia: { label: 'Aswan & Nubia', cssId: 'aswan_nubia' },
+    alexandria: { label: 'Alexandria', cssId: 'alexandria' },
+    sinai_red_sea: { label: 'Sinai & Red Sea', cssId: 'sinai_red_sea' },
+    western_desert: { label: 'Western Desert', cssId: 'western_desert' },
+    upper_egypt: { label: 'Upper Egypt', cssId: 'upper_egypt' },
+    suez_canal: { label: 'Suez Canal', cssId: 'suez_canal' }
 };
 
 
@@ -116,7 +116,7 @@ function renderRegionHeader(config, count) {
 function buildImportanceDots(importance) {
     /* Convert the 1–10 score to a 1–5 dot count */
     const filledCount = Math.min(Math.round(importance / 2), 5);
-    const totalDots   = 5;
+    const totalDots = 5;
 
     /* Build the HTML string for the dot elements */
     let dotsHTML = '';
@@ -233,7 +233,7 @@ function renderLandmarkGrid(landmarks) {
        When you click a card, the event "bubbles up" from the card
        to its parent (#landmark-grid). We catch it at the grid level
        and check which card was clicked using event.target.closest(). */
-    grid.addEventListener('click', function(event) {
+    grid.addEventListener('click', function (event) {
         /* .closest('.landmark-card') walks UP the DOM tree from the clicked
            element until it finds an ancestor with class "landmark-card".
            This works even if the user clicked the image or the text INSIDE the card. */
@@ -241,19 +241,19 @@ function renderLandmarkGrid(landmarks) {
         if (card) {
             const landmarkId = card.dataset.id; /* reads data-id attribute */
             /* Find the landmark in our array by its ID */
-            const landmark = landmarks.find(function(l) { return l.id === landmarkId; });
+            const landmark = landmarks.find(function (l) { return l.id === landmarkId; });
             if (landmark) openModal(landmark);
         }
     });
 
     /* Support keyboard navigation: allow Enter/Space to open modal on focused card */
-    grid.addEventListener('keydown', function(event) {
+    grid.addEventListener('keydown', function (event) {
         if (event.key === 'Enter' || event.key === ' ') {
             const card = event.target.closest('.landmark-card');
             if (card) {
                 event.preventDefault();
                 const landmarkId = card.dataset.id;
-                const landmark = landmarks.find(function(l) { return l.id === landmarkId; });
+                const landmark = landmarks.find(function (l) { return l.id === landmarkId; });
                 if (landmark) openModal(landmark);
             }
         }
@@ -278,7 +278,7 @@ const modal = document.getElementById('landmark-modal');
 function openModal(landmark) {
     /* Fill the modal image */
     const modalImg = document.getElementById('modal-image');
-    const imgSrc   = landmark.imagePath || landmark.thumbnail || '';
+    const imgSrc = landmark.imagePath || landmark.thumbnail || '';
     if (modalImg) {
         modalImg.src = 'assets/' + imgSrc;
         modalImg.alt = landmark.name;
@@ -313,7 +313,7 @@ function closeModal() {
    The <dialog> fires a 'click' event. If the click target IS the dialog itself
    (not an element inside it), the user clicked the backdrop. */
 if (modal) {
-    modal.addEventListener('click', function(event) {
+    modal.addEventListener('click', function (event) {
         if (event.target === modal) {
             closeModal();
         }
@@ -400,7 +400,7 @@ async function main() {
            If landmarks.json is ever modified, whoever adds a new entry
            MUST insert it at the correct position (by importance score)
            to maintain this contract. */
-        const regionLandmarks = allLandmarks.filter(function(landmark) {
+        const regionLandmarks = allLandmarks.filter(function (landmark) {
             return landmark.region === config.label;
         });
 

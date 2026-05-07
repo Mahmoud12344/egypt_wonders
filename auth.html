@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Sign In — Egypt Wonders</title>
+
+    <!-- SEO description for search engines -->
+    <meta name="description" content="Sign in or create an account to join the Egypt Wonders community.">
+
+    <!-- Shared design system (colors, fonts, buttons, nav) -->
+    <link rel="stylesheet" href="css/global.css?v=6">
+
+    <!-- Page-specific auth card styles -->
+    <link rel="stylesheet" href="css/auth.css?v=1">
+
+    <!-- Google Fonts: preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+    <!-- ─────────────────────────────────────────────────────
+         NAVIGATION BAR
+         Identical structure across every page.
+         nav.js will highlight the active link and handle
+         the dark mode toggle.
+         ───────────────────────────────────────────────────── -->
+    <header class="site-nav" role="banner">
+        <nav class="nav-inner container" aria-label="Main navigation">
+
+            <!-- Logo links back to Home -->
+            <a href="index.html" class="nav-logo">Egypt Wonders</a>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Static Sign In link. nav.js hides this and shows greeting when logged in. -->
+                <a href="auth.html" id="nav-signin" class="nav-auth-btn btn-solid" aria-label="Sign in to your account">Sign In</a>
+
+                <!-- Dark/Light mode toggle handled by nav.js -->
+                <button class="nav-mode-btn" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ─────────────────────────────────────────────────────
+         GIANT FAINT BACKGROUND WATERMARK
+         aria-hidden="true" means screen readers will skip it —
+         it is purely decorative.
+         ───────────────────────────────────────────────────── -->
+    <div class="bg-watermark" aria-hidden="true">EGYPT</div>
+
+
+    <!-- ─────────────────────────────────────────────────────
+         AUTH PAGE MAIN CONTENT
+         The .auth-page class centers the card using flexbox.
+         ───────────────────────────────────────────────────── -->
+    <main class="auth-page">
+
+        <!-- The glass card that holds the login / sign-up panels -->
+        <div class="auth-card">
+
+            <!-- Brand / logo at top of card -->
+            <div class="auth-brand">
+                <a href="index.html" class="auth-brand-logo">Egypt Wonders</a>
+                <p class="auth-brand-tagline">Your journey through ancient history</p>
+            </div>
+
+            <!-- ──────────────────────────────────────────────
+                 TAB TOGGLE BAR
+                 Two pill buttons to switch between panels.
+                 JavaScript (below) listens for clicks and
+                 swaps the .active class and the visible panel.
+                 ────────────────────────────────────────────── -->
+            <div class="auth-tabs" role="tablist">
+                <!-- data-target tells the JS which panel to show -->
+                <button class="auth-tab active"
+                        id="tab-login"
+                        role="tab"
+                        aria-selected="true"
+                        data-target="panel-login">
+                    Sign In
+                </button>
+                <button class="auth-tab"
+                        id="tab-signup"
+                        role="tab"
+                        aria-selected="false"
+                        data-target="panel-signup">
+                    Sign Up
+                </button>
+            </div>
+
+
+            <!-- ──────────────────────────────────────────────
+                 LOGIN PANEL
+                 Visible by default (.visible class).
+                 ────────────────────────────────────────────── -->
+            <div class="auth-panel visible" id="panel-login" role="tabpanel">
+
+                <form class="auth-form" id="form-login" novalidate>
+
+                    <!-- Email field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="login-email">Email Address</label>
+                        <input class="auth-input"
+                               type="email"
+                               id="login-email"
+                               name="email"
+                               placeholder="your@email.com"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="login-password">Password</label>
+                        <input class="auth-input"
+                               type="password"
+                               id="login-password"
+                               name="password"
+                               placeholder="Your password"
+                               autocomplete="current-password"
+                               required>
+                    </div>
+
+                    <!-- Submit — uses global .btn-solid + auth-specific .auth-submit -->
+                    <button class="btn-solid auth-submit" type="submit" id="btn-login">
+                        Sign In →
+                    </button>
+
+                </form>
+
+                <!-- Feedback message (hidden until JS sets it) -->
+                <div class="auth-message" id="msg-login" role="alert"></div>
+
+                <!-- Link to switch to Sign Up panel -->
+                <p class="auth-footer-note">
+                    New here?
+                    <button type="button" onclick="switchTab('tab-signup')">Create an account</button>
+                </p>
+
+            </div><!-- /panel-login -->
+
+
+            <!-- ──────────────────────────────────────────────
+                 SIGN-UP PANEL
+                 Hidden by default (no .visible class).
+                 ────────────────────────────────────────────── -->
+            <div class="auth-panel" id="panel-signup" role="tabpanel">
+
+                <form class="auth-form" id="form-signup" novalidate>
+
+                    <!-- Full name field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signup-name">Full Name</label>
+                        <input class="auth-input"
+                               type="text"
+                               id="signup-name"
+                               name="name"
+                               placeholder="Your full name"
+                               autocomplete="name"
+                               required>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signup-email">Email Address</label>
+                        <input class="auth-input"
+                               type="email"
+                               id="signup-email"
+                               name="email"
+                               placeholder="your@email.com"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signup-password">Password</label>
+                        <input class="auth-input"
+                               type="password"
+                               id="signup-password"
+                               name="password"
+                               placeholder="Minimum 6 characters"
+                               autocomplete="new-password"
+                               required>
+                    </div>
+
+                    <!-- Confirm password field -->
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signup-confirm">Confirm Password</label>
+                        <input class="auth-input"
+                               type="password"
+                               id="signup-confirm"
+                               name="confirmPassword"
+                               placeholder="Repeat your password"
+                               autocomplete="new-password"
+                               required>
+                    </div>
+
+                    <button class="btn-solid auth-submit" type="submit" id="btn-signup">
+                        Create Account →
+                    </button>
+
+                </form>
+
+                <!-- Feedback message -->
+                <div class="auth-message" id="msg-signup" role="alert"></div>
+
+                <!-- Link to switch back to Login panel -->
+                <p class="auth-footer-note">
+                    Already have an account?
+                    <button type="button" onclick="switchTab('tab-login')">Sign in</button>
+                </p>
+
+            </div><!-- /panel-signup -->
+
+        </div><!-- /auth-card -->
+
+    </main>
+
+
+    <!-- ─────────────────────────────────────────────────────
+         SCRIPTS
+         auth.js must come before nav.js so getCurrentUser()
+         is available when nav.js runs.
+         ───────────────────────────────────────────────────── -->
+    <script src="js/auth.js"></script>
+    <script src="js/nav.js"></script>
+
+    <script>
+        /* =====================================================
+           AUTH PAGE CONTROLLER
+           Handles tab switching and form submission on this
+           specific page.
+           ===================================================== */
+
+        /* --- Redirect away if already logged in ---
+           If a logged-in user visits auth.html, send them home. */
+        if (getCurrentUser()) {
+            window.location.href = 'index.html';
+        }
+
+
+        /* ─────────────────────────────────────────────────────
+           TAB SWITCHING
+           Called by the tab buttons (data-target) and the
+           "Create an account" / "Sign in" footer links.
+           ───────────────────────────────────────────────────── */
+        function switchTab(targetTabId) {
+            /* Get all tab buttons and all panels */
+            const tabs   = document.querySelectorAll('.auth-tab');
+            const panels = document.querySelectorAll('.auth-panel');
+
+            /* Remove active state from all tabs */
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+
+            /* Hide all panels */
+            panels.forEach(function(panel) {
+                panel.classList.remove('visible');
+            });
+
+            /* Activate the clicked tab */
+            const clickedTab = document.getElementById(targetTabId);
+            clickedTab.classList.add('active');
+            clickedTab.setAttribute('aria-selected', 'true');
+
+            /* Show the matching panel using the data-target attribute */
+            const targetPanelId = clickedTab.getAttribute('data-target');
+            document.getElementById(targetPanelId).classList.add('visible');
+
+            /* Clear any previous error messages so they don't persist */
+            document.querySelectorAll('.auth-message').forEach(function(msg) {
+                msg.classList.remove('visible', 'error', 'success');
+                msg.textContent = '';
+            });
+        }
+
+        /* Wire up the tab buttons to switchTab() */
+        document.querySelectorAll('.auth-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                switchTab(tab.id);
+            });
+        });
+
+
+        /* ─────────────────────────────────────────────────────
+           HELPER: Show a feedback message inside the card.
+           msgEl  — the .auth-message <div> element
+           text   — the text to display
+           type   — 'error' or 'success' (CSS class)
+           ───────────────────────────────────────────────────── */
+        function showMessage(msgEl, text, type) {
+            /* Reset previous state */
+            msgEl.classList.remove('visible', 'error', 'success');
+            /* Set new text and type */
+            msgEl.textContent = text;
+            msgEl.classList.add('visible', type);
+        }
+
+
+        /* ─────────────────────────────────────────────────────
+           LOGIN FORM SUBMISSION
+           ───────────────────────────────────────────────────── */
+        document.getElementById('form-login').addEventListener('submit', function(event) {
+            /* Prevent the default form behaviour (page reload) */
+            event.preventDefault();
+
+            /* Read what the user typed */
+            const email    = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const msgEl    = document.getElementById('msg-login');
+
+            /* Call auth.js signIn() function */
+            const result = signIn(email, password);
+
+            if (result.success) {
+                /* Show brief success message, then redirect to home */
+                showMessage(msgEl, result.message, 'success');
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+                }, 1000);
+            } else {
+                /* Show the error (wrong password, user not found, etc.) */
+                showMessage(msgEl, result.message, 'error');
+            }
+        });
+
+
+        /* ─────────────────────────────────────────────────────
+           SIGN-UP FORM SUBMISSION
+           ───────────────────────────────────────────────────── */
+        document.getElementById('form-signup').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name            = document.getElementById('signup-name').value;
+            const email           = document.getElementById('signup-email').value;
+            const password        = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm').value;
+            const msgEl           = document.getElementById('msg-signup');
+
+            /* Call auth.js signUp() function */
+            const result = signUp(name, email, password, confirmPassword);
+
+            if (result.success) {
+                showMessage(msgEl, result.message, 'success');
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+                }, 1000);
+            } else {
+                showMessage(msgEl, result.message, 'error');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

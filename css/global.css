@@ -324,7 +324,8 @@ p {
     /* Glassmorphism: semi-transparent background + blur */
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
     /* Smooth transition between transparent ↔ solid states */
@@ -451,6 +452,33 @@ p {
     background-color: var(--bg-card);
 }
 
+/* ── Auth button injected by nav.js (Part 4) ──
+   Uses the global .btn-solid class but is overridden here
+   to be smaller and match the nav bar height. */
+.nav-auth-btn {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/* User greeting + sign-out wrapper (when logged in) */
+.nav-user-area {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+/* The "Hi, Ahmed" greeting text in the nav */
+.nav-user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
 /* Page body needs top padding equal to nav height so content
    doesn't hide behind the fixed nav bar */
 .page-content {
@@ -558,6 +586,101 @@ p {
 
 
 /* ─────────────────────────────────────────────────────────────
+   12. COMMUNITY BLOG STYLES
+   ───────────────────────────────────────────────────────────── */
+
+/* Community Form Box */
+.community-form-box {
+    background: #FFFFFF; /* Solid white background like the screenshot */
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Slight rounding like the screenshot */
+    padding: var(--space-lg);
+    max-width: 600px;
+    margin: 0 auto var(--space-xl) auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Very subtle shadow */
+}
+
+/* Form layout matching the old blog2.html */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc; /* Explicit grey border requested */
+    font-family: var(--font-body);
+    font-size: 1rem;
+    box-sizing: border-box; /* Crucial for 100% width with padding */
+    background: #FFFFFF;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.form-input:focus {
+    border-color: #888;
+}
+
+/* Black solid button for the form */
+.btn-black {
+    width: 100%;
+    padding: 14px;
+    background: #222 !important;
+    color: #FFF !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-black:hover {
+    background: #000 !important;
+}
+
+/* Action Buttons (Like / Delete) inside community posts */
+.community-actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.action-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all var(--transition);
+    font-family: var(--font-body);
+}
+
+.action-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border-color: var(--accent);
+}
+
+/* The delete button gets a subtle red hover effect */
+.action-btn.delete-btn:hover {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+/* Modify the blog-card slightly for community text-only posts */
+.community-card {
+    background: var(--bg-card); /* Ensure solid background if no image */
+}
+
+/* ─────────────────────────────────────────────────────────────
    RESPONSIVE — MOBILE ADJUSTMENTS
    Applied globally to all pages at < 600px screen width.
    More specific breakpoints (modal, sidebar) live in their
@@ -583,23 +706,24 @@ p {
         gap: var(--space-sm);
     }
 }
+
 /* ─────────────────────────────────────────────────────────────
    12. DECORATIVE BACKGROUND WATERMARK
    ───────────────────────────────────────────────────────────── */
 .bg-watermark {
-    position:       fixed;
-    top:            50%;
-    left:           50%;
-    transform:      translate(-50%, -50%);
-    font-family:    var(--font-heading);
-    font-size:      clamp(8rem, 20vw, 25rem);
-    font-weight:    700;
-    color:          var(--text-main);
-    opacity:        0.08;
-    white-space:    nowrap;
-    z-index:        -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: clamp(8rem, 20vw, 25rem);
+    font-weight: 700;
+    color: var(--text-main);
+    opacity: 0.08;
+    white-space: nowrap;
+    z-index: -1;
     pointer-events: none;
-    user-select:    none;
+    user-select: none;
 }
 
 [data-mode="dark"] .bg-watermark {
@@ -610,12 +734,12 @@ p {
    13. SCROLL REVEAL ANIMATIONS
    ───────────────────────────────────────────────────────────── */
 .reveal-element {
-    opacity:    0;
-    transform:  translateY(40px);
+    opacity: 0;
+    transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .reveal-visible {
-    opacity:   1;
+    opacity: 1;
     transform: translateY(0);
 }

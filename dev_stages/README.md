@@ -1,56 +1,87 @@
-# Egypt Wonders — Dev Stages Index
+# Egypt Wonders — Project Documentation
 
-> **Looking for setup instructions?** See the main
-> [README.md](../README.md) in the project root.
-
-This folder contains one `.md` file per development stage.
-Each file explains **what** was built, **why** it was done that way,
-and **how** every part of the code works.
+> **Read these documents and you will understand every file, every design decision, and every line of code in the project.**
 
 ---
 
-## Stages Overview
+## How to Run the Project
 
-| Stage | File | What It Covers | Status |
-|---|---|---|---|
-| 0 | `stage-00-design-decisions.md` | All approved design decisions — the single source of truth | ✅ Done |
-| 1 | `stage-01-project-setup.md` | Folder structure, empty files, git initialization | ✅ Done |
-| 2 | `stage-02-global-css.md` | The design system: CSS variables, fonts, dark mode, nav, footer | ✅ Done |
-| 3 | `stage-03-home-page.md` | `index.html` + `home.css` — hero, geographic region groups | ✅ Done |
-| 4 | `stage-04-region-page.md` | `region.html` + `region.css` + `region.js` — dynamic landmark grid, modal, pre-sorted data | ✅ Done |
-| 5 | `stage-05-landmark-detail.md` | `landmark.html` + `landmark.css` + `landmark.js` — gallery, sidebar, parallel fetch | ✅ Done |
-| 6 | `stage-06-blog-contact.md` | `blog.html` + `contact.html` — static pages, form semantics | ✅ Done |
-| 7 | `stage-07-polish.md` | Local server setup, responsive tweaks, dark mode, full testing checklist | ✅ Done |
-| 8 | `stage-08-video-hero.md` | `ffmpeg` video compression, HTML5 background video attributes, CSS object-fit | ✅ Done |
-| 9 | `stage-09-cinematic-animations.md` | CSS animations from scratch, cinematic reveal card interactions, centered modals | ✅ Done |
-| 10 | `stage-10-background-polish.md` | CSS SVG Noise textures, IntersectionObserver scroll reveals, and giant background typography | ✅ Done |
-| 11 | `stage-11-nav-upgrade.md` | Glassmorphism nav, `backdrop-filter: blur()`, fixing white-on-white hero bug | ✅ Done |
-
----
-
-## ⚠️ Critical: How to Run the Project
-
-**Do NOT open HTML files directly.** `fetch()` requires an HTTP server.
+**You must use a local HTTP server.** Opening HTML files directly (`file://`) will break `fetch()` calls.
 
 ```bash
-# Navigate to the project folder, then run:
 python3 -m http.server 8000
 ```
 
-Then open: **http://localhost:8000** in your browser.
-
-See `stage-07-polish.md` for full server options and testing checklist.
+Then open **http://localhost:8000** in your browser.
 
 ---
 
-## Git Commit History
+## Documentation Index
+
+### Shared Components
+| Document | Covers |
+|:---|:---|
+| [global-styles.md](global-styles.md) | `global.css` — Design tokens, dark mode, region accents, reset, nav CSS, footer CSS, buttons, watermark |
+| [navigation.md](navigation.md) | `nav.js` — Active link detection, dark mode toggle, transparent scroll, nav HTML structure |
+| [scroll-reveal.md](scroll-reveal.md) | `reveal.js` — IntersectionObserver scroll animations + CSS classes |
+| [data-layer.md](data-layer.md) | `regions.json`, `landmarks.json`, `landmark_images.json` — Schemas and relationships |
+
+### Pages
+| Document | Covers |
+|:---|:---|
+| [home-page.md](home-page.md) | `index.html` + `home.css` — Hero video, CTA section, region card grid, all animations |
+| [about-page.md](about-page.md) | `about.html` — Contributor glassmorphism grid, CSS line-by-line |
+| [region-page.md](region-page.md) | `region.html` + `landmarks-grid.css` + `region.js` — Landmark grid, modal, event delegation |
+| [landmark-page.md](landmark-page.md) | `landmark.html` + `landmark.css` + `landmark.js` — Gallery, sidebar, Promise.all |
+| [blog-page.md](blog-page.md) | `blog.html` — Static editorial blog with inline styles |
+| [community-blog-page.md](community-blog-page.md) | `blog2.html` — Interactive localStorage blog with inline JS |
+| [contact-page.md](contact-page.md) | `contact.html` — Contact form, team section, form semantics |
+
+### Exam Prep
+| Document | Covers |
+|:---|:---|
+| [QA.md](QA.md) | 42+ potential exam questions with full answers |
+
+---
+
+## Quick Reference: Page → File Mapping
+
+| Page | HTML | CSS | JS |
+|:---|:---|:---|:---|
+| Home | `index.html` | `global.css` + `home.css` | `nav.js` + `reveal.js` |
+| Region | `region.html` | `global.css` + `landmarks-grid.css` | `nav.js` + `region.js` + `reveal.js` |
+| Landmark Detail | `landmark.html` | `global.css` + `landmark.css` | `nav.js` + `landmark.js` + `reveal.js` |
+| Blog | `blog.html` | `global.css` + inline `<style>` | `nav.js` |
+| Community Blog | `blog2.html` | Inline `<style>` (standalone) | Inline `<script>` (standalone) |
+| Contact | `contact.html` | `global.css` + inline `<style>` | `nav.js` |
+
+---
+
+## Folder Structure
 
 ```
-7509ac3  perf: remove redundant runtime sort — JSON is pre-sorted by importance desc
-e7d6339  feat: add blog and contact pages (Stage 6)
-33cd084  feat: add landmark detail page with gallery and sidebar (Stage 5)
-3a96575  feat: add region page with dynamic landmark grid and modal (Stage 4)
-4aa9268  feat: add design system, nav logic, and home page (Stages 2-3)
-9620277  chore: set up project folder structure and Stage 1 docs
-2ef1387  chore: initialize project with design docs and color demo
+project/
+├── index.html                 ← Home page (entry point)
+├── region.html                ← Region landmark grid (dynamic)
+├── landmark.html              ← Landmark detail page (dynamic)
+├── blog.html                  ← Static editorial blog
+├── blog2.html                 ← Interactive community blog (standalone)
+├── contact.html               ← Contact form + team credits
+├── css/
+│   ├── global.css             ← Shared design system (ALL pages)
+│   ├── home.css               ← index.html only
+│   ├── landmarks-grid.css     ← region.html only
+│   └── landmark.css           ← landmark.html only
+├── js/
+│   ├── nav.js                 ← Shared: active link + dark mode + scroll
+│   ├── reveal.js              ← Shared: IntersectionObserver scroll reveal
+│   ├── region.js              ← region.html only
+│   └── landmark.js            ← landmark.html only
+├── assets/
+│   ├── regions.json           ← 8 regions
+│   ├── landmarks.json         ← 90 landmarks (master data)
+│   ├── landmark_images.json   ← Image gallery paths per landmark
+│   ├── images/                ← 76 subdirectories of JPG photos
+│   └── videos/hero-bg.mp4    ← Hero background video
+└── dev_stages/                ← This documentation folder
 ```
